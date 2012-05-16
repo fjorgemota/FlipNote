@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-    <jsp:include page="includes/head.jsp"/>
+  <jsp:include page="includes/head.jsp">
+        <jsp:param name="titulo" value="Cadastrar Trabalhos"/>
+    </jsp:include>
     <body>
         <div class="navbar navbar-fixed-top">
             <jsp:include page="includes/navbar.jsp"/>
@@ -33,7 +35,10 @@
 
                         </div>
                         <div class="span6">
-                            <input type="radio" name="notification" >
+                            <input type="radio" name="notification" id="nyes" checked="checked"/><label for="nyes">Sim</label><input type="radio" name="notification" id="nnot" checked="checked"/><label for="nnot">Não</label>                        
+                            <br />
+                            <div id="ncalendar" style="float:left;">
+                            </div>
 
                         </div>
 
@@ -47,10 +52,23 @@
                             <textarea rows="3" cols="80" ></textarea>
                         </div>
 
-
-
                     </div>
+                    <div class="row-fluid">
+                        <div class="span4" style="text-align: right;">
+                            <a class="btn btn-success" >
+                                Concluir
+                            </a>
+                        </div>
+                        <div class="span4">
+                            <a class="btn btn-danger" >
+                                Limpar
+                            </a>
 
+                        </div>
+                        <div class="span4">
+                            &nbsp;
+                        </div>
+                    </div>
 
 
 

@@ -8,7 +8,7 @@
                     <a class="brand" href="#">FlipNote</a>
                     <div class="nav-collapse">
                         <ul class="nav">
-                            <li class="active"><a href="#">Inicio</a></li>
+                            <li class="active"><a href="index.jsp">Inicio</a></li>
                             <li><a href="#minhaconta">Minha Conta</a></li>
                             <li><a href="#logout">Sair</a></li>
                         </ul>
