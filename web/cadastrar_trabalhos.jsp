@@ -19,31 +19,8 @@
 
                     <jsp:include page="includes/materia.jsp" />
 
-                    <div class="row-fluid">
-                        <div class="span6">
-                            <p>Data de entrega: </p>
-                        </div>
-                        <div class="span6">
-                            <input type ="text" id="datepicker" />
-
-                        </div>
-
-                    </div>
-                    <div class="row-fluid">
-                        <div class="span6">
-                            <p>Notificação:</p>
-
-                        </div>
-                        <div class="span6">
-                            <input type="radio" name="notification" id="nyes" checked="checked"/><label for="nyes">Sim</label><input type="radio" name="notification" id="nnot" checked="checked"/><label for="nnot">Não</label>                        
-                            <br />
-                            <div id="ncalendar" style="float:left;">
-                            </div>
-
-                        </div>
-
-                    </div>
-
+                    <jsp:include page="includes/data.jsp" />
+                    
                     <div class="row-fluid">
                         <div class="span6">
                             <p>Conteudo:  </p>
@@ -51,25 +28,9 @@
                         <div class="span6">
                             <textarea rows="3" cols="80" ></textarea>
                         </div>
-
                     </div>
-                    <div class="row-fluid">
-                        <div class="span4" style="text-align: right;">
-                            <a class="btn btn-success" >
-                                Concluir
-                            </a>
-                        </div>
-                        <div class="span4">
-                            <a class="btn btn-danger" >
-                                Limpar
-                            </a>
-
-                        </div>
-                        <div class="span4">
-                            &nbsp;
-                        </div>
-                    </div>
-
+                    <jsp:include page="includes/notificacao.jsp" />
+                    <jsp:include page="includes/botoes-form.jsp" />
 
 
                 </div>
