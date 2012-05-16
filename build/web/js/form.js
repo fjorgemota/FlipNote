@@ -1,11 +1,13 @@
-Calendar.setup({
-    inputField:"datepicker",
-    trigger:"datepicker",
-    onSelect:function(){
-        this.hide();
-    },
-    dateFormat:"%d/%m/%Y"
-});
+if(!!document.getElementById("datepicker")){
+    Calendar.setup({
+        inputField:"datepicker",
+        trigger:"datepicker",
+        onSelect:function(){
+            this.hide();
+        },
+        dateFormat:"%d/%m/%Y"
+    });
+}
 Calendar.setup({
     cont:"ncalendar",
     onSelect:function(){
