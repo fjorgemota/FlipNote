@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-  <jsp:include page="includes/head.jsp"/>
+   <jsp:include page="includes/head.jsp">
+        <jsp:param name="titulo" value="Cadastrar avaliações"/>
+    </jsp:include>
     <body>
         <div class="navbar navbar-fixed-top">
             <jsp:include page="includes/navbar.jsp"/>
