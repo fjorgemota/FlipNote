@@ -14,12 +14,12 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#avaliacao/visualizar/semana/">
+                                <a href="avaliacoes_semana.jsp">
                                     Nesta Semana
                                 </a>
                             </li>
                             <li>
-                                <a href="#avaliacao/visualizar/mes/">
+                                <a href="avaliacoes_mes.jsp">
                                     Neste Mês
                                 </a>
                             </li>
@@ -32,12 +32,12 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#trabalhos/visualizar/semana/">
+                                <a href="trabalhos_semana.jsp">
                                     Nesta Semana
                                 </a>
                             </li>
                             <li>
-                                <a href="#trabalhos/visualizar/mes/">
+                                <a href="trabalhos_mes.jsp">
                                     Neste Mês
                                 </a>
                             </li>
@@ -50,7 +50,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#anotacoes/listar/">
+                                <a href="anotacoes_listar.jsp">
                                     Listar
                                 </a>
                             </li>
@@ -63,7 +63,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#materias/listar/">
+                                <a href="materias_listar.jsp">
                                     Listar
                                 </a>
                             </li>
@@ -76,7 +76,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#grupos/listar/">
+                                <a href="grupos_listar.jsp">
                                     Listar
                                 </a>
                             </li>
