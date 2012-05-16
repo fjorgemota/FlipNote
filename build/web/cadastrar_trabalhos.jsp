@@ -10,21 +10,12 @@
                 <div class="span3">
                     <jsp:include page="includes/menu.jsp"/>
                 </div>
+
                 <div class="span9">
                     <h2>Cadastrar Trabalhos</h2>
                     <p> Use o formulario abaixo para cadastrar um trabalho.</p>
 
-                    <div class="row-fluid">
-                        <div class="span6">
-                            <p>Nome da matéria do trabalho: </p>
-                        </div>
-                        <div class="span6">
-                            <select > <option> Portugues</option>
-                                <option> Matemática </option>
-                            </select>
-                        </div>
-
-                    </div>
+                    <jsp:include page="includes/materia.jsp" />
 
                     <div class="row-fluid">
                         <div class="span6">
@@ -67,6 +58,6 @@
 
             </div>
         </div>
-            <jsp:include page="includes/javascript_formulario.jsp"/>
+        <jsp:include page="includes/javascript_formulario.jsp"/>
     </body>
 </html>
