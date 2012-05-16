@@ -26,27 +26,14 @@
 
                     <div class="row-fluid">
                         <div class="span6">
-                            <p>Deseja ser avisado sobre esta anotação: </p>
-                        </div>
-                        <div class="span6">
-                            <input type ="text" id="datepicker" />
-
-                        </div>
-
-                    </div>
-
-                    <div class="row-fluid">
-                        <div class="span6">
                             <p>Anotação </p>
                         </div>
                         <div class="span6">
                             <textarea rows="4" cols="80" ></textarea>
                         </div>
-
-
-
                     </div>
-
+                     <jsp:include page="includes/notificacao.jsp" />
+                    <jsp:include page="includes/botoes-form.jsp" />
                 </div>
 
             </div>
