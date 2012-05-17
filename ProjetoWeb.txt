@@ -1,0 +1,768 @@
+<mockup version="1.0" skin="sketch" measuredW="3319" measuredH="2555" mockupW="3074" mockupH="2451">
+  <controls>
+    <control controlID="36" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="245" y="104" w="960" h="776" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//</text>
+      </controlProperties>
+    </control>
+    <control controlID="37" controlTypeID="com.balsamiq.mockups::Canvas" x="396" y="418" w="377" h="184" measuredW="100" measuredH="70" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>13421772</color>
+      </controlProperties>
+    </control>
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::Canvas" x="245" y="173" w="958" h="36" measuredW="100" measuredH="70" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10066329</color>
+      </controlProperties>
+    </control>
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::SubTitle" x="269" y="175" w="-1" h="-1" measuredW="89" measuredH="33" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Flipnote</text>
+      </controlProperties>
+    </control>
+    <control controlID="40" controlTypeID="com.balsamiq.mockups::List" x="245" y="226" w="134" h="630" measuredW="100" measuredH="380" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <alternateRowColor>14803425</alternateRowColor>
+        <color>14803425</color>
+        <text>Resumos%0AAvalia%E7%F5es%09%0A%20%20Cadastrar%20Nova%0A%20%20Nesta%20Semana%0A%20%20Neste%20M%EAs%0ATrabalhos%0A%20%20Cadastrar%20%0A%20%20Nesta%20Semana%0A%20%20Neste%20M%EAs%0AAnota%E7%F5es%0A%20%20Cadastrar%0A%20%20Listar%0AMat%E9rias%0A%20%20Cadastrar%0A%20%20Listar%0AGrupos%0A%20%20Cadastrar%0A%20%20Gerenciar</text>
+      </controlProperties>
+    </control>
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::LinkBar" x="505" y="180" w="-1" h="-1" measuredW="171" measuredH="21" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Inicio%2C%20Minha%20Conta%2C%20Sair</text>
+      </controlProperties>
+    </control>
+    <control controlID="42" controlTypeID="com.balsamiq.mockups::ComboBox" x="1117" y="179" w="-1" h="-1" measuredW="86" measuredH="23" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Fernando</text>
+      </controlProperties>
+    </control>
+    <control controlID="43" controlTypeID="com.balsamiq.mockups::Canvas" x="396" y="226" w="800" h="165" measuredW="100" measuredH="70" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>14540253</color>
+      </controlProperties>
+    </control>
+    <control controlID="44" controlTypeID="com.balsamiq.mockups::Title" x="411" y="247" w="-1" h="-1" measuredW="307" measuredH="41" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <size>32</size>
+        <text>Bem%20Vindo%2C%20Fernando</text>
+      </controlProperties>
+    </control>
+    <control controlID="45" controlTypeID="com.balsamiq.mockups::PieChart" x="408" y="456" w="354" h="133" measuredW="180" measuredH="180" zOrder="9" locked="false" isInGroup="-1"/>
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::SubTitle" x="396" y="426" w="369" h="-1" measuredW="188" measuredH="26" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>Avalia%E7%F5es%20por%20Mat%E9ria</text>
+      </controlProperties>
+    </control>
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::Canvas" x="796" y="418" w="400" h="177" measuredW="100" measuredH="70" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>13421772</color>
+      </controlProperties>
+    </control>
+    <control controlID="48" controlTypeID="com.balsamiq.mockups::SubTitle" x="829" y="425" w="334" h="-1" measuredW="182" measuredH="28" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+        <text>Dias%20com%20atividades</text>
+      </controlProperties>
+    </control>
+    <control controlID="49" controlTypeID="com.balsamiq.mockups::Calendar" x="829" y="456" w="318" h="123" measuredW="96" measuredH="96" zOrder="13" locked="false" isInGroup="-1"/>
+    <control controlID="50" controlTypeID="com.balsamiq.mockups::Canvas" x="396" y="609" w="377" h="210" measuredW="100" measuredH="70" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>13421772</color>
+      </controlProperties>
+    </control>
+    <control controlID="51" controlTypeID="com.balsamiq.mockups::SubTitle" x="495" y="620" w="151" h="-1" measuredW="77" measuredH="28" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+        <text>Tarefas</text>
+      </controlProperties>
+    </control>
+    <control controlID="52" controlTypeID="com.balsamiq.mockups::Label" x="411" y="294" w="394" h="41" measuredW="460" measuredH="21" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Parece%20que%20voc%EA%20vai%20ter%20uma%20semana%20corrida%2C%20Fernando.%20Portanto%2C%20Boa%20sorte.%20%3A%29</text>
+      </controlProperties>
+    </control>
+    <control controlID="53" controlTypeID="com.balsamiq.mockups::Button" x="411" y="335" w="-1" h="-1" measuredW="94" measuredH="27" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Veja%20porqu%EA</text>
+      </controlProperties>
+    </control>
+    <control controlID="54" controlTypeID="com.balsamiq.mockups::Link" x="409" y="668" w="-1" h="-1" measuredW="123" measuredH="21" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Cadastrar%20Avalia%E7%E3o</text>
+      </controlProperties>
+    </control>
+    <control controlID="55" controlTypeID="com.balsamiq.mockups::Link" x="409" y="704" w="-1" h="-1" measuredW="116" measuredH="21" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Cadastrar%20Trabalho</text>
+      </controlProperties>
+    </control>
+    <control controlID="56" controlTypeID="com.balsamiq.mockups::Link" x="409" y="740" w="-1" h="-1" measuredW="122" measuredH="21" zOrder="20" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Cadastrar%20Anota%E7%E3o</text>
+      </controlProperties>
+    </control>
+    <control controlID="57" controlTypeID="com.balsamiq.mockups::Link" x="409" y="776" w="-1" h="-1" measuredW="111" measuredH="21" zOrder="21" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Cadastrar%20Mat%E9ria</text>
+      </controlProperties>
+    </control>
+    <control controlID="58" controlTypeID="com.balsamiq.mockups::Canvas" x="796" y="604" w="400" h="215" measuredW="100" measuredH="70" zOrder="22" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>13421772</color>
+      </controlProperties>
+    </control>
+    <control controlID="59" controlTypeID="com.balsamiq.mockups::SubTitle" x="801" y="619" w="395" h="-1" measuredW="189" measuredH="28" zOrder="23" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <size>20</size>
+        <text>Atividades%20Recentes</text>
+      </controlProperties>
+    </control>
+    <control controlID="60" controlTypeID="com.balsamiq.mockups::List" x="805" y="663" w="385" h="142" measuredW="100" measuredH="126" zOrder="24" locked="false" isInGroup="-1">
+      <controlProperties>
+        <alternateRowColor>14803425</alternateRowColor>
+        <borderStyle>none</borderStyle>
+        <color>14803425</color>
+        <rowHeight>16</rowHeight>
+        <size>11</size>
+        <text>Najuan%20cadastrou%20um%20trabalho%20em%20Programa%E7%E3o%20Orientada%20%E0%20Objetos%20II%20-%20H%E1%2015%20minutos%20atr%E1s%0AKamila%20convidou%20voc%EA%20para%20participar%20do%20grupo%20%22T%E9cnico%22%20-%20Ontem</text>
+      </controlProperties>
+    </control>
+    <control controlID="61" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="1293" y="104" w="964" h="776" measuredW="450" measuredH="400" zOrder="25" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//</text>
+      </controlProperties>
+    </control>
+    <control controlID="62" controlTypeID="com.balsamiq.mockups::List" x="1293" y="226" w="120" h="630" measuredW="100" measuredH="380" zOrder="26" locked="false" isInGroup="-1">
+      <controlProperties>
+        <alternateRowColor>14803425</alternateRowColor>
+        <color>14803425</color>
+        <text>Resumos%0AAvalia%E7%F5es%09%0A%20%20Cadastrar%20Nova%0A%20%20Nesta%20Semana%0A%20%20Neste%20M%EAs%0ATrabalhos%0A%20%20Cadastrar%20%0A%20%20Nesta%20Semana%0A%20%20Neste%20M%EAs%0AAnota%E7%F5es%0A%20%20Cadastrar%0A%20%20Listar%0AMat%E9rias%0A%20%20Cadastrar%0A%20%20Listar%0AGrupos%0A%20%20Cadastrar%0A%20%20Gerenciar</text>
+      </controlProperties>
+    </control>
+    <control controlID="63" controlTypeID="com.balsamiq.mockups::Canvas" x="1293" y="173" w="960" h="36" measuredW="100" measuredH="70" zOrder="27" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10066329</color>
+      </controlProperties>
+    </control>
+    <control controlID="64" controlTypeID="com.balsamiq.mockups::LinkBar" x="1540" y="180" w="-1" h="-1" measuredW="171" measuredH="21" zOrder="28" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Inicio%2C%20Minha%20Conta%2C%20Sair</text>
+      </controlProperties>
+    </control>
+    <control controlID="65" controlTypeID="com.balsamiq.mockups::ComboBox" x="2152" y="179" w="-1" h="-1" measuredW="86" measuredH="23" zOrder="29" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Fernando</text>
+      </controlProperties>
+    </control>
+    <control controlID="66" controlTypeID="com.balsamiq.mockups::Canvas" x="1429" y="226" w="800" h="605" measuredW="100" measuredH="70" zOrder="30" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>14540253</color>
+      </controlProperties>
+    </control>
+    <control controlID="67" controlTypeID="com.balsamiq.mockups::Title" x="1444" y="247" w="375" h="-1" measuredW="353" measuredH="41" zOrder="31" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <size>32</size>
+        <text>Cadastrar%20avalia%E7%E3o.%09</text>
+      </controlProperties>
+    </control>
+    <control controlID="68" controlTypeID="com.balsamiq.mockups::Label" x="1444" y="294" w="394" h="41" measuredW="378" measuredH="21" zOrder="32" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Use%20o%20formulario%20abaixo%20para%20cadastrar%20uma%20avalia%E7%E3o%20no%20sistema.</text>
+      </controlProperties>
+    </control>
+    <control controlID="69" controlTypeID="com.balsamiq.mockups::DateChooser" x="1586" y="462" w="-1" h="-1" measuredW="90" measuredH="25" zOrder="33" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%20%20/%20%20/%20%20%20%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="70" controlTypeID="com.balsamiq.mockups::Label" x="1457" y="464" w="-1" h="-1" measuredW="113" measuredH="21" zOrder="34" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Data%20da%20avalia%E7%E3o%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="71" controlTypeID="com.balsamiq.mockups::Label" x="1457" y="530" w="69" h="23" measuredW="69" measuredH="21" zOrder="35" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Conteudo%3A%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="72" controlTypeID="com.balsamiq.mockups::TextArea" x="1586" y="533" w="275" h="91" measuredW="200" measuredH="140" zOrder="36" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="73" controlTypeID="com.balsamiq.mockups::Label" x="1457" y="404" w="-1" h="-1" measuredW="57" measuredH="21" zOrder="37" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Mat%E9ria%3A%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="74" controlTypeID="com.balsamiq.mockups::ComboBox" x="1586" y="403" w="-1" h="-1" measuredW="92" measuredH="23" zOrder="38" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>closed</state>
+        <text>Portugues.%0AMatematica.%0AHist%F3ria.%0AGeografia.%0APrograma%E7%E3o%20Orientada%20a%20Objetos.%0A%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="75" controlTypeID="com.balsamiq.mockups::Label" x="1457" y="648" w="-1" h="-1" measuredW="73" measuredH="21" zOrder="39" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Notifica%E7%E3o%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="76" controlTypeID="com.balsamiq.mockups::DateChooser" x="1586" y="648" w="-1" h="-1" measuredW="90" measuredH="25" zOrder="40" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%20%20/%20%20/%20%20%20%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="77" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="245" y="926" w="964" h="776" measuredW="450" measuredH="400" zOrder="41" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//</text>
+      </controlProperties>
+    </control>
+    <control controlID="78" controlTypeID="com.balsamiq.mockups::List" x="245" y="1048" w="120" h="630" measuredW="100" measuredH="380" zOrder="42" locked="false" isInGroup="-1">
+      <controlProperties>
+        <alternateRowColor>14803425</alternateRowColor>
+        <color>14803425</color>
+        <text>Resumos%0AAvalia%E7%F5es%09%0A%20%20Cadastrar%20Nova%0A%20%20Nesta%20Semana%0A%20%20Neste%20M%EAs%0ATrabalhos%0A%20%20Cadastrar%20%0A%20%20Nesta%20Semana%0A%20%20Neste%20M%EAs%0AAnota%E7%F5es%0A%20%20Cadastrar%0A%20%20Listar%0AMat%E9rias%0A%20%20Cadastrar%0A%20%20Listar%0AGrupos%0A%20%20Cadastrar%0A%20%20Gerenciar</text>
+      </controlProperties>
+    </control>
+    <control controlID="79" controlTypeID="com.balsamiq.mockups::Canvas" x="379" y="1048" w="800" h="605" measuredW="100" measuredH="70" zOrder="43" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>14540253</color>
+      </controlProperties>
+    </control>
+    <control controlID="80" controlTypeID="com.balsamiq.mockups::Title" x="396" y="1069" w="375" h="-1" measuredW="263" measuredH="41" zOrder="44" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <size>32</size>
+        <text>Cadastrar%20Mat%E9ria</text>
+      </controlProperties>
+    </control>
+    <control controlID="81" controlTypeID="com.balsamiq.mockups::Label" x="396" y="1116" w="394" h="41" measuredW="381" measuredH="21" zOrder="45" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Use%20o%20formulario%20abaixo%20para%20cadastrar%20uma%20mat%E9riano%20no%20sistema.</text>
+      </controlProperties>
+    </control>
+    <control controlID="82" controlTypeID="com.balsamiq.mockups::TextArea" x="762" y="1198" w="224" h="35" measuredW="200" measuredH="140" zOrder="46" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="83" controlTypeID="com.balsamiq.mockups::Label" x="403" y="1198" w="-1" h="-1" measuredW="259" measuredH="21" zOrder="47" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Digite%20o%20nome%20da%20mat%E9ria%20a%20ser%20cadastrada%3A%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="84" controlTypeID="com.balsamiq.mockups::Canvas" x="245" y="997" w="964" h="36" measuredW="100" measuredH="70" zOrder="48" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10066329</color>
+      </controlProperties>
+    </control>
+    <control controlID="85" controlTypeID="com.balsamiq.mockups::LinkBar" x="403" y="1005" w="-1" h="-1" measuredW="171" measuredH="21" zOrder="49" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Inicio%2C%20Minha%20Conta%2C%20Sair</text>
+      </controlProperties>
+    </control>
+    <control controlID="86" controlTypeID="com.balsamiq.mockups::ComboBox" x="1117" y="1003" w="-1" h="-1" measuredW="86" measuredH="23" zOrder="50" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Fernando</text>
+      </controlProperties>
+    </control>
+    <control controlID="87" controlTypeID="com.balsamiq.mockups::Button" x="1055" y="1202" w="-1" h="-1" measuredW="69" measuredH="27" zOrder="51" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Concluir</text>
+      </controlProperties>
+    </control>
+    <control controlID="88" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="1293" y="935" w="964" h="776" measuredW="450" measuredH="400" zOrder="52" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//</text>
+      </controlProperties>
+    </control>
+    <control controlID="89" controlTypeID="com.balsamiq.mockups::List" x="1293" y="1057" w="120" h="630" measuredW="100" measuredH="380" zOrder="53" locked="false" isInGroup="-1">
+      <controlProperties>
+        <alternateRowColor>14803425</alternateRowColor>
+        <color>14803425</color>
+        <text>Resumos%0AAvalia%E7%F5es%09%0A%20%20Cadastrar%20Nova%0A%20%20Nesta%20Semana%0A%20%20Neste%20M%EAs%0ATrabalhos%0A%20%20Cadastrar%20%0A%20%20Nesta%20Semana%0A%20%20Neste%20M%EAs%0AAnota%E7%F5es%0A%20%20Cadastrar%0A%20%20Listar%0AMat%E9rias%0A%20%20Cadastrar%0A%20%20Listar%0AGrupos%0A%20%20Cadastrar%0A%20%20Gerenciar</text>
+      </controlProperties>
+    </control>
+    <control controlID="90" controlTypeID="com.balsamiq.mockups::Canvas" x="1429" y="1057" w="800" h="605" measuredW="100" measuredH="70" zOrder="54" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>14540253</color>
+      </controlProperties>
+    </control>
+    <control controlID="91" controlTypeID="com.balsamiq.mockups::Title" x="1444" y="1078" w="375" h="-1" measuredW="294" measuredH="41" zOrder="55" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <size>32</size>
+        <text>Cadastrar%20Trabalhos</text>
+      </controlProperties>
+    </control>
+    <control controlID="92" controlTypeID="com.balsamiq.mockups::Label" x="1444" y="1125" w="394" h="41" measuredW="362" measuredH="21" zOrder="56" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Use%20o%20formulario%20abaixo%20para%20cadastrar%20um%20trabalho%20no%20sistema.</text>
+      </controlProperties>
+    </control>
+    <control controlID="93" controlTypeID="com.balsamiq.mockups::Label" x="1451" y="1207" w="-1" h="-1" measuredW="291" measuredH="21" zOrder="57" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Digite%20o%20nome%20da%20mat%E9ria%20que%20se%20trata%20o%20trabalho%3A%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="94" controlTypeID="com.balsamiq.mockups::Canvas" x="1293" y="1006" w="964" h="36" measuredW="100" measuredH="70" zOrder="58" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10066329</color>
+      </controlProperties>
+    </control>
+    <control controlID="95" controlTypeID="com.balsamiq.mockups::LinkBar" x="1451" y="1014" w="-1" h="-1" measuredW="171" measuredH="21" zOrder="59" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Inicio%2C%20Minha%20Conta%2C%20Sair</text>
+      </controlProperties>
+    </control>
+    <control controlID="96" controlTypeID="com.balsamiq.mockups::ComboBox" x="2165" y="1012" w="-1" h="-1" measuredW="86" measuredH="23" zOrder="60" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Fernando</text>
+      </controlProperties>
+    </control>
+    <control controlID="97" controlTypeID="com.balsamiq.mockups::ComboBox" x="1797" y="1207" w="-1" h="-1" measuredW="92" measuredH="23" zOrder="61" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>closed</state>
+        <text>Portugues.%0AMatematica.%0AHist%F3ria.%0AGeografia.%0APrograma%E7%E3o%20Orientada%20a%20Objetos.%0A%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="98" controlTypeID="com.balsamiq.mockups::DateChooser" x="1797" y="1242" w="90" h="-1" measuredW="90" measuredH="25" zOrder="62" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%20%20/%20%20/%20%20%20%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="99" controlTypeID="com.balsamiq.mockups::Label" x="1451" y="1243" w="113" h="22" measuredW="173" measuredH="21" zOrder="63" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Data%20de%20entrega%20do%20trabalho%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="100" controlTypeID="com.balsamiq.mockups::Label" x="1451" y="1282" w="73" h="22" measuredW="73" measuredH="21" zOrder="64" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Notifica%E7%E3o%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="101" controlTypeID="com.balsamiq.mockups::DateChooser" x="1797" y="1279" w="90" h="-1" measuredW="90" measuredH="25" zOrder="65" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%20%20/%20%20/%20%20%20%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="102" controlTypeID="com.balsamiq.mockups::Label" x="1451" y="1327" w="69" h="23" measuredW="69" measuredH="21" zOrder="66" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Conteudo%3A%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="103" controlTypeID="com.balsamiq.mockups::TextArea" x="1797" y="1327" w="275" h="91" measuredW="200" measuredH="140" zOrder="67" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="104" controlTypeID="com.balsamiq.mockups::TextArea" x="762" y="1254" w="224" h="35" measuredW="200" measuredH="140" zOrder="68" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="105" controlTypeID="com.balsamiq.mockups::Label" x="403" y="1254" w="-1" h="-1" measuredW="231" measuredH="21" zOrder="69" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Digite%20o%20nome%20do%20professor%20da%20mat%E9ria%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="106" controlTypeID="com.balsamiq.mockups::Button" x="1055" y="1258" w="-1" h="-1" measuredW="69" measuredH="27" zOrder="70" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Concluir</text>
+      </controlProperties>
+    </control>
+    <control controlID="107" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="2355" y="937" w="964" h="776" measuredW="450" measuredH="400" zOrder="71" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//</text>
+      </controlProperties>
+    </control>
+    <control controlID="108" controlTypeID="com.balsamiq.mockups::List" x="2355" y="1059" w="120" h="630" measuredW="100" measuredH="380" zOrder="72" locked="false" isInGroup="-1">
+      <controlProperties>
+        <alternateRowColor>14803425</alternateRowColor>
+        <color>14803425</color>
+        <text>Resumos%0AAvalia%E7%F5es%09%0A%20%20Cadastrar%20Nova%0A%20%20Nesta%20Semana%0A%20%20Neste%20M%EAs%0ATrabalhos%0A%20%20Cadastrar%20%0A%20%20Nesta%20Semana%0A%20%20Neste%20M%EAs%0AAnota%E7%F5es%0A%20%20Cadastrar%0A%20%20Listar%0AMat%E9rias%0A%20%20Cadastrar%0A%20%20Listar%0AGrupos%0A%20%20Cadastrar%0A%20%20Gerenciar</text>
+      </controlProperties>
+    </control>
+    <control controlID="109" controlTypeID="com.balsamiq.mockups::Canvas" x="2491" y="1059" w="800" h="605" measuredW="100" measuredH="70" zOrder="73" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>14540253</color>
+      </controlProperties>
+    </control>
+    <control controlID="110" controlTypeID="com.balsamiq.mockups::Title" x="2506" y="1080" w="375" h="-1" measuredW="353" measuredH="41" zOrder="74" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <size>32</size>
+        <text>Cadastrar%20Anota%E7%F5es%09</text>
+      </controlProperties>
+    </control>
+    <control controlID="111" controlTypeID="com.balsamiq.mockups::Label" x="2506" y="1127" w="394" h="41" measuredW="377" measuredH="21" zOrder="75" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Use%20o%20formulario%20abaixo%20para%20cadastrar%20uma%20anota%E7%E3o%20no%20sistema.</text>
+      </controlProperties>
+    </control>
+    <control controlID="112" controlTypeID="com.balsamiq.mockups::SubTitle" x="2368" y="1011" w="-1" h="-1" measuredW="223" measuredH="33" zOrder="76" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%28Um%20nome%20bom%20aqui%29</text>
+      </controlProperties>
+    </control>
+    <control controlID="113" controlTypeID="com.balsamiq.mockups::LinkBar" x="2615" y="1015" w="-1" h="-1" measuredW="171" measuredH="21" zOrder="77" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Inicio%2C%20Minha%20Conta%2C%20Sair</text>
+      </controlProperties>
+    </control>
+    <control controlID="114" controlTypeID="com.balsamiq.mockups::ComboBox" x="3227" y="1014" w="-1" h="-1" measuredW="86" measuredH="23" zOrder="78" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Fernando</text>
+      </controlProperties>
+    </control>
+    <control controlID="115" controlTypeID="com.balsamiq.mockups::Label" x="2513" y="1242" w="245" h="23" measuredW="241" measuredH="21" zOrder="79" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Deseja%20ser%20avisado%20sobre%20esta%20anota%E7%E3o%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="116" controlTypeID="com.balsamiq.mockups::DateChooser" x="2846" y="1242" w="90" h="-1" measuredW="90" measuredH="25" zOrder="80" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%20%20/%20%20/%20%20%20%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="117" controlTypeID="com.balsamiq.mockups::Label" x="2513" y="1302" w="69" h="23" measuredW="64" measuredH="21" zOrder="81" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Anota%E7%E3o%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="118" controlTypeID="com.balsamiq.mockups::TextArea" x="2846" y="1307" w="275" h="91" measuredW="200" measuredH="140" zOrder="82" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="119" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="2355" y="105" w="964" h="776" measuredW="450" measuredH="400" zOrder="83" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//</text>
+      </controlProperties>
+    </control>
+    <control controlID="120" controlTypeID="com.balsamiq.mockups::List" x="2355" y="227" w="120" h="630" measuredW="100" measuredH="380" zOrder="84" locked="false" isInGroup="-1">
+      <controlProperties>
+        <alternateRowColor>14803425</alternateRowColor>
+        <color>14803425</color>
+        <text>Resumos%0AAvalia%E7%F5es%09%0A%20%20Cadastrar%20Nova%0A%20%20Nesta%20Semana%0A%20%20Neste%20M%EAs%0ATrabalhos%0A%20%20Cadastrar%20%0A%20%20Nesta%20Semana%0A%20%20Neste%20M%EAs%0AAnota%E7%F5es%0A%20%20Cadastrar%0A%20%20Listar%0AMat%E9rias%0A%20%20Cadastrar%0A%20%20Listar%0AGrupos%0A%20%20Cadastrar%0A%20%20Gerenciar</text>
+      </controlProperties>
+    </control>
+    <control controlID="121" controlTypeID="com.balsamiq.mockups::Canvas" x="2491" y="227" w="800" h="605" measuredW="100" measuredH="70" zOrder="85" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>14540253</color>
+      </controlProperties>
+    </control>
+    <control controlID="122" controlTypeID="com.balsamiq.mockups::Title" x="2506" y="248" w="375" h="-1" measuredW="258" measuredH="41" zOrder="86" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <size>32</size>
+        <text>Cadastrar%20Grupos</text>
+      </controlProperties>
+    </control>
+    <control controlID="123" controlTypeID="com.balsamiq.mockups::Label" x="2506" y="295" w="394" h="41" measuredW="281" measuredH="21" zOrder="87" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Use%20o%20formulario%20abaixo%20para%20cadastrar%20um%20grupo</text>
+      </controlProperties>
+    </control>
+    <control controlID="124" controlTypeID="com.balsamiq.mockups::SubTitle" x="2368" y="179" w="-1" h="-1" measuredW="223" measuredH="33" zOrder="88" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%28Um%20nome%20bom%20aqui%29</text>
+      </controlProperties>
+    </control>
+    <control controlID="125" controlTypeID="com.balsamiq.mockups::LinkBar" x="2615" y="183" w="-1" h="-1" measuredW="171" measuredH="21" zOrder="89" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Inicio%2C%20Minha%20Conta%2C%20Sair</text>
+      </controlProperties>
+    </control>
+    <control controlID="126" controlTypeID="com.balsamiq.mockups::ComboBox" x="3227" y="182" w="-1" h="-1" measuredW="86" measuredH="23" zOrder="90" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Fernando</text>
+      </controlProperties>
+    </control>
+    <control controlID="127" controlTypeID="com.balsamiq.mockups::Label" x="2505" y="362" w="154" h="22" measuredW="143" measuredH="21" zOrder="91" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Digite%20o%20nome%20do%20grupo%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="128" controlTypeID="com.balsamiq.mockups::Label" x="2506" y="517" w="184" h="23" measuredW="184" measuredH="21" zOrder="92" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Informe%20o%20e-mail%20do%20seu%20amigo%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="129" controlTypeID="com.balsamiq.mockups::TextArea" x="2859" y="404" w="275" h="91" measuredW="200" measuredH="140" zOrder="93" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="130" controlTypeID="com.balsamiq.mockups::TextArea" x="2859" y="362" w="250" h="22" measuredW="200" measuredH="140" zOrder="94" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="131" controlTypeID="com.balsamiq.mockups::Canvas" x="2355" y="1006" w="964" h="36" measuredW="100" measuredH="70" zOrder="95" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10066329</color>
+      </controlProperties>
+    </control>
+    <control controlID="132" controlTypeID="com.balsamiq.mockups::LinkBar" x="2615" y="1013" w="-1" h="-1" measuredW="171" measuredH="21" zOrder="96" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Inicio%2C%20Minha%20Conta%2C%20Sair</text>
+      </controlProperties>
+    </control>
+    <control controlID="133" controlTypeID="com.balsamiq.mockups::ComboBox" x="3227" y="1012" w="-1" h="-1" measuredW="86" measuredH="23" zOrder="97" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Fernando</text>
+      </controlProperties>
+    </control>
+    <control controlID="134" controlTypeID="com.balsamiq.mockups::Canvas" x="2355" y="173" w="964" h="36" measuredW="100" measuredH="70" zOrder="98" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10066329</color>
+      </controlProperties>
+    </control>
+    <control controlID="135" controlTypeID="com.balsamiq.mockups::LinkBar" x="2615" y="180" w="-1" h="-1" measuredW="171" measuredH="21" zOrder="99" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Inicio%2C%20Minha%20Conta%2C%20Sair</text>
+      </controlProperties>
+    </control>
+    <control controlID="136" controlTypeID="com.balsamiq.mockups::ComboBox" x="3227" y="179" w="-1" h="-1" measuredW="86" measuredH="23" zOrder="100" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Fernando</text>
+      </controlProperties>
+    </control>
+    <control controlID="137" controlTypeID="com.balsamiq.mockups::TextArea" x="2859" y="518" w="275" h="91" measuredW="200" measuredH="140" zOrder="101" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="138" controlTypeID="com.balsamiq.mockups::Label" x="2506" y="403" w="138" h="23" measuredW="122" measuredH="21" zOrder="102" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Descri%E7%E3o%20do%20grupo%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="139" controlTypeID="com.balsamiq.mockups::SubTitle" x="1310" y="175" w="-1" h="-1" measuredW="89" measuredH="33" zOrder="103" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Flipnote</text>
+      </controlProperties>
+    </control>
+    <control controlID="140" controlTypeID="com.balsamiq.mockups::SubTitle" x="2372" y="175" w="-1" h="-1" measuredW="89" measuredH="33" zOrder="104" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Flipnote</text>
+      </controlProperties>
+    </control>
+    <control controlID="141" controlTypeID="com.balsamiq.mockups::SubTitle" x="1310" y="1008" w="-1" h="-1" measuredW="89" measuredH="33" zOrder="105" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Flipnote</text>
+      </controlProperties>
+    </control>
+    <control controlID="142" controlTypeID="com.balsamiq.mockups::SubTitle" x="263" y="997" w="-1" h="-1" measuredW="89" measuredH="33" zOrder="106" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Flipnote</text>
+      </controlProperties>
+    </control>
+    <control controlID="143" controlTypeID="com.balsamiq.mockups::SubTitle" x="2372" y="1008" w="-1" h="-1" measuredW="89" measuredH="33" zOrder="107" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Flipnote</text>
+      </controlProperties>
+    </control>
+    <control controlID="144" controlTypeID="com.balsamiq.mockups::Label" x="2513" y="1179" w="69" h="23" measuredW="41" measuredH="21" zOrder="108" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Titulo%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="145" controlTypeID="com.balsamiq.mockups::TextArea" x="2846" y="1184" w="275" h="23" measuredW="200" measuredH="140" zOrder="109" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="146" controlTypeID="com.balsamiq.mockups::Canvas" x="245" y="173" w="964" h="36" measuredW="100" measuredH="70" zOrder="110" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10066329</color>
+      </controlProperties>
+    </control>
+    <control controlID="147" controlTypeID="com.balsamiq.mockups::LinkBar" x="403" y="181" w="-1" h="-1" measuredW="171" measuredH="21" zOrder="111" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Inicio%2C%20Minha%20Conta%2C%20Sair</text>
+      </controlProperties>
+    </control>
+    <control controlID="148" controlTypeID="com.balsamiq.mockups::ComboBox" x="1117" y="179" w="-1" h="-1" measuredW="86" measuredH="23" zOrder="112" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Fernando</text>
+      </controlProperties>
+    </control>
+    <control controlID="149" controlTypeID="com.balsamiq.mockups::SubTitle" x="263" y="173" w="-1" h="-1" measuredW="89" measuredH="33" zOrder="113" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Flipnote</text>
+      </controlProperties>
+    </control>
+    <control controlID="150" controlTypeID="com.balsamiq.mockups::Canvas" x="1293" y="1006" w="964" h="36" measuredW="100" measuredH="70" zOrder="114" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10066329</color>
+      </controlProperties>
+    </control>
+    <control controlID="151" controlTypeID="com.balsamiq.mockups::LinkBar" x="1451" y="1014" w="-1" h="-1" measuredW="171" measuredH="21" zOrder="115" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Inicio%2C%20Minha%20Conta%2C%20Sair</text>
+      </controlProperties>
+    </control>
+    <control controlID="152" controlTypeID="com.balsamiq.mockups::ComboBox" x="2165" y="1012" w="-1" h="-1" measuredW="86" measuredH="23" zOrder="116" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Fernando</text>
+      </controlProperties>
+    </control>
+    <control controlID="153" controlTypeID="com.balsamiq.mockups::SubTitle" x="1311" y="1006" w="-1" h="-1" measuredW="89" measuredH="33" zOrder="117" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Flipnote</text>
+      </controlProperties>
+    </control>
+    <control controlID="154" controlTypeID="com.balsamiq.mockups::Canvas" x="1293" y="173" w="964" h="36" measuredW="100" measuredH="70" zOrder="118" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10066329</color>
+      </controlProperties>
+    </control>
+    <control controlID="155" controlTypeID="com.balsamiq.mockups::LinkBar" x="1451" y="181" w="-1" h="-1" measuredW="171" measuredH="21" zOrder="119" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Inicio%2C%20Minha%20Conta%2C%20Sair</text>
+      </controlProperties>
+    </control>
+    <control controlID="156" controlTypeID="com.balsamiq.mockups::ComboBox" x="2165" y="179" w="-1" h="-1" measuredW="86" measuredH="23" zOrder="120" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Fernando</text>
+      </controlProperties>
+    </control>
+    <control controlID="157" controlTypeID="com.balsamiq.mockups::SubTitle" x="1311" y="173" w="-1" h="-1" measuredW="89" measuredH="33" zOrder="121" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Flipnote</text>
+      </controlProperties>
+    </control>
+    <control controlID="158" controlTypeID="com.balsamiq.mockups::Canvas" x="2355" y="173" w="964" h="36" measuredW="100" measuredH="70" zOrder="122" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10066329</color>
+      </controlProperties>
+    </control>
+    <control controlID="159" controlTypeID="com.balsamiq.mockups::LinkBar" x="2513" y="181" w="-1" h="-1" measuredW="171" measuredH="21" zOrder="123" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Inicio%2C%20Minha%20Conta%2C%20Sair</text>
+      </controlProperties>
+    </control>
+    <control controlID="160" controlTypeID="com.balsamiq.mockups::ComboBox" x="3227" y="179" w="-1" h="-1" measuredW="86" measuredH="23" zOrder="124" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Fernando</text>
+      </controlProperties>
+    </control>
+    <control controlID="161" controlTypeID="com.balsamiq.mockups::SubTitle" x="2373" y="173" w="-1" h="-1" measuredW="89" measuredH="33" zOrder="125" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Flipnote</text>
+      </controlProperties>
+    </control>
+    <control controlID="162" controlTypeID="com.balsamiq.mockups::Canvas" x="2355" y="1006" w="964" h="36" measuredW="100" measuredH="70" zOrder="126" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10066329</color>
+      </controlProperties>
+    </control>
+    <control controlID="163" controlTypeID="com.balsamiq.mockups::LinkBar" x="2513" y="1014" w="-1" h="-1" measuredW="171" measuredH="21" zOrder="127" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Inicio%2C%20Minha%20Conta%2C%20Sair</text>
+      </controlProperties>
+    </control>
+    <control controlID="164" controlTypeID="com.balsamiq.mockups::ComboBox" x="3227" y="1012" w="-1" h="-1" measuredW="86" measuredH="23" zOrder="128" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Fernando</text>
+      </controlProperties>
+    </control>
+    <control controlID="165" controlTypeID="com.balsamiq.mockups::SubTitle" x="2373" y="1006" w="-1" h="-1" measuredW="89" measuredH="33" zOrder="129" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Flipnote</text>
+      </controlProperties>
+    </control>
+    <control controlID="166" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="245" y="1779" w="964" h="776" measuredW="450" measuredH="400" zOrder="130" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//</text>
+      </controlProperties>
+    </control>
+    <control controlID="167" controlTypeID="com.balsamiq.mockups::List" x="245" y="1901" w="120" h="630" measuredW="100" measuredH="380" zOrder="131" locked="false" isInGroup="-1">
+      <controlProperties>
+        <alternateRowColor>14803425</alternateRowColor>
+        <color>14803425</color>
+        <text>Resumos%0AAvalia%E7%F5es%09%0A%20%20Cadastrar%20Nova%0A%20%20Nesta%20Semana%0A%20%20Neste%20M%EAs%0ATrabalhos%0A%20%20Cadastrar%20%0A%20%20Nesta%20Semana%0A%20%20Neste%20M%EAs%0AAnota%E7%F5es%0A%20%20Cadastrar%0A%20%20Listar%0AMat%E9rias%0A%20%20Cadastrar%0A%20%20Listar%0AGrupos%0A%20%20Cadastrar%0A%20%20Gerenciar</text>
+      </controlProperties>
+    </control>
+    <control controlID="169" controlTypeID="com.balsamiq.mockups::Canvas" x="245" y="1850" w="964" h="36" measuredW="100" measuredH="70" zOrder="132" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10066329</color>
+      </controlProperties>
+    </control>
+    <control controlID="170" controlTypeID="com.balsamiq.mockups::LinkBar" x="403" y="1858" w="-1" h="-1" measuredW="171" measuredH="21" zOrder="133" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Inicio%2C%20Minha%20Conta%2C%20Sair</text>
+      </controlProperties>
+    </control>
+    <control controlID="171" controlTypeID="com.balsamiq.mockups::ComboBox" x="1117" y="1856" w="-1" h="-1" measuredW="86" measuredH="23" zOrder="134" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Fernando</text>
+      </controlProperties>
+    </control>
+    <control controlID="172" controlTypeID="com.balsamiq.mockups::SubTitle" x="263" y="1850" w="-1" h="-1" measuredW="89" measuredH="33" zOrder="135" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Flipnote</text>
+      </controlProperties>
+    </control>
+    <control controlID="173" controlTypeID="com.balsamiq.mockups::Canvas" x="382" y="2027" w="377" h="184" measuredW="100" measuredH="70" zOrder="136" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>13421772</color>
+      </controlProperties>
+    </control>
+    <control controlID="174" controlTypeID="com.balsamiq.mockups::PieChart" x="394" y="2065" w="354" h="133" measuredW="180" measuredH="180" zOrder="137" locked="false" isInGroup="-1"/>
+    <control controlID="175" controlTypeID="com.balsamiq.mockups::SubTitle" x="382" y="2035" w="280" h="-1" measuredW="191" measuredH="26" zOrder="138" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>Avalia%E7%F5es%20da%20Semana</text>
+      </controlProperties>
+    </control>
+    <control controlID="176" controlTypeID="com.balsamiq.mockups::Canvas" x="790" y="2020" w="400" h="188" measuredW="100" measuredH="70" zOrder="139" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>13421772</color>
+      </controlProperties>
+    </control>
+    <control controlID="177" controlTypeID="com.balsamiq.mockups::SubTitle" x="823" y="2027" w="334" h="-1" measuredW="182" measuredH="28" zOrder="140" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+        <text>Dias%20com%20atividades</text>
+      </controlProperties>
+    </control>
+    <control controlID="178" controlTypeID="com.balsamiq.mockups::Calendar" x="823" y="2060" w="318" h="131" measuredW="96" measuredH="96" zOrder="141" locked="false" isInGroup="-1"/>
+    <control controlID="179" controlTypeID="com.balsamiq.mockups::Canvas" x="383" y="2266" w="365" h="184" measuredW="100" measuredH="70" zOrder="142" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>14540253</color>
+      </controlProperties>
+    </control>
+    <control controlID="180" controlTypeID="com.balsamiq.mockups::SubTitle" x="379" y="2278" w="280" h="-1" measuredW="204" measuredH="26" zOrder="143" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>Conteudo%20das%20avalia%E7%F5es</text>
+      </controlProperties>
+    </control>
+    <control controlID="181" controlTypeID="com.balsamiq.mockups::Canvas" x="790" y="2266" w="377" h="184" measuredW="100" measuredH="70" zOrder="144" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>13421772</color>
+      </controlProperties>
+    </control>
+    <control controlID="182" controlTypeID="com.balsamiq.mockups::PieChart" x="802" y="2304" w="354" h="133" measuredW="180" measuredH="180" zOrder="145" locked="false" isInGroup="-1"/>
+    <control controlID="183" controlTypeID="com.balsamiq.mockups::SubTitle" x="790" y="2274" w="280" h="-1" measuredW="203" measuredH="26" zOrder="146" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>Notas%20das%20ultimas%20provas</text>
+      </controlProperties>
+    </control>
+    <control controlID="184" controlTypeID="com.balsamiq.mockups::Title" x="383" y="1901" w="375" h="-1" measuredW="324" measuredH="41" zOrder="147" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <size>32</size>
+        <text>Avalia%E7%F5es%20da%20semana</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
