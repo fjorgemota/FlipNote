@@ -14,9 +14,10 @@
     <link rel="stylesheet" type="text/css" href="css/border-radius.css" />
     <style type="text/css" rel="stylesheet">
         #tablerow .row-fluid{
-            height:40px;
+            height:auto;
+            min-height:40px;
         }
-        #tablerow .row-fluid:first-child{
+        #tablerow .row-fluid:first-child, #tablerow #rowtitle{
             font-weight: bold;
             font-size:18pt;
         }
