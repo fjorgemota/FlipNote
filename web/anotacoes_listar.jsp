@@ -11,10 +11,38 @@
                 <div class="span3">
                     <jsp:include page="includes/menu.jsp"/>
                 </div>
-                <div class="span9">
+                <div class="span9" id="tablerow">
                     <div class="row-fluid">
                         <div class="span4">
-                            Não possuem anotações cadastradas até o momento.
+                            ID
+                        </div>
+                        <div class="span4">
+                            Titulo
+                        </div>
+                        <div class="span4">
+                            Links
+                        </div>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span4">
+                            1
+                        </div>
+                        <div class="span4">
+                            <b>Testando....</b>
+                        </div>
+                        <div class="span4">
+                            Editar | Apagar
+                        </div>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span4">
+                            5
+                        </div>
+                        <div class="span4">
+                            <b>Segunda anotação...</b>
+                        </div>
+                        <div class="span4">
+                            Editar | Apagar
                         </div>
                     </div>
                 </div><!--/span-->

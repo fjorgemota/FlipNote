@@ -3,7 +3,7 @@
         <p>Data da avaliação: </p>
     </div>
     <div class="span6">
-        <input type ="text" id="datepicker" value="<% out.print(request.getParameter("data")); %>" />
+        <input type ="text" id="datepicker" value="" />
 
     </div>
 
