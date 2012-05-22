@@ -12,9 +12,9 @@
                 <div class="span3">
                     <jsp:include page="includes/menu.jsp"/>
                 </div>
-                <div class="span9">
+                <div class="span9" id="tablerow">
                     <div class="row-fluid">
-                        <div class="span4">
+                        <div class="span4" >
                             Nome do grupo
                         </div>
                         <div class="span4">
@@ -27,7 +27,7 @@
                     </div> 
                     <div class="row-fluid">
                         <div class="span12">
-                            Não existem grupos disponíveis
+                            Programaçõ orientada a objetos
                         </div>
                     </div>
                 </div><!--/span-->
