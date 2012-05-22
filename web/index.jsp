@@ -56,15 +56,15 @@
                         <div class="span6">
                             <h2>Tarefas</h2>
                             <ul class="unstyled">
-                                <li><a href="#">Cadastrar avaliações</a></li>
-                                <li><a href="#">Cadastrar Trabalho</a></li>
-                                <li><a href="#">Cadastrar Anotações</a></li>
-                                <li><a href="#">Cadastrar Matéria</a></li>
+                                <li><a href="cadastrar_avaliacao.jsp">Cadastrar avaliações</a></li>
+                                <li><a href="cadastrar_trabalhos.jsp">Cadastrar Trabalho</a></li>
+                                <li><a href="cadastrar_anotacao.jsp">Cadastrar Anotações</a></li>
+                                <li><a href="cadastrar_materia.jsp">Cadastrar Matéria</a></li>
                             </ul>
                         </div><!--/span-->
                         <div class="span6">
                             <h2>Atividades recentes</h2>
-                            <p>Histórico de atividades, exemplo Najuan cadastrou um trabalho em ProgramaÃ§Ã£o Orientada a Objetos - Há¡ 20 minutos. </p>
+                            <p>Histórico de atividades, exemplo Najuan cadastrou um trabalho em Programaação Orientada a Objetos - Há¡ 20 minutos. </p>
                             <p>Kamila,Convidou voce a participar do grupo "Técnico" - Ontem . </p>
 
                         </div><!--/span-->

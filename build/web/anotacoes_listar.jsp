@@ -12,7 +12,11 @@
                     <jsp:include page="includes/menu.jsp"/>
                 </div>
                 <div class="span9">
-
+                    <div class="row-fluid">
+                        <div class="span4">
+                            Não possuem anotações cadastradas até o momento.
+                        </div>
+                    </div>
                 </div><!--/span-->
             </div>
         </div>

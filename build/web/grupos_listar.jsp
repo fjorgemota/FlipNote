@@ -13,7 +13,23 @@
                     <jsp:include page="includes/menu.jsp"/>
                 </div>
                 <div class="span9">
-              
+                    <div class="row-fluid">
+                        <div class="span4">
+                            Nome do grupo
+                        </div>
+                        <div class="span4">
+                            Descrição do grupo
+                        </div>
+                        <div class="span4">
+                            Participantes
+                        </div>
+
+                    </div> 
+                    <div class="row-fluid">
+                        <div class="span12">
+                            Não existem grupos disponíveis
+                        </div>
+                    </div>
                 </div><!--/span-->
             </div>
         </div>

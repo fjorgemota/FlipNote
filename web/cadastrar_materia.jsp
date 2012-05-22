@@ -5,12 +5,12 @@
     </jsp:include>
     <body>
         <div class="navbar navbar-fixed-top">
-             <jsp:include page="includes/navbar.jsp"/>
+            <jsp:include page="includes/navbar.jsp"/>
         </div>
         <div class="container-fluid">
             <div class="row-fluid">
                 <div class="span3">
-                     <jsp:include page="includes/menu.jsp"/>
+                    <jsp:include page="includes/menu.jsp"/>
                 </div>
                 <div class="span9">
                     <h2>Cadastrar Matéria</h2>
@@ -37,28 +37,13 @@
                             <textarea rows="1" cols="50" ></textarea>
                         </div>
                     </div>
-                    <div class="row-fluid">
-                        <div class="span4" style="text-align: right;">
-                            <a class="btn btn-success" >
-                                    Concluir
-                            </a>
-                        </div>
-                        <div class="span4">
-                            <a class="btn btn-danger" >
-                                    Limpar
-                            </a>
-
-                        </div>
-                        <div class="span4">
-                            &nbsp;
-                        </div>
-                    </div>
+                    <jsp:include page="includes/botoes-form.jsp" />
 
 
                 </div>
 
             </div>
         </div>
-          <jsp:include page="includes/javascript_formulario.jsp"/>
+        <jsp:include page="includes/javascript_formulario.jsp"/>
     </body>
 </html>
