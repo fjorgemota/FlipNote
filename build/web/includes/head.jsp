@@ -12,4 +12,13 @@
     <meta name="author" content="Fernando e Najuan" />        
     <link rel="stylesheet" type="text/css" href="css/jscal2.css" />
     <link rel="stylesheet" type="text/css" href="css/border-radius.css" />
+    <style type="text/css" rel="stylesheet">
+        #tablerow .row-fluid{
+            height:40px;
+        }
+        #tablerow .row-fluid:first-child{
+            font-weight: bold;
+            font-size:18pt;
+        }
+    </style>
 </head>

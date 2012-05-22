@@ -4,36 +4,41 @@
  */
 package modelo;
 
+import java.util.Random;
+
 /**
  *
  * @author fernando_mota
  */
 public class Materia {
+    protected int id;
     protected String nome;
     protected String professor;
     protected int criador;
     protected int grupo;
-    protected int atividades_mes;
-
-    public Materia(String nome, String professor, int atividades_mes) {
-        this.nome = nome;
-        this.professor = professor;
-        this.atividades_mes = atividades_mes;
+    public Materia() {
     }
 
     public Materia(String nome, String professor) {
         this.nome = nome;
         this.professor = professor;
     }
-
-    
-
-    public int getAtividades_mes() {
-        return atividades_mes;
+    public Materia(String nome, String professor, int atividade_mes) {
+        this.nome = nome;
+        this.professor = professor;
+    }
+    public Materia(int id, String nome, String professor) {
+        this.nome = nome;
+        this.professor = professor;
     }
 
-    public void setAtividades_mes(int atividades_mes) {
-        this.atividades_mes = atividades_mes;
+    
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getCriador() {
@@ -67,6 +72,9 @@ public class Materia {
     public void setProfessor(String professor) {
         this.professor = professor;
     }
-    
+    public int getAtividades_mes(){
+        Random client = new Random();
+        return client.nextInt(50);
+    }
     
 }
