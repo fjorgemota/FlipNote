@@ -17,10 +17,9 @@
             height:auto;
             min-height:40px;
         }
-        #tablerow .row-fluid:first-child{
+        #tablerow .row-fluid:first-child, #tablerow #rowtitle{
             font-weight: bold;
             font-size:18pt;
-            
         }
     </style>
 </head>
