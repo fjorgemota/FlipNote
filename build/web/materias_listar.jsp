@@ -1,6 +1,6 @@
 <html>
 
-   <jsp:include page="includes/head.jsp">
+    <jsp:include page="includes/head.jsp">
         <jsp:param name="titulo" value="Listar matérias"/>
     </jsp:include>
     <body>
@@ -13,10 +13,10 @@
                     <jsp:include page="includes/menu.jsp"/>
                 </div>
                 <div class="span9">
-              
-                </div><!--/span-->
+                   
+                    </div><!--/span-->
+                </div>
             </div>
-        </div>
-        <jsp:include page="includes/javascript_formulario.jsp"/>
+            <jsp:include page="includes/javascript_formulario.jsp"/>
     </body>
 </html>
