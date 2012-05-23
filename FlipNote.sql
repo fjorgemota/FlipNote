@@ -1,114 +1,156 @@
--- --------------------------------------------------------
--- Host:                         127.0.0.1
--- Server version:               5.5.17 - MySQL Community Server (GPL)
--- Server OS:                    Win32
--- HeidiSQL version:             7.0.0.4053
--- Date/time:                    2012-05-23 14:37:18
--- --------------------------------------------------------
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL';
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET NAMES utf8 */;
-/*!40014 SET FOREIGN_KEY_CHECKS=0 */;
+CREATE SCHEMA IF NOT EXISTS `flipnote` DEFAULT CHARACTER SET utf8 ;
+USE `flipnote` ;
 
--- Dumping database structure for flipnote
-DROP DATABASE IF EXISTS `flipnote`;
-CREATE DATABASE IF NOT EXISTS `flipnote` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `flipnote`;
-
-
--- Dumping structure for table flipnote.aluno
-DROP TABLE IF EXISTS `aluno`;
-CREATE TABLE IF NOT EXISTS `aluno` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(200) NOT NULL,
-  `senha` varchar(40) NOT NULL,
-  `email` varchar(200) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- Data exporting was unselected.
+-- -----------------------------------------------------
+-- Table `flipnote`.`aluno`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `flipnote`.`aluno` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT ,
+  `nome` VARCHAR(200) NOT NULL ,
+  `senha` VARCHAR(40) NOT NULL ,
+  `email` VARCHAR(200) NOT NULL ,
+  PRIMARY KEY (`id`) ,
+  UNIQUE INDEX `email` (`email` ASC) )
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
 
 
--- Dumping structure for table flipnote.anotacao
-DROP TABLE IF EXISTS `anotacao`;
-CREATE TABLE IF NOT EXISTS `anotacao` (
-  `id` int(11) NOT NULL,
-  `titulo` varchar(50) NOT NULL,
-  `texto` text,
-  `notificacao` datetime DEFAULT NULL,
-  `aluno` int(10) NOT NULL,
-  `grupo` int(10) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- Data exporting was unselected.
+-- -----------------------------------------------------
+-- Table `flipnote`.`grupo`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `flipnote`.`grupo` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT ,
+  `nome` VARCHAR(200) NOT NULL ,
+  `descricao` TEXT NULL DEFAULT NULL ,
+  PRIMARY KEY (`id`) )
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
 
 
--- Dumping structure for table flipnote.grupo
-DROP TABLE IF EXISTS `grupo`;
-CREATE TABLE IF NOT EXISTS `grupo` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(200) NOT NULL,
-  `descricao` text,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- Data exporting was unselected.
-
-
--- Dumping structure for table flipnote.grupo_aluno
-DROP TABLE IF EXISTS `grupo_aluno`;
-CREATE TABLE IF NOT EXISTS `grupo_aluno` (
-  `aluno` int(10) NOT NULL,
-  `grupo` int(10) NOT NULL,
-  PRIMARY KEY (`aluno`,`grupo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- Data exporting was unselected.
-
-
--- Dumping structure for table flipnote.materia
-DROP TABLE IF EXISTS `materia`;
-CREATE TABLE IF NOT EXISTS `materia` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(100) NOT NULL,
-  `professor` varchar(100) DEFAULT NULL,
-  `aluno` int(10) DEFAULT NULL,
-  `grupo` int(10) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- Data exporting was unselected.
+-- -----------------------------------------------------
+-- Table `flipnote`.`anotacao`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `flipnote`.`anotacao` (
+  `id` INT(11) NOT NULL ,
+  `titulo` VARCHAR(50) NOT NULL ,
+  `texto` TEXT NULL DEFAULT NULL ,
+  `notificacao` DATETIME NULL DEFAULT NULL ,
+  `aluno` INT(11) NOT NULL ,
+  `grupo` INT(11) NULL ,
+  PRIMARY KEY (`id`, `aluno`) ,
+  INDEX `fk_anotacao_aluno1` (`aluno` ASC) ,
+  INDEX `fk_anotacao_grupo1` (`grupo` ASC) ,
+  CONSTRAINT `fk_anotacao_aluno1`
+    FOREIGN KEY (`aluno` )
+    REFERENCES `flipnote`.`aluno` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_anotacao_grupo1`
+    FOREIGN KEY (`grupo` )
+    REFERENCES `flipnote`.`grupo` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
 
 
--- Dumping structure for table flipnote.prova
-DROP TABLE IF EXISTS `prova`;
-CREATE TABLE IF NOT EXISTS `prova` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `materia` int(11) NOT NULL,
-  `data` datetime NOT NULL,
-  `descricao` text NOT NULL,
-  `notificacao` datetime DEFAULT NULL,
-  `nota` int(10) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-- -----------------------------------------------------
+-- Table `flipnote`.`materia`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `flipnote`.`materia` (
+  `id` INT(10) NOT NULL AUTO_INCREMENT ,
+  `nome` VARCHAR(100) NOT NULL ,
+  `professor` VARCHAR(100) NULL DEFAULT NULL ,
+  `grupo` INT(11) NOT NULL ,
+  `aluno` INT(11) NOT NULL ,
+  PRIMARY KEY (`id`, `aluno`) ,
+  INDEX `fk_materia_grupo1` (`grupo` ASC) ,
+  INDEX `fk_materia_aluno1` (`aluno` ASC) ,
+  CONSTRAINT `fk_materia_grupo1`
+    FOREIGN KEY (`grupo` )
+    REFERENCES `flipnote`.`grupo` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_materia_aluno1`
+    FOREIGN KEY (`aluno` )
+    REFERENCES `flipnote`.`aluno` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
 
--- Data exporting was unselected.
+
+-- -----------------------------------------------------
+-- Table `flipnote`.`prova`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `flipnote`.`prova` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT ,
+  `materia` INT(10) NOT NULL ,
+  `data` DATETIME NOT NULL ,
+  `descricao` TEXT NOT NULL ,
+  `notificacao` DATETIME NULL DEFAULT NULL ,
+  `nota` FLOAT NULL DEFAULT NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `fk_prova_materia1` (`materia` ASC) ,
+  CONSTRAINT `fk_prova_materia1`
+    FOREIGN KEY (`materia` )
+    REFERENCES `flipnote`.`materia` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
 
 
--- Dumping structure for table flipnote.trabalho
-DROP TABLE IF EXISTS `trabalho`;
-CREATE TABLE IF NOT EXISTS `trabalho` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `materia` int(11) NOT NULL,
-  `data` datetime NOT NULL,
-  `descricao` text NOT NULL,
-  `notificacao` datetime DEFAULT NULL,
-  `nota` int(10) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+-- -----------------------------------------------------
+-- Table `flipnote`.`trabalho`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `flipnote`.`trabalho` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT ,
+  `materia` INT(10) NOT NULL ,
+  `data` DATETIME NOT NULL ,
+  `descricao` TEXT NOT NULL ,
+  `notificacao` DATETIME NULL DEFAULT NULL ,
+  `nota` FLOAT NULL DEFAULT NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `fk_trabalho_materia1` (`materia` ASC) ,
+  CONSTRAINT `fk_trabalho_materia1`
+    FOREIGN KEY (`materia` )
+    REFERENCES `flipnote`.`materia` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+ROW_FORMAT = COMPACT;
 
--- Data exporting was unselected.
-/*!40014 SET FOREIGN_KEY_CHECKS=1 */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+
+-- -----------------------------------------------------
+-- Table `flipnote`.`grupo_aluno`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `flipnote`.`grupo_aluno` (
+  `aluno_id` INT(11) NOT NULL ,
+  `grupo_id` INT(11) NOT NULL ,
+  PRIMARY KEY (`aluno_id`, `grupo_id`) ,
+  INDEX `fk_aluno_has_grupo_grupo1` (`grupo_id` ASC) ,
+  INDEX `fk_aluno_has_grupo_aluno` (`aluno_id` ASC) ,
+  CONSTRAINT `fk_aluno_has_grupo_aluno`
+    FOREIGN KEY (`aluno_id` )
+    REFERENCES `flipnote`.`aluno` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_aluno_has_grupo_grupo1`
+    FOREIGN KEY (`grupo_id` )
+    REFERENCES `flipnote`.`grupo` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
