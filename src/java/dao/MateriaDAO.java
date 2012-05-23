@@ -6,6 +6,8 @@ package dao;
 
 import java.util.ArrayList;
 import modelo.Materia;
+import util.ConjuntoResultados;
+import util.MySQL;
 
 /**
  *
@@ -14,20 +16,35 @@ import modelo.Materia;
 public class MateriaDAO {
     public static ArrayList<Materia> listaAtividadesPorMes(int criador){
         ArrayList<Materia> materias = new ArrayList<Materia>();
-        materias.add(new Materia("Portugues", "Rebeca"));
-        materias.add(new Materia("Matematica", "Carlos"));
-        materias.add(new Materia("Geografia", "Mario"));
-        materias.add(new Materia("Historia", "Raquel"));
-        materias.add(new Materia("Quimica", "Lauro"));
-        return materias;
+         
+        
+        MySQL bancoDados = new MySQL();
+        String sql = "select * from materia";
+        ConjuntoResultados linhas = bancoDados.executaSelect(sql);  
+      
+        while(linhas.next()){
+            Materia n = new Materia();
+          n.setNome(linhas.getString("nome"));
+          n.setProfessor(linhas.getString("professor"));
+            
+            materias.add(n);
+        }
+        return materias;                                      
     }
     public static ArrayList<Materia> lista(){
         ArrayList<Materia> materias = new ArrayList<Materia>();
-        materias.add(new Materia("Portugues", "Rebeca"));
-        materias.add(new Materia("Matematica", "Carlos"));
-        materias.add(new Materia("Geografia", "Mario"));
-        materias.add(new Materia("Historia", "Raquel"));
-        materias.add(new Materia("Quimica", "Lauro"));
-        return materias;
+        
+        MySQL bancoDados = new MySQL();
+        String sql = "select * from materia";
+        ConjuntoResultados linhas = bancoDados.executaSelect(sql);  
+      
+        while(linhas.next()){
+            Materia n = new Materia();
+          n.setNome(linhas.getString("nome"));
+          n.setProfessor(linhas.getString("professor"));
+            
+            materias.add(n);
+        }
+        return materias;    
     }
 }
