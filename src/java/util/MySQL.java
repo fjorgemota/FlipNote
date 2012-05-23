@@ -8,8 +8,8 @@ public class MySQL
 {
     Statement statement;    
     String user = "root";
-    String pass = "vertigo";
-    String database = "FlipNote";
+    String pass = "senai2012";
+    String database = "flipnote";
     String host = "localhost";
    
     public MySQL()
