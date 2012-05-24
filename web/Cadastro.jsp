@@ -19,7 +19,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="#">FlipNote</a>
+                    <a class="brand" href="pagina_inicial.jsp">FlipNote</a>
                 </div>
             </div>
         </div>
@@ -89,6 +89,7 @@
             </div>
         </div>
 
-
+        <jsp:include page="includes/javascript_formulario.jsp"/>
     </body>
+
 </html>
