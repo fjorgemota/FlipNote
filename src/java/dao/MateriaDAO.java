@@ -15,8 +15,9 @@ import util.MySQL;
  * @author fernando_mota
  */
 public class MateriaDAO {
-    public static ArrayList<MateriaAR> lista(){
+   public static ArrayList<MateriaAR> listaAtividadesPorMes(int criador){
         ArrayList<MateriaAR> materias = new ArrayList<MateriaAR>();
+         
         
         MySQL bancoDados = new MySQL();
         String sql = "select * from materia";
@@ -36,21 +37,6 @@ public class MateriaDAO {
         
         MySQL bancoDados = new MySQL();
         String sql = "SELECT * FROM materia WHERE aluno='"+aluno.getID()+"';";
-        ConjuntoResultados linhas = bancoDados.executaSelect(sql);  
-      
-        while(linhas.next()){
-            MateriaAR n = new MateriaAR();
-            n.setNome(linhas.getString("nome"));
-            n.setProfessor(linhas.getString("professor"));
-            materias.add(n);
-        }
-        return materias;    
-    }
-    public static ArrayList<MateriaAR> getMateriasPorAluno(Aluno aluno){
-        ArrayList<MateriaAR> materias = new ArrayList<MateriaAR>();
-        
-        MySQL bancoDados = new MySQL();
-        String sql = "SELECT * FROM materia WHERE aluno='"+aluno+"';";
         ConjuntoResultados linhas = bancoDados.executaSelect(sql);  
       
         while(linhas.next()){
