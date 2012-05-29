@@ -141,7 +141,8 @@ public class MateriaAR implements AR{
 
     public void update() {
         MySQL cliente = MySQL.getInstance();
-        String sql = "UPDATE materia SET nome='"+this.getNome()+"',professor='"+this.getProfessor()+"',grupo="+this.getGrupoSQL()+",aluno="+this.getAlunoSQL()+" WHERE id='"+this.getID()+"';";
+        String sql = "UPDATE materia SET nome='"+this.getNome()+"',professor='"+this.getProfessor()+"',"
+                + "grupo="+this.getGrupoSQL()+",aluno="+this.getAlunoSQL()+" WHERE id='"+this.getID()+"';";
         cliente.executaUpdate(sql);
     }
 

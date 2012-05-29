@@ -1,7 +1,7 @@
  <div class="well sidebar-nav">
                         <ul class="nav nav-list">
                             <li class="nav-header">
-                                <a href="#">
+                                <a href="pagina_inicial.jsp">
                                     Resumo
                                 </a>
                             </li>

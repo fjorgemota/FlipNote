@@ -64,7 +64,7 @@
             </div>
             <div class="span3" >
                 <a class="btn btn-success" >
-                    Loguin
+                    Login
                 </a>
             </div>
             
