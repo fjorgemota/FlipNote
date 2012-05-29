@@ -59,24 +59,21 @@ public class GrupoAR implements AR{
         this.nome = nome;
     }
 
-    @Override
     public void load() {
-        
-    }
 
-    @Override
-    public void insert() {
-       
-    }
-
-    @Override
-    public void update() {
    
     }
 
     @Override
+    public void insert() {
+    }
+
+    @Override
+    public void update() {
+    }
+
+    @Override
     public void delete() {
-       
     }
     
 }
