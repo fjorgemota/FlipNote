@@ -1,4 +1,4 @@
-<%@page import="modelo.Materia"%>
+<%@page import="modelo.MateriaAR"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="dao.MateriaDAO"%>
 <div class="row-fluid">
@@ -8,8 +8,8 @@
     <div class="span6">
         <select > 
             <%
-                ArrayList<Materia> lista = MateriaDAO.lista();
-                for (Materia n : lista) {
+                ArrayList<MateriaAR> lista = MateriaDAO.getMaterias();
+                for (MateriaAR n : lista) {
                     out.print("<option>" + n.getNome() + "</option>");
 
                 }
