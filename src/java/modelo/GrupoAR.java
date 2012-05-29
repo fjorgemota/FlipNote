@@ -59,9 +59,7 @@ public class GrupoAR implements AR{
         this.nome = nome;
     }
 
-    @Override
     public void load() {
-        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
