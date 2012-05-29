@@ -11,7 +11,7 @@ public class MySQL
     String pass = "senai2012";
     String database = "flipnote";
     String host = "localhost";
-   
+    protected static MySQL instance = null;
     public MySQL()
     {
        String url = "jdbc:mysql://"+host+":3306/"+database;             
@@ -27,7 +27,12 @@ public class MySQL
             System.out.println("Erro na conexão com a base de dados: "+e);
         }        
     }
-
+    public static MySQL getInstance(){
+        if(MySQL.instance == null){
+            MySQL.instance = new MySQL();
+        }
+        return MySQL.instance;
+    }
     public boolean executaInsert(String insert)
     {
         try {

@@ -11,7 +11,7 @@ USE `flipnote` ;
 CREATE  TABLE IF NOT EXISTS `flipnote`.`aluno` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
   `nome` VARCHAR(200) NOT NULL ,
-  `senha` VARCHAR(40) NOT NULL ,
+  `senha` VARCHAR(41) NOT NULL ,
   `email` VARCHAR(200) NOT NULL ,
   PRIMARY KEY (`id`) ,
   UNIQUE INDEX `email` (`email` ASC) )
@@ -65,7 +65,7 @@ CREATE  TABLE IF NOT EXISTS `flipnote`.`materia` (
   `id` INT(10) NOT NULL AUTO_INCREMENT ,
   `nome` VARCHAR(100) NOT NULL ,
   `professor` VARCHAR(100) NULL DEFAULT NULL ,
-  `grupo` INT(11) NOT NULL ,
+  `grupo` INT(11) NULL ,
   `aluno` INT(11) NOT NULL ,
   PRIMARY KEY (`id`, `aluno`) ,
   INDEX `fk_materia_grupo1` (`grupo` ASC) ,
