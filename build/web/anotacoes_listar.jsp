@@ -31,7 +31,9 @@
                             <b>Testando....</b>
                         </div>
                         <div class="span4">
-                            Editar | Apagar
+                            <div class="row-fluid">
+                                <jsp:include page="includes/botoes-editar-apagar.jsp"/>
+                            </div>
                         </div>
                     </div>
                     <div class="row-fluid">
@@ -42,7 +44,9 @@
                             <b>Segunda anotação...</b>
                         </div>
                         <div class="span4">
-                            Editar | Apagar
+                            <div class="row-fluid">
+                                <jsp:include page="includes/botoes-editar-apagar.jsp"/>
+                            </div>
                         </div>
                     </div>
                 </div><!--/span-->
