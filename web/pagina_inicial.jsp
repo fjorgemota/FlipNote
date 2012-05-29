@@ -1,5 +1,6 @@
+<%@page import="util.Data"%>
+<%@page import="modelo.MateriaAR"%>
 <%@page import="dao.MateriaDAO"%>
-<%@page import="modelo.Materia"%>
 <%@page import="java.util.ArrayList"%>
 <!DOCTYPE html>
 <html>
@@ -35,9 +36,9 @@
                                 so.addVariable("path", "ampie/");
                                 so.addVariable("chart_settings", encodeURIComponent("<settings><redraw>1</redraw><background><alpha>100</alpha><border_alpha>20</border_alpha></background><legend><enabled>0</enabled><align>center</align></legend><pie><y>50%</y></pie><data_labels><show>{title}: {value}</show><max_width>140</max_width></data_labels></settings>"));
                                 so.addVariable("chart_data", encodeURIComponent("<pie><%
-                                                                ArrayList<Materia> atividades = MateriaDAO.listaAtividadesPorMes(1);
-                                                                for(Materia materia: atividades){
-                                                                    out.print("<slice title='"+materia.getNome()+"'>"+materia.getAtividades_mes()+"</slice>");
+                                                                ArrayList<MateriaAR> atividades = MateriaDAO.getMaterias();
+                                                                for(MateriaAR materia: atividades){
+                                                                    out.print("<slice title='"+materia.getNome()+"'>"+materia.getAtividadesPeriodo(Data.getDate(), Data.getDate(86400*30)) +"</slice>");
                                                                 }
                                                                                                                                %></pie>"));
                                 so.write("amcharts_1336583874998");
