@@ -15,23 +15,6 @@ import util.MySQL;
  * @author fernando_mota
  */
 public class MateriaDAO {
-   public static ArrayList<MateriaAR> listaAtividadesPorMes(int criador){
-        ArrayList<MateriaAR> materias = new ArrayList<MateriaAR>();
-         
-        
-        MySQL bancoDados = new MySQL();
-        String sql = "select * from materia";
-        ConjuntoResultados linhas = bancoDados.executaSelect(sql);  
-      
-        while(linhas.next()){
-            MateriaAR n = new MateriaAR();
-          n.setNome(linhas.getString("nome"));
-          n.setProfessor(linhas.getString("professor"));
-            
-            materias.add(n);
-        }
-        return materias;    
-    }
     public static ArrayList<MateriaAR> getMateriasPorAluno(AlunoAR aluno){
         ArrayList<MateriaAR> materias = new ArrayList<MateriaAR>();
         
@@ -41,8 +24,10 @@ public class MateriaDAO {
       
         while(linhas.next()){
             MateriaAR n = new MateriaAR();
-            n.setNome(linhas.getString("nome"));
+            n.setAluno(linhas.getInt("aluno"));
+            n.setGrupo(linhas.getInt("grupo"));
             n.setProfessor(linhas.getString("professor"));
+            n.setNome(linhas.getString("nome"));
             materias.add(n);
         }
         return materias;    
