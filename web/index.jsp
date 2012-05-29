@@ -5,7 +5,7 @@
 <html>
 
     <jsp:include page="includes/head.jsp">
-        <jsp:param name="titulo" value="Loguin"/>
+        <jsp:param name="titulo" value="Login"/>
     </jsp:include>
     <body>
         <div class="navbar navbar-fixed-top">

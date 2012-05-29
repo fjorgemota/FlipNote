@@ -61,22 +61,22 @@ public class GrupoAR implements AR{
 
     @Override
     public void load() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        
     }
 
     @Override
     public void insert() {
-        throw new UnsupportedOperationException("Not supported yet.");
+       
     }
 
     @Override
     public void update() {
-        throw new UnsupportedOperationException("Not supported yet.");
+   
     }
 
     @Override
     public void delete() {
-        throw new UnsupportedOperationException("Not supported yet.");
+       
     }
     
 }
