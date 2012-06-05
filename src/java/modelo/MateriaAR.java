@@ -137,7 +137,8 @@ public class MateriaAR implements AR{
         MySQL cliente = MySQL.getInstance();
         String sql = "INSERT INTO materia(id, nome, professor, grupo, aluno) "
                 + "VALUES("+this.getID()+",'"+this.getNome()+"', "
-                + "'"+this.getProfessor()+"', '"+this.getGrupoSQL()+"', '"+this.getAlunoSQL()+"');";
+                + "'"+this.getProfessor()+"', "+this.getGrupoSQL()+", "+this.getAlunoSQL()+");";
+        System.out.print(sql);
         return cliente.executaInsert(sql);
     }
 
