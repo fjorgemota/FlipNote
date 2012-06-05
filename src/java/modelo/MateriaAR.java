@@ -119,7 +119,7 @@ public class MateriaAR implements AR{
         }
         return numero1+numero2;
     }
-    public void load() {
+    public boolean load() {
         MySQL cliente = MySQL.getInstance();
         String sql = "SELECT * FROM materia WHERE id='"+this.getID()+"';";
         ConjuntoResultados linha = cliente.executaSelect(sql);
@@ -128,28 +128,30 @@ public class MateriaAR implements AR{
             this.setGrupo(linha.getInt("grupo"));
             this.setProfessor(linha.getString("professor"));
             this.setNome(linha.getString("nome"));
+            return true;
         }
+        return false;
     }
 
-    public void insert() {
+    public boolean insert() {
         MySQL cliente = MySQL.getInstance();
         String sql = "INSERT INTO materia(id, nome, professor, grupo, aluno) "
                 + "VALUES("+this.getID()+",'"+this.getNome()+"', "
                 + "'"+this.getProfessor()+"', '"+this.getGrupoSQL()+"', '"+this.getAlunoSQL()+"');";
-        cliente.executaInsert(sql);
+        return cliente.executaInsert(sql);
     }
 
-    public void update() {
+    public boolean update() {
         MySQL cliente = MySQL.getInstance();
         String sql = "UPDATE materia SET nome='"+this.getNome()+"',professor='"+this.getProfessor()+"',"
                 + "grupo="+this.getGrupoSQL()+",aluno="+this.getAlunoSQL()+" WHERE id='"+this.getID()+"';";
-        cliente.executaUpdate(sql);
+        return cliente.executaUpdate(sql);
     }
 
-    public void delete() {
+    public boolean delete() {
         MySQL cliente = MySQL.getInstance();
         String sql = "DELETE FROM materia WHERE id='"+this.getID()+"';";
-        cliente.executaDelete(sql);
+        return cliente.executaDelete(sql);
     }
 
     private String getGrupoSQL() {
