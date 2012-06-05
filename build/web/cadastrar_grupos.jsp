@@ -16,40 +16,50 @@
                     <h2>Cadastrar Grupo</h2>
                     <p> Use o formulario abaixo para cadastrar um grupo.</p>
 
-                    <div class="row-fluid">
-                        <div class="span6">
-                            <p>Digite o nome do grupo: </p>
-                        </div>
-                        <div class="span6">
-                            <textarea rows="2" cols="80" ></textarea>
-                        </div>
+                    <form class="form-horizontal well" action="acao/cadastrar_grupos.jsp" method="POST">
+                        <fieldset>
 
-                    </div>
+                            <div class="control-group">
 
-                    <div class="row-fluid">
-                        <div class="span6">
-                            <p>Descrição do grupo: </p>
-                        </div>
-                        <div class="span6">
-                            <textarea rows="3" cols="80" ></textarea>
+                                <label class="control-label" for="nome">
+                                    Digite o nome do grupo:
+                                </label>
 
-                        </div>
+                                <div class="controls">
+                                    <input type="textarea" class="input-xlarge" id="nome" name="nome">
+                                </div>
 
-                    </div>
+                            </div>
 
-                    <div class="row-fluid">
-                        <div class="span6">
-                            <p>Informe o e-mail do seu amigo: </p>
-                        </div>
-                        <div class="span6">
-                            <textarea rows="3" cols="80" ></textarea>
-                        </div>
+                            <div class="control-group">
+
+                                <label class="control-label" for="nome">
+                                    Descrição do grupo:
+                                </label>
+
+                                <div class="controls">
+                                    <input type="textarea" class="input-xlarge" id="descricao" name="descricao">
+                                </div>
 
 
+                            </div>
 
-                    </div>               
+                            <div class="control-group">
+                                <label class="control-label" for="nome">
+                                    Informe o e-mail do seu amigo:
+                                </label>
 
-                    <jsp:include page="includes/botoes-form.jsp" />
+                                <div class="controls">
+                                    <input type="text" class="input-xlarge" id="resumo" name="resumo">
+                                </div>
+
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Cadastrar</button>
+                            </div>
+
+                     
+                    </form>
                 </div>
 
             </div>
