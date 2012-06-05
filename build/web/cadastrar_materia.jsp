@@ -15,13 +15,13 @@
                 <div class="span9">
                     <h2>Cadastrar Matéria</h2>
                     <p> Use o formulario abaixo para cadastrar uma matéria.</p>
-
+                    <form action="acao/cadastrar_materia.jsp" method="POST">
                     <div class="row-fluid">
                         <div class="span4">
                             <p>Digite o nome da matéria a ser cadastrada: </p>
                         </div>
                         <div class="span8">
-                            <textarea rows="1" cols="50" ></textarea>
+                            <input type="text" name="nome" size="30" />
                         </div>
 
                     </div>
@@ -34,12 +34,12 @@
                             <p>Digite o nome do professor da matéria: </p>
                         </div>
                         <div class="span8">
-                            <textarea rows="1" cols="50" ></textarea>
+                            <input type="text" name="professor" size="30" />
                         </div>
                     </div>
                     <jsp:include page="includes/botoes-form.jsp" />
 
-
+                    </form>
                 </div>
 
             </div>
