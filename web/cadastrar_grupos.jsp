@@ -58,7 +58,8 @@
                                 <button type="submit" class="btn btn-primary">Cadastrar</button>
                             </div>
 
-                     
+                        </fieldset>
+
                     </form>
                 </div>
 
