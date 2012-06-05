@@ -44,16 +44,7 @@
 
                             </div>
 
-                            <div class="control-group">
-                                <label class="control-label" for="nome">
-                                    Informe o e-mail do seu amigo:
-                                </label>
-
-                                <div class="controls">
-                                    <input type="text" class="input-xlarge" id="resumo" name="resumo">
-                                </div>
-
-                            </div>
+                           
                             <div class="form-actions">
                                 <button type="submit" class="btn btn-primary">Cadastrar</button>
                             </div>

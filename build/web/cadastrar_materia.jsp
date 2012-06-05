@@ -26,9 +26,6 @@
 
                     </div>
 
-
-
-
                     <div class="row-fluid">
                         <div class="span4">
                             <p>Digite o nome do professor da matéria: </p>

@@ -8,7 +8,7 @@
     String nome = request.getParameter("nome");
     String descricao = request.getParameter("descricao");
 
-    String sql = "insert into novidades ";
+    String sql = "insert into grupo ";
     sql += "(nome, descricao) ";
     sql += "values (";
     sql += "\"" + nome + "\",";
@@ -17,8 +17,8 @@
 
     MySQL mysql = new MySQL();
     if (mysql.executaInsert(sql)) {
-        out.print(sql);
-        //   response.sendRedirect("../sucesso.jsp");
+        //out.print(sql);
+       response.sendRedirect("../cadastrado_sucesso.jsp");
 
     } else {
 
