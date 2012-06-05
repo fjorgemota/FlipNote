@@ -26,7 +26,14 @@ CREATE  TABLE IF NOT EXISTS `flipnote`.`grupo` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
   `nome` VARCHAR(200) NOT NULL ,
   `descricao` TEXT NULL DEFAULT NULL ,
-  PRIMARY KEY (`id`) )
+  `aluno` INT(11) NOT NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `fk_grupo_aluno1` (`aluno` ASC) ,
+  CONSTRAINT `fk_grupo_aluno1`
+    FOREIGN KEY (`aluno` )
+    REFERENCES `flipnote`.`aluno` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
@@ -94,11 +101,18 @@ CREATE  TABLE IF NOT EXISTS `flipnote`.`prova` (
   `descricao` TEXT NOT NULL ,
   `notificacao` DATETIME NULL DEFAULT NULL ,
   `nota` FLOAT NULL DEFAULT NULL ,
+  `aluno` INT(11) NOT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `fk_prova_materia1` (`materia` ASC) ,
+  INDEX `fk_prova_aluno1` (`aluno` ASC) ,
   CONSTRAINT `fk_prova_materia1`
     FOREIGN KEY (`materia` )
     REFERENCES `flipnote`.`materia` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_prova_aluno1`
+    FOREIGN KEY (`aluno` )
+    REFERENCES `flipnote`.`aluno` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -115,11 +129,18 @@ CREATE  TABLE IF NOT EXISTS `flipnote`.`trabalho` (
   `descricao` TEXT NOT NULL ,
   `notificacao` DATETIME NULL DEFAULT NULL ,
   `nota` FLOAT NULL DEFAULT NULL ,
+  `aluno` INT(11) NOT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `fk_trabalho_materia1` (`materia` ASC) ,
+  INDEX `fk_trabalho_aluno1` (`aluno` ASC) ,
   CONSTRAINT `fk_trabalho_materia1`
     FOREIGN KEY (`materia` )
     REFERENCES `flipnote`.`materia` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_trabalho_aluno1`
+    FOREIGN KEY (`aluno` )
+    REFERENCES `flipnote`.`aluno` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -131,18 +152,18 @@ ROW_FORMAT = COMPACT;
 -- Table `flipnote`.`grupo_aluno`
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `flipnote`.`grupo_aluno` (
-  `aluno_id` INT(11) NOT NULL ,
-  `grupo_id` INT(11) NOT NULL ,
-  PRIMARY KEY (`aluno_id`, `grupo_id`) ,
-  INDEX `fk_aluno_has_grupo_grupo1` (`grupo_id` ASC) ,
-  INDEX `fk_aluno_has_grupo_aluno` (`aluno_id` ASC) ,
+  `aluno` INT(11) NOT NULL ,
+  `grupo` INT(11) NOT NULL ,
+  PRIMARY KEY (`aluno`, `grupo`) ,
+  INDEX `fk_aluno_has_grupo_grupo1` (`grupo` ASC) ,
+  INDEX `fk_aluno_has_grupo_aluno` (`aluno` ASC) ,
   CONSTRAINT `fk_aluno_has_grupo_aluno`
-    FOREIGN KEY (`aluno_id` )
+    FOREIGN KEY (`aluno` )
     REFERENCES `flipnote`.`aluno` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_aluno_has_grupo_grupo1`
-    FOREIGN KEY (`grupo_id` )
+    FOREIGN KEY (`grupo` )
     REFERENCES `flipnote`.`grupo` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)

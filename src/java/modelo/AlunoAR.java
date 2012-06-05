@@ -18,7 +18,7 @@ public class AlunoAR implements AR {
     private String email;
     private String senha;
 
-    public void load() {
+    public boolean load() {
         String sql = "SELECT * FROM aluno WHERE id='"+this.id+"' LIMIT 1;";
         MySQL bancoDados = MySQL.getInstance();
         ConjuntoResultados resultado = bancoDados.executaSelect(sql);
@@ -26,23 +26,23 @@ public class AlunoAR implements AR {
             this.nome = resultado.getString("nome");
             this.email = resultado.getString("email");
             this.senha = resultado.getString("senha");
+            return true;
         }
+        return false;
     }
     public boolean testaSenha(String novaSenha){
         return Codificador.compara(this.senha, novaSenha);
     }
-    @Override
-    public void insert() {
-
+    public boolean insert() {
+        return true; // Substituir pelo codigo do MySQL, inspire-se na da classe MateriaAR
     }
 
-    @Override
-    public void update() {
- 
+    public boolean update() {
+        return true; // Substituir pelo codigo do MySQL, inspire-se na da classe MateriaAR
     }
 
-    @Override
-    public void delete() {
+    public boolean delete() {
+        return true; // Substituir pelo codigo do MySQL, inspire-se na da classe MateriaAR
     }
 
     public String getEmail() {
