@@ -1,5 +1,5 @@
 if(!!document.getElementById("datepicker")){
-    Calendar.setup({
+    window.datepicker = Calendar.setup({
         inputField:"datepicker",
         trigger:"datepicker",
         onSelect:function(){
@@ -8,12 +8,12 @@ if(!!document.getElementById("datepicker")){
         dateFormat:"%d/%m/%Y"
     });
 }
-Calendar.setup({
+window.ncalendar = Calendar.setup({
     cont:"ncalendar",
+    dateFormat:"%d/%m/%Y",
     onSelect:function(){
-        this.hide();
-    },
-    dateFormat:"%d/%m/%Y"
+        jQuery("#nfield").val(this.selection.print("%d/%m/%Y","").join(""))
+    }
 });
 setInterval(function(){
     var nYes = $("#nyes")[0].checked;
