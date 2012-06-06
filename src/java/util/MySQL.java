@@ -39,7 +39,7 @@ public class MySQL
             statement.execute(insert);
             return true;
         } catch (SQLException e){
-            System.out.println("Erro na Inclusão "+e);
+            System.out.println("Erro na Inclusão do registro "+e);
             return false;
         }
     }
@@ -50,7 +50,7 @@ public class MySQL
             statement.execute(insert);
             return true;
         } catch (SQLException e){
-            System.out.println("Erro na Inclus�o "+e);
+            System.out.println("Erro na atualização do registro "+e);
             return false;
         }
     }
@@ -61,7 +61,7 @@ public class MySQL
             statement.execute(delete);
             return true;
         } catch (SQLException e){
-            System.out.println("Erro na exclus�o "+e);
+            System.out.println("Erro na exclusão do registro "+e);
             return false;
         }
     }
@@ -77,6 +77,6 @@ public class MySQL
             System.exit(0);
             return null;
         }
-    }       
+    }
     
 }
