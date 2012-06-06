@@ -6,6 +6,7 @@ package modelo;
 
 import java.util.Date;
 import util.ConjuntoResultados;
+import util.Data;
 import util.MySQL;
 
 /**
@@ -49,11 +50,11 @@ public class AnotacaoAR implements AR {
         this.grupo = grupo;
     }
 
-    public int getId() {
+    public int getID() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setID(int id) {
         this.id = id;
     }
 
@@ -64,7 +65,9 @@ public class AnotacaoAR implements AR {
     public void setNotificacao(Date notificacao) {
         this.notificacao = notificacao;
     }
-
+    public void setNotificacao(String notificacao) {
+        this.notificacao = Data.getDateTime(notificacao);
+    }
     public String getTexto() {
         return texto;
     }
@@ -84,7 +87,7 @@ public class AnotacaoAR implements AR {
     @Override
     public boolean load() {
         MySQL cliente = MySQL.getInstance();
-        String sql = "SELECT * FROM anotacao WHERE id='" + this.getId() + "';";
+        String sql = "SELECT * FROM anotacao WHERE id='" + this.getID() + "';";
         ConjuntoResultados linha = cliente.executaSelect(sql);
         if (linha.next()) {
 
@@ -103,8 +106,8 @@ public class AnotacaoAR implements AR {
     public boolean insert() {
         MySQL cliente = MySQL.getInstance();
         String sql = "INSERT INTO anotacao(id, titulo, texto, aluno, grupo, notificacao) "
-                + "VALUES(" + this.getId() + ",'" + this.getTitulo() + "', "
-                + "'" + this.getTexto() + "', " + this.getAlunoSQL() + ", " + this.getGrupoSQL() + ", " + this.getNotificacao() + ");";
+                + "VALUES(" + this.getID() + ",'" + this.getTitulo() + "', "
+                + "'" + this.getTexto() + "', " + this.getAlunoSQL() + ", " + this.getGrupoSQL() + ", " + Data.getDateTime(this.getNotificacao()) + ");";
         return cliente.executaInsert(sql);
     }
 
@@ -112,15 +115,15 @@ public class AnotacaoAR implements AR {
     public boolean update() {
         MySQL cliente = MySQL.getInstance();
         String sql = "UPDATE anotacao SET titulo='" + this.getTitulo() + "',texto='" + this.getTexto() + "',"
-                + "aluno=" + this.getAlunoSQL() + ",grupo=" + this.getGrupoSQL() + ", notificacao=" + this.getNotificacao()
-                + " WHERE id='" + this.getId() + "';";
+                + "aluno=" + this.getAlunoSQL() + ",grupo=" + this.getGrupoSQL() + ", notificacao=" + Data.getDateTime(this.getNotificacao())
+                + " WHERE id='" + this.getID() + "';";
         return cliente.executaUpdate(sql);
     }
 
     @Override
     public boolean delete() {
          MySQL cliente = MySQL.getInstance();
-        String sql = "DELETE FROM anotacao WHERE id='"+this.getId()+"';";
+        String sql = "DELETE FROM anotacao WHERE id='"+this.getID()+"';";
         return cliente.executaDelete(sql);
     }
 
