@@ -45,4 +45,12 @@ public class ConjuntoResultados
                 return 0;
             }
         }
+        public float getFloat(String t){
+            try{
+                return rs.getFloat(t);
+            }catch(SQLException sqlError){
+                System.out.println("Erro no SQL: "+sqlError);
+                return 0;
+            }
+        }
     }
