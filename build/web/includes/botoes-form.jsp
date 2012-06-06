@@ -1,8 +1,10 @@
+<div class="row-fluid"> &nbsp;</div>
+<div class="row-fluid"> &nbsp;</div>
+
 <div class="row-fluid">
     <div class="span4" style="text-align: right;">
-        <a class="btn btn-success" >
-            Cadastrar
-        </a>
+        <button type="submit" class="btn btn-success">Cadastrar</button>
+         
     </div>
     <div class="span4">
         <a class="btn btn-danger" >

@@ -15,7 +15,7 @@
 
                 <div class="span9">
                     <h2>Cadastrar Trabalhos</h2>
-                    <p> Use o formulario abaixo para cadastrar um trabalho.</p>
+                    <p><h4> Use o formulario abaixo para cadastrar um trabalho.</h4></p>
 
                     <jsp:include page="includes/materia.jsp" />
 

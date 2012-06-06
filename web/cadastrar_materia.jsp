@@ -14,7 +14,8 @@
                 </div>
                 <div class="span9">
                     <h2>Cadastrar Matéria</h2>
-                    <p> Use o formulario abaixo para cadastrar uma matéria.</p>
+                    <p><h4> Use o formulario abaixo para cadastrar uma matéria.</h4></p>
+                    
                     <form action="acao/cadastrar_materia.jsp" method="POST">
                     <div class="row-fluid">
                         <div class="span4">

@@ -23,7 +23,7 @@
     } else {
 
         out.print("Erro: por favor, tente novamente<br />");
-        out.print("<a href=\"../cadastrar_grupos.jsp\">Voltar</a>");
+        out.print("<a href=\"../pagina_inicial.jsp\">Voltar</a>");
     }
 
 %>
