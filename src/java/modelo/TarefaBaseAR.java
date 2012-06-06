@@ -75,6 +75,7 @@ public abstract class TarefaBaseAR implements AR {
         this.notificacao = notificacao;
     }
     protected boolean carrega(String nomeTabela) {
+        
         return true;
     }
 
