@@ -6,20 +6,20 @@
                                 </a>
                             </li>
                             <li class="nav-header">
-                                Avaliações
+                                Provas 
                             </li>
                             <li>
-                                <a href="cadastrar_avaliacao.jsp">
+                                <a href="cadastrar_prova.jsp">
                                     Cadastrar
                                 </a>
                             </li>
                             <li>
-                                <a href="avaliacoes_semana.jsp">
+                                <a href="provas_semana.jsp">
                                     Nesta Semana
                                 </a>
                             </li>
                             <li>
-                                <a href="avaliacoes_mes.jsp">
+                                <a href="provas_mes.jsp">
                                     Neste Mês
                                 </a>
                             </li>
