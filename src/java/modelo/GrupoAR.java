@@ -17,7 +17,20 @@ public class GrupoAR implements AR {
     private int id;
     private String nome;
     private String descricao;
+    private AlunoAR aluno;
 
+    public AlunoAR getAluno() {
+        return aluno;
+    }
+
+    public void setAluno(AlunoAR aluno) {
+        this.aluno = aluno;
+    }
+    public void setAluno(int aluno) {
+        this.aluno = new AlunoAR();
+        this.aluno.setID(aluno);
+        this.aluno.load();
+    }
     public String getDescricao() {
         return descricao;
     }
@@ -50,6 +63,7 @@ public class GrupoAR implements AR {
 
             this.setDescricao(linha.getString("descricao"));
             this.setNome(linha.getString("nome"));
+            this.setAluno(linha.getInt("aluno"));
             return true;
         }
         return false;
@@ -58,9 +72,9 @@ public class GrupoAR implements AR {
 
     public boolean insert() {
         MySQL cliente = MySQL.getInstance();
-        String sql = "INSERT INTO grupo(id, nome, descricao) "
+        String sql = "INSERT INTO grupo(id, nome, descricao, aluno) "
                 + "VALUES(" + this.getID() + ",'" + this.getNome() + "', "
-                + "'" + this.getDescricao() + ");";
+                + "'" + this.getDescricao() + "', "+this.getAlunoSQL()+");";
         return cliente.executaInsert(sql);
 
 
@@ -69,7 +83,7 @@ public class GrupoAR implements AR {
     public boolean update() {
         
         MySQL cliente = MySQL.getInstance();
-        String sql = "UPDATE grupo SET nome='"+this.getNome()+"',descricao='"+this.getDescricao()+ " WHERE id='"+this.getID()+"';";
+        String sql = "UPDATE grupo SET nome='"+this.getNome()+"',descricao='"+this.getDescricao()+ ", aluno="+this.getAlunoSQL()+" WHERE id='"+this.getID()+"';";
         return cliente.executaUpdate(sql);
        
     }
@@ -79,5 +93,12 @@ public class GrupoAR implements AR {
         String sql = "DELETE FROM grupo WHERE id='"+this.getID()+"';";
         return cliente.executaDelete(sql);
          
+    }
+
+    private String getAlunoSQL() {
+        if(this.aluno == null){
+            return "NULL";
+        }
+        return ""+this.aluno.getID();
     }
 }
