@@ -5,8 +5,8 @@
 --%>
 <%@page import="util.Sessao"%>
 <%@page import="modelo.GrupoAR"%>
-<%@page import="util.MySQL"%>
 <%
+    Sessao.verificaLoginERedireciona(request, response);
     String nome = request.getParameter("nome");
     String descricao = request.getParameter("descricao");
     GrupoAR grupo = new GrupoAR();
@@ -15,11 +15,8 @@
     grupo.setNome(nome);
 
     if (grupo.insert()) {
-        //out.print(sql);
        response.sendRedirect("../cadastrado_sucesso.jsp");
-
     } else {
-
         out.print("Erro: por favor, tente novamente<br />");
         out.print("<a href=\"../pagina_inicial.jsp\">Voltar</a>");
     }
