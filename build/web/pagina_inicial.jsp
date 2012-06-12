@@ -1,3 +1,4 @@
+<%@page import="util.Sessao"%>
 <%@page import="dao.AlunoDAO"%>
 <%@page import="modelo.AlunoAR"%>
 <%@page import="util.Data"%>
@@ -5,9 +6,7 @@
 <%@page import="dao.MateriaDAO"%>
 <%@page import="java.util.ArrayList"%>
 <%
-if(!AlunoDAO.estaLogado(request.getSession().getAttribute("aluno"))){
-    response.sendRedirect("index.jsp");
-}
+Sessao.verificaLoginERedireciona(request, response);
 %>
 <!DOCTYPE html>
 <html>
@@ -26,7 +25,7 @@ if(!AlunoDAO.estaLogado(request.getSession().getAttribute("aluno"))){
                 <div class="span9">
                     <div class="hero-unit">
                         <h1>Bem vindo, <% 
-                            AlunoAR aluno = AlunoDAO.getAlunoByID(session.getAttribute("aluno"));
+                            AlunoAR aluno = Sessao.getAlunoLogado(request);
                             out.print(aluno.getPrimeiroNome());
                             %></h1>
                         <p>Parece que voce vai ter uma semana corrida,Fernando, Portanto, </p>
