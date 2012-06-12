@@ -4,13 +4,14 @@
     Author     : HP
 --%>
 <%@page import="modelo.GrupoAR"%>
+
 <%
     String nome = request.getParameter("nome");
     String descricao = request.getParameter("descricao");
     GrupoAR grupo = new GrupoAR();
     
     grupo.setNome(nome);
-     grupo.setDescricao(descricao);
+    grupo.setDescricao(descricao);
      
     if (grupo.insert()) {
         //out.print(sql);
