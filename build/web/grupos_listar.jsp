@@ -1,3 +1,7 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="util.Sessao"%>
+<%@page import="dao.GrupoDAO"%>
+<%@page import="modelo.GrupoAR"%>
 <html>
 
     <jsp:include page="includes/head.jsp">
@@ -14,25 +18,39 @@
                 </div>
                 <div class="span9" id="tablerow">
                     <div class="row-fluid">
-                        <div class="span4" >
+                        <div class="span6" >
                             Nome do grupo
                         </div>
-                        <div class="span4">
+                        <div class="span6">
                             Descrição do grupo
                         </div>
-                        <div class="span4">
-                            Participantes
-                        </div>
 
-                    </div> 
-                    <div class="row-fluid">
-                        <div class="span12">
-                            Programaçõ orientada a objetos
-                        </div>
+
+
                     </div>
-                </div><!--/span-->
-            </div>
+
+                    <%
+                        ArrayList<GrupoAR> grupos = GrupoDAO.getGruposPorAluno(Sessao.getAlunoLogado(request));
+                        for (GrupoAR grupo : grupos) {
+                            out.print("<div class=\"row-fluid\">");
+                            out.print("<div class=\"span6\">");
+                            out.print(grupo.getNome());
+                            out.print("</div>");
+
+                            out.print("<div class=\"span6\">");
+                            out.print(grupo.getDescricao());
+                            out.print("</div>");
+                            out.print("</div>");
+
+                        }
+                    %>
+
+
+
+                </div>
+            </div><!--/span-->
         </div>
-        <jsp:include page="includes/javascript_formulario.jsp"/>
-    </body>
+    </div>
+    <jsp:include page="includes/javascript_formulario.jsp"/>
+</body>
 </html>

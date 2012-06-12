@@ -13,7 +13,6 @@
     String descricao = request.getParameter("descricao");
     GrupoAR grupo = new GrupoAR();
 
-
     grupo.setAluno(Sessao.getAlunoLogado(request));
     grupo.setDescricao(descricao);
     grupo.setNome(nome);
