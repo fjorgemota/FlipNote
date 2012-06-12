@@ -34,23 +34,5 @@ public class AlunoDAO {
         return null;
     }
 
-    public static AlunoAR getAlunoByID(Object id) {
-        if(id == null){
-            return new AlunoAR();// Retorna um aluno vazio justamente por estar..vazio
-        }
-        AlunoAR n = new AlunoAR();
-        n.setID((Integer)id); // Seta só o ID e dá load gracas a senha
-        if (!n.load()) {
-            n.setID(0);
-        }  
-        return n;
-    }
-    public static boolean estaLogado(Object id) {
-        if(id == null){
-            return false;
-        }
-        AlunoAR n = new AlunoAR();
-        n.setID((Integer)id); // Seta só o ID e dá load gracas a senha
-        return n.load();
-    }
+    
 }
