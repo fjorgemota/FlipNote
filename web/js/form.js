@@ -18,13 +18,13 @@ if(!!document.getElementById("datepicker")){
         onSelect:function(){
             this.hide();
         },
-        dateFormat:"%d/%m/%Y"
+        dateFormat:"%Y-%m-%d"
     });
 }
 if(!!document.getElementById("ncalendar")){
     window.ncalendar = Calendar.setup({
         cont:"ncalendar",
-        dateFormat:"%d/%m/%Y",
+        dateFormat:"%Y-%m-%d",
         onSelect:function(){
             jQuery("#nfield").val(this.selection.print("%d/%m/%Y","").join(""))
         }
