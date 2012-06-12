@@ -152,9 +152,10 @@ ROW_FORMAT = COMPACT;
 -- Table `flipnote`.`grupo_aluno`
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `flipnote`.`grupo_aluno` (
-  `aluno` INT(11) NOT NULL ,
-  `grupo` INT(11) NOT NULL ,
-  PRIMARY KEY (`aluno`, `grupo`) ,
+  `id` INT NOT NULL AUTO_INCREMENT ,
+  `aluno` INT NOT NULL ,
+  `grupo` INT NOT NULL ,
+  PRIMARY KEY (`id`) ,
   INDEX `fk_aluno_has_grupo_grupo1` (`grupo` ASC) ,
   INDEX `fk_aluno_has_grupo_aluno` (`aluno` ASC) ,
   CONSTRAINT `fk_aluno_has_grupo_aluno`
