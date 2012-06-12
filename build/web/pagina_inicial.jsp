@@ -1,10 +1,16 @@
+<%@page import="dao.AlunoDAO"%>
+<%@page import="modelo.AlunoAR"%>
 <%@page import="util.Data"%>
 <%@page import="modelo.MateriaAR"%>
 <%@page import="dao.MateriaDAO"%>
 <%@page import="java.util.ArrayList"%>
+<%
+if(!AlunoDAO.estaLogado(request.getSession().getAttribute("aluno"))){
+    response.sendRedirect("index.jsp");
+}
+%>
 <!DOCTYPE html>
 <html>
-
    <jsp:include page="includes/head.jsp">
         <jsp:param name="titulo" value="Página inicial"/>
     </jsp:include>
@@ -19,7 +25,10 @@
                 </div>
                 <div class="span9">
                     <div class="hero-unit">
-                        <h1>Bem vindo, Fernando!</h1>
+                        <h1>Bem vindo, <% 
+                            AlunoAR aluno = AlunoDAO.getAlunoByID(session.getAttribute("aluno"));
+                            out.print(aluno.getPrimeiroNome());
+                            %></h1>
                         <p>Parece que voce vai ter uma semana corrida,Fernando, Portanto, </p>
                         <p>Boa sorte. :)</p>
                         <p><a class="btn btn-primary btn-large">Veja porquê. &raquo;</a></p>
