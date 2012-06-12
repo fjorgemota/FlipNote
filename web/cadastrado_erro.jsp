@@ -19,12 +19,13 @@
                 <jsp:include page="includes/menu.jsp"/>
             </div>
             <div class ="span9">
-                <h1>Registro cadastrado com sucesso.</h1>
+                <h1>Erro durante o cadastro.</h1>
                 <p>
-                    O registro foi salvo com segurança no banco de dados.
+                    Houve um erro ao cadastrar o registro no banco de dados.
+                    Tente novamente mais tarde.
                 </p>
                 <p>
-                    <a href="<% out.print(request.getParameter("link")); %>" class="btn btn-success">Deseja adicionar outro registro?</a>
+                    <a href="<% out.print(request.getParameter("link")); %>" class="btn btn-danger">Voltar</a>
                     <a href="pagina_inicial.jsp" class="btn btn-warning">Página Inicial</a>
                 </p>
             </div>
