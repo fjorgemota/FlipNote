@@ -24,8 +24,8 @@ public class AlunoAR implements AR {
         MySQL bancoDados = MySQL.getInstance();
         ConjuntoResultados resultado = bancoDados.executaSelect(sql);
         if (resultado.next()) {
-            this.nome = resultado.getString("nome");
-            this.email = resultado.getString("email");
+            this.setNome(resultado.getString("nome"));
+            this.setEmail(resultado.getString("email"));
             this.senha = resultado.getString("senha");
             return true;
         }
@@ -33,14 +33,14 @@ public class AlunoAR implements AR {
     }
 
     public boolean testaSenha(String novaSenha) {
-        return Codificador.compara(this.senha, novaSenha);
+        return Codificador.compara(this.getSenha(), novaSenha);
     }
 
     public boolean insert() {
         MySQL cliente = MySQL.getInstance();
         String sql = "INSERT INTO aluno(id, nome, email, senha) "
-                + "VALUES(" + this.getID() + ",'" + this.getNome() + "', "
-                + "'" + this.getEmail() + "', " + this.getSenha() + ");";
+                + "VALUES(" + this.getID() + ",'" + this.getNomeCompleto() + "', "
+                + "'" + this.getEmail() + "', '" + this.getSenha() + "');";
         return cliente.executaInsert(sql);
 
     }
@@ -48,7 +48,7 @@ public class AlunoAR implements AR {
     public boolean update() {
 
         MySQL cliente = MySQL.getInstance();
-        String sql = "UPDATE alunoo SET nome='" + this.getNome() + "',email='" + this.getEmail() + "',"
+        String sql = "UPDATE alunoo SET nome='" + this.getNomeCompleto() + "',email='" + this.getEmail() + "',"
                 + "senha=" + this.getSenha() + " WHERE id='" + this.getID() + "';";
         return cliente.executaUpdate(sql);
 
@@ -78,19 +78,39 @@ public class AlunoAR implements AR {
         this.id = id;
     }
 
-    public String getNome() {
+    public String getNomeCompleto() {
         return nome;
     }
-
+    public String getPrimeiroNome() {
+        if(nome == null){
+            return "";
+        }
+        String[] nomeCompleto = nome.split(" ",1);
+        if(nomeCompleto.length > 0){
+            return nomeCompleto[0];
+        }
+        return "";
+    }
+    public String getSobreNome() {
+        if(nome == null){
+            return "";
+        }
+        String[] nomeCompleto = nome.split(" ",1);
+        if(nomeCompleto.length == 2){
+            return nomeCompleto[1];
+        }
+        return "";
+        
+    }
     public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public String getSenha() {
+    private String getSenha() {
         return senha;
     }
 
     public void setSenha(String senha) {
-        this.senha = senha;
+        this.senha = Codificador.codifica(senha);
     }
 }

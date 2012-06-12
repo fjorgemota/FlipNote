@@ -28,14 +28,14 @@
             </div>
             <div class="span3">&nbsp;</div>
         </div>
-
+        <form action="acao/login.jsp" method="POST">
         <div class="row-fluid">
             <div class="span3">&nbsp;</div>
             <div class="span3">
                 <p>E-mail: </p>
             </div>
             <div class="span3">
-                <textarea rows="1" cols="50" ></textarea>
+                <input type="text" name="email" size="50" />
             </div>
             <div class="span3">&nbsp;</div>
         </div>
@@ -49,7 +49,7 @@
                 <p>Senha: </p>
             </div>
             <div class="span3">
-                <textarea rows="1" cols="50" ></textarea>
+                <input type="password" name="senha" size="50" />
             </div>
             <div class="span3">&nbsp;</div>
 
@@ -72,7 +72,7 @@
                 &nbsp;
             </div>
         </div>
-
+        </form>
         <div class="row-fluid">&nbsp;</div>
         <div class="row-fluid">&nbsp;</div>
 
