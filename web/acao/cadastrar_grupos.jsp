@@ -3,20 +3,16 @@
     Created on : Jun 5, 2012, 4:05:10 PM
     Author     : HP
 --%>
-<%@page import="util.MySQL"%>
+<%@page import="modelo.GrupoAR"%>
 <%
     String nome = request.getParameter("nome");
     String descricao = request.getParameter("descricao");
-
-    String sql = "insert into grupo ";
-    sql += "(nome, descricao) ";
-    sql += "values (";
-    sql += "\"" + nome + "\",";
-    sql += "\"" + descricao + "\",";
-    sql += ")";
-
-    MySQL mysql = new MySQL();
-    if (mysql.executaInsert(sql)) {
+    GrupoAR grupo = new GrupoAR();
+    
+    grupo.setNome(nome);
+     grupo.setDescricao(descricao);
+     
+    if (grupo.insert()) {
         //out.print(sql);
        response.sendRedirect("../cadastrado_sucesso.jsp");
 
