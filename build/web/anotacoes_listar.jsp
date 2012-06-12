@@ -1,3 +1,7 @@
+<%@page import="util.Sessao"%>
+<%
+Sessao.verificaLoginERedireciona(request, response);
+%>
 <html>
     <jsp:include page="includes/head.jsp">
         <jsp:param name="titulo" value="Listar anotações"/>
