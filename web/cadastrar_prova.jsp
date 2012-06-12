@@ -12,6 +12,7 @@
               <div class="span3">
                      <jsp:include page="includes/menu.jsp"/>
                 </div>
+                <form action="acao/cadastrar_prova.jsp" method="POST">
                 <div class="span9">
                     <h2>Cadastrar avaliação</h2>
                     <p> <h4>Use o formulario abaixo para cadastrar uma avaliação no sistema.</h4></p>
@@ -36,6 +37,7 @@
 
 
                 </div>
+                </form>
 
             </div>
         </div>

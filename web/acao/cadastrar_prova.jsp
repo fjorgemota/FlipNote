@@ -9,7 +9,6 @@
 <%@page import="modelo.ProvaAR"%>
 <%
     Sessao.verificaLoginERedireciona(request, response);
-    String nome = request.getParameter("nome");
     String data = request.getParameter("data");
     String descricao = request.getParameter("descricao");
     String notificacao = request.getParameter("notificacao");
