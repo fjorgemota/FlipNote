@@ -21,7 +21,7 @@ public abstract class TarefaBaseAR implements AR {
     private Date notificacao;
     private float nota;
     private AlunoAR criador;
-    protected String nomeTabela; // Simplifica ja que, dentre duas classes, muda-se apenas o nome da tabela
+    protected String nomeTabela; 
     public AlunoAR getCriador() {
         return criador;
     }

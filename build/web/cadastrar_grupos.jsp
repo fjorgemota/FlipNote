@@ -13,43 +13,36 @@
                     <jsp:include page="includes/menu.jsp"/>
                 </div>
                 <div class="span9">
+                    
                     <h2>Cadastrar Grupo</h2>
-                    <p> Use o formulario abaixo para cadastrar um grupo.</p>
+                    <p><h4>Use o formulario abaixo para criar um grupo.</h4> </p>
 
-                    <form class="form-horizontal well" action="acao/cadastrar_grupos.jsp" method="POST">
-                        <fieldset>
+                    <form action="acao/cadastrar_grupos.jsp" method="POST">
 
-                            <div class="control-group">
 
-                                <label class="control-label" for="nome">
-                                    Digite o nome do grupo:
-                                </label>
-
-                                <div class="controls">
-                                    <input type="textarea" class="input-xlarge" id="nome" name="nome">
-                                </div>
-
+                        <div class="row-fluid">
+                            <div class="span4">
+                                <p>Digite o nome do grupo: </p>
                             </div>
-
-                            <div class="control-group">
-
-                                <label class="control-label" for="nome">
-                                    Descrição do grupo:
-                                </label>
-
-                                <div class="controls">
-                                    <input type="textarea" class="input-xlarge" id="descricao" name="descricao">
-                                </div>
-
-
+                            <div class="span8">
+                                <input type="text" name="nome" size="30" />
                             </div>
+                        </div>
+                        
+                        
 
-                           
-                            <div class="form-actions">
-                                <button type="submit" class="btn btn-primary">Cadastrar</button>
+                        <div class="row-fluid">
+                            <div class="span4">
+                                <p>Descrição do grupo: </p>
                             </div>
+                            <div class="span8">
+                                <input type="text" name="descricao" size="30" />
+                            </div>
+                        </div>
+                
 
-                        </fieldset>
+                        <jsp:include page="includes/botoes-form.jsp" />
+
 
                     </form>
                 </div>

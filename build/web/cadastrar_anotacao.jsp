@@ -14,7 +14,7 @@
                 </div>
                 <div class="span9">
                     <h2>Cadastrar Anotação</h2>
-                    <p> Use o formulario abaixo para cadastrar uma anotação.</p>
+                    <p><h4> Use o formulario abaixo para cadastrar uma anotação.</h4></p>
 
                     <div class="row-fluid">
                         <div class="span6">

@@ -14,7 +14,7 @@
                 </div>
                 <div class="span9">
                     <h2>Cadastrar avaliação</h2>
-                    <p> Use o formulario abaixo para cadastrar uma avaliação no sistema.</p>
+                    <p> <h4>Use o formulario abaixo para cadastrar uma avaliação no sistema.</h4></p>
 
                     <jsp:include page="includes/materia.jsp" />
 
