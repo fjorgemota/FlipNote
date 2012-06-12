@@ -1,4 +1,5 @@
- <%@page import="modelo.AlunoAR"%>
+ <%@page import="util.Sessao"%>
+<%@page import="modelo.AlunoAR"%>
 <%@page import="dao.AlunoDAO"%>
 <div class="navbar-inner">
                 <div class="container-fluid">
@@ -15,7 +16,7 @@
                             <li><a href="acao/logout.jsp">Sair</a></li>
                         </ul>
                         <p class="navbar-text pull-right">Conectado como <a href="#minhaconta"><% 
-                          AlunoAR aluno = AlunoDAO.getAlunoByID(session.getAttribute("aluno")); 
+                          AlunoAR aluno = Sessao.getAlunoLogado(request);
                           out.print(aluno.getPrimeiroNome()); 
                         %> </a></p>
                     </div>
