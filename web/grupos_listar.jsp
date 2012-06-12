@@ -18,13 +18,16 @@
                 </div>
                 <div class="span9" id="tablerow">
                     <div class="row-fluid">
-                        <div class="span6" >
+                        <div class="span4" >
                             Nome do grupo
                         </div>
-                        <div class="span6">
+                        <div class="span4">
                             Descrição do grupo
                         </div>
 
+                        <div class="span4">
+                            Ações
+                        </div>
 
 
                     </div>
@@ -33,13 +36,19 @@
                         ArrayList<GrupoAR> grupos = GrupoDAO.getGruposPorAluno(Sessao.getAlunoLogado(request));
                         for (GrupoAR grupo : grupos) {
                             out.print("<div class=\"row-fluid\">");
-                            out.print("<div class=\"span6\">");
+                            out.print("<div class=\"span4\">");
                             out.print(grupo.getNome());
                             out.print("</div>");
 
-                            out.print("<div class=\"span6\">");
+                            out.print("<div class=\"span4\">");
                             out.print(grupo.getDescricao());
                             out.print("</div>");
+                            
+                            
+                            out.print("<div class=\"span4\">");
+                            
+                            out.print("</div>");
+                            
                             out.print("</div>");
 
                         }
