@@ -1,3 +1,4 @@
+<%@page import="util.HTMLUtil"%>
 <!DOCTYPE html>
 <html>
     <jsp:include page="includes/head.jsp">
@@ -16,7 +17,7 @@
                     <h2>Cadastrar Matéria</h2>
                     <p><h4> Use o formulario abaixo para cadastrar uma matéria.</h4></p>
                     
-                    <form action="acao/cadastrar_materia.jsp" method="POST">
+                <%=HTMLUtil.initFormCadastrar("materia")%>
                     <div class="row-fluid">
                         <div class="span4">
                             <p>Digite o nome da matéria a ser cadastrada: </p>
@@ -37,7 +38,7 @@
                     </div>
                     <jsp:include page="includes/botoes-form.jsp" />
 
-                    </form>
+                    <%=HTMLUtil.endForm()%>
                 </div>
 
             </div>

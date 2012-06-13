@@ -14,10 +14,10 @@
     materia.setNome(nome);
     materia.setProfessor(professor);
     if (materia.insert()) {
-        response.sendRedirect("../cadastrado_sucesso.jsp?link=cadastrar_materia.jsp");
+        response.sendRedirect("../cadastrar_materia.jsp?situacao_cadastro=sucesso");
 
     } else {
-        response.sendRedirect("../cadastrado_erro.jsp?link=cadastrar_materia.jsp");
+        response.sendRedirect("../cadastrar_materia.jsp?situacao_cadastro=erro");
     }
 
 %>

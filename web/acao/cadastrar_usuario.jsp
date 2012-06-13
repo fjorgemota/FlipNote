@@ -15,12 +15,10 @@
     aluno.setSenha(senha);
     if (aluno.insert()) {
         //out.print(sql);
-       response.sendRedirect("../cadastrado_sucesso.jsp");
+       response.sendRedirect("../index.jsp?situacao_cadastro=sucesso");
 
     } else {
-
-        out.print("Erro: por favor, tente novamente<br />");
-        out.print("<a href=\"../cadastrar_usuario.jsp\">Voltar</a>");
+response.sendRedirect("../cadastrar_sucesso.jsp?situacao_cadastro=erro");
     }
 
 %>
