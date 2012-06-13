@@ -107,7 +107,7 @@ public class AnotacaoAR implements AR {
         MySQL cliente = MySQL.getInstance();
         String sql = "INSERT INTO anotacao(id, titulo, texto, aluno, grupo, notificacao) "
                 + "VALUES(" + this.getID() + ",'" + this.getTitulo() + "', "
-                + "'" + this.getTexto() + "', " + this.getAlunoSQL() + ", " + this.getGrupoSQL() + ", " + Data.getDateTime(this.getNotificacao()) + ");";
+                + "'" + this.getTexto() + "', " + this.getAlunoSQL() + ", " + this.getGrupoSQL() + ", " + this.getNotificacaoSQL() + ");";
         return cliente.executaInsert(sql);
     }
 
@@ -115,7 +115,7 @@ public class AnotacaoAR implements AR {
     public boolean update() {
         MySQL cliente = MySQL.getInstance();
         String sql = "UPDATE anotacao SET titulo='" + this.getTitulo() + "',texto='" + this.getTexto() + "',"
-                + "aluno=" + this.getAlunoSQL() + ",grupo=" + this.getGrupoSQL() + ", notificacao=" + Data.getDateTime(this.getNotificacao())
+                + "aluno=" + this.getAlunoSQL() + ",grupo=" + this.getGrupoSQL() + ", notificacao=" + this.getNotificacaoSQL()
                 + " WHERE id='" + this.getID() + "';";
         return cliente.executaUpdate(sql);
     }
@@ -139,5 +139,12 @@ public class AnotacaoAR implements AR {
             return "NULL";
         }
         return "" + this.aluno.getID();
+    }
+
+    private String getNotificacaoSQL() {
+        if(this.getNotificacao() == null){
+            return "NULL";
+        }
+        return Data.getDateTime(this.getNotificacao());
     }
 }
