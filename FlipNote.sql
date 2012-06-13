@@ -42,7 +42,7 @@ DEFAULT CHARACTER SET = utf8;
 -- Table `flipnote`.`anotacao`
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `flipnote`.`anotacao` (
-  `id` INT(11) NOT NULL ,
+  `id` INT(11) NOT NULL AUTO_INCREMENT ,
   `titulo` VARCHAR(50) NOT NULL ,
   `texto` TEXT NULL DEFAULT NULL ,
   `notificacao` DATETIME NULL DEFAULT NULL ,
@@ -62,7 +62,8 @@ CREATE  TABLE IF NOT EXISTS `flipnote`.`anotacao` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8;
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_romanian_ci;
 
 
 -- -----------------------------------------------------
