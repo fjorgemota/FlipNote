@@ -1,3 +1,7 @@
+<%@page import="dao.MateriaDAO"%>
+<%@page import="util.Sessao"%>
+<%@page import="modelo.MateriaAR"%>
+<%@page import="java.util.ArrayList"%>
 <html>
 
     <jsp:include page="includes/head.jsp">
@@ -29,33 +33,30 @@
                             Ações
                         </div>
                     </div>
-                    <div class="row-fluid">
-                        <div class="span4">
-                            Programação Orientada à Objetos 2
-                        </div>
-                        <div class="span4">
-                            Kaléu Caminha
-                        </div>
-                        <div class="span4">
-                            <div class="row-fluid">
-                                  <jsp:include page="includes/botoes-editar-apagar.jsp"/>
-                            </div>
+                    
+                    <%
+                        ArrayList<MateriaAR> materias = MateriaDAO.getMateriasPorAluno(Sessao.getAlunoLogado(request));
+                        for (MateriaAR materia : materias) {
+                            out.print("<div class=\"row-fluid\">");
+                            out.print("<div class=\"span4\">");
+                            out.print(materia.getNome());
+                            out.print("</div>");
 
-                        </div>
-                    </div>
-                    <div class="row-fluid">
-                        <div class="span4">
-                            Projetos de Software II
-                        </div>
-                        <div class="span4">
-                            Maiquel
-                        </div>
-                        <div class="span4">
-                            <div class="row-fluid">
-                                <jsp:include page="includes/botoes-editar-apagar.jsp"/>
-                            </div>
-                        </div>
-                    </div>
+                            out.print("<div class=\"span4\">");
+                            out.print(materia.getProfessor());
+                            out.print("</div>");
+                            
+                            
+                            out.print("<div class=\"span4\">");
+                            
+                            out.print("</div>");
+                            
+                            out.print("</div>");
+
+                        }
+                    %>
+                                                                                 
+                  
                 </div><!--/span-->
 
             </div>

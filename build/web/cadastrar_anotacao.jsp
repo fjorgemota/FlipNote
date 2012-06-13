@@ -17,13 +17,13 @@
 
                     <p><h4> Use o formulario abaixo para cadastrar uma anotação.</h4></p>
 
-                    <form action="acao/cadastrar_usuario.jsp" method="POST">
+                    <form action="acao/cadastrar_anotacao.jsp" method="POST">
                         <div class="row-fluid">
                             <div class="span6">
                                 <p>Titulo: </p>
                             </div>
                             <div class="span6">
-                                <textarea rows="1" cols="80" ></textarea>
+                                <input type="text" name="titulo" size="30" /> 
                             </div>
 
                         </div>
@@ -33,10 +33,12 @@
                                 <p>Anotação </p>
                             </div>
                             <div class="span6">
-                                <textarea rows="4" cols="80" ></textarea>
+                                <input type="text" name="texto" size="30" />  
                             </div>
                         </div>
-                        <jsp:include page="includes/notificacao.jsp" />
+                        
+                        
+                        <jsp:include page="includes/notificacao.jsp" />     
                         <jsp:include page="includes/botoes-form.jsp" />
                     </form>
                 </div>

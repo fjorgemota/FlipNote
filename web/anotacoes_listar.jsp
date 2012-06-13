@@ -1,3 +1,6 @@
+<%@page import="dao.AnotacaoDAO"%>
+<%@page import="modelo.AnotacaoAR"%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="util.Sessao"%>
 <%
 Sessao.verificaLoginERedireciona(request, response);
@@ -27,32 +30,28 @@ Sessao.verificaLoginERedireciona(request, response);
                             Links
                         </div>
                     </div>
-                    <div class="row-fluid">
-                        <div class="span4">
-                            1
-                        </div>
-                        <div class="span4">
-                            <b>Testando....</b>
-                        </div>
-                        <div class="span4">
-                            <div class="row-fluid">
-                                <jsp:include page="includes/botoes-editar-apagar.jsp"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row-fluid">
-                        <div class="span4">
-                            5
-                        </div>
-                        <div class="span4">
-                            <b>Segunda anotação...</b>
-                        </div>
-                        <div class="span4">
-                            <div class="row-fluid">
-                                <jsp:include page="includes/botoes-editar-apagar.jsp"/>
-                            </div>
-                        </div>
-                    </div>
+                    
+                     <%
+                        ArrayList<AnotacaoAR> anotacoes = AnotacaoDAO.getAnotacoesPorAluno(Sessao.getAlunoLogado(request));
+                        for (AnotacaoAR anotacao : anotacoes) {
+                            out.print("<div class=\"row-fluid\">");
+                            out.print("<div class=\"span4\">");
+                            out.print(anotacao.getID());
+                            out.print("</div>");
+
+                            out.print("<div class=\"span4\">");
+                            out.print(anotacao.getTitulo());
+                            out.print("</div>");
+                            
+                            
+                            out.print("<div class=\"span4\">");
+                            
+                            out.print("</div>");
+                            
+                            out.print("</div>");
+
+                        }
+                    %>
                 </div><!--/span-->
             </div>
         </div>
