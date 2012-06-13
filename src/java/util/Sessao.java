@@ -17,7 +17,7 @@ public class Sessao {
     protected static int usuarioID;
     protected static AlunoAR usuarioLogado;
     public static AlunoAR getAlunoLogado(HttpServletRequest request) {
-        Object id = request.getSession().getAttribute("aluno");
+        Object id =      request.getSession(true).getAttribute("aluno");
         if(id == null){
             return new AlunoAR();// Retorna um aluno vazio justamente por estar..vazio
         }
