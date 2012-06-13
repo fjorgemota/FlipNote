@@ -66,7 +66,10 @@ public class AnotacaoAR implements AR {
         this.notificacao = notificacao;
     }
     public void setNotificacao(String notificacao) {
-        this.notificacao = Data.getDateTime(notificacao);
+        if(notificacao != null){
+            this.notificacao = Data.getDateTime(notificacao);
+        }
+        
     }
     public String getTexto() {
         return texto;
