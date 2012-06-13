@@ -1,3 +1,4 @@
+<%@page import="util.HTMLUtil"%>
 <%@page import="dao.AnotacaoDAO"%>
 <%@page import="modelo.AnotacaoAR"%>
 <%@page import="java.util.ArrayList"%>
@@ -27,7 +28,7 @@ Sessao.verificaLoginERedireciona(request, response);
                             Titulo
                         </div>
                         <div class="span4">
-                            Links
+                            Ações
                         </div>
                     </div>
                     
@@ -45,14 +46,14 @@ Sessao.verificaLoginERedireciona(request, response);
                             
                             
                             out.print("<div class=\"span4\">");
-                            
+                            out.print(HTMLUtil.getActionsButtons("anotacao", anotacao.getID()));
                             out.print("</div>");
                             
                             out.print("</div>");
 
                         }
                     %>
-                </div><!--/span-->
+                 </div><!--/span-->
             </div>
         </div>
         <jsp:include page="includes/javascript_formulario.jsp"/>
