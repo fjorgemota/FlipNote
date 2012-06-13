@@ -85,7 +85,7 @@ public class AlunoAR implements AR {
         if(nome == null){
             return "";
         }
-        String[] nomeCompleto = nome.split(" ",1);
+        String[] nomeCompleto = nome.split(" ",2);
         if(nomeCompleto.length > 0){
             return nomeCompleto[0];
         }

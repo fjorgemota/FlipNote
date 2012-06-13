@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <jsp:include page="includes/head.jsp">
+    <jsp:include page="includes/head.jsp">
         <jsp:param name="titulo" value="Cadastrar Trabalhos"/>
     </jsp:include>
     <body>
@@ -17,22 +17,24 @@
                     <h2>Cadastrar Trabalhos</h2>
                     <p><h4> Use o formulario abaixo para cadastrar um trabalho.</h4></p>
 
-                    <jsp:include page="includes/materia.jsp" />
+                    <form action="acao/cadastrar_anotacao.jsp" method="POST">   
+                        <jsp:include page="includes/materia.jsp" />
 
-                    <jsp:include page="includes/data.jsp" />
-                    
-                    <div class="row-fluid">
-                        <div class="span6">
-                            <p>Conteudo:  </p>
+                        <jsp:include page="includes/data.jsp" />
+
+                        <div class="row-fluid">
+                            <div class="span6">
+                                <p>Conteudo:  </p>
+                            </div>
+                            <div class="span6">
+                                <input type="text" name="descricao" size="30" />
+                                
+                            </div>
                         </div>
-                        <div class="span6">
-                            <textarea rows="3" cols="80" ></textarea>
-                        </div>
-                    </div>
-                    <jsp:include page="includes/notificacao.jsp" />
-                    <jsp:include page="includes/botoes-form.jsp" />
+                        <jsp:include page="includes/notificacao.jsp" />
+                        <jsp:include page="includes/botoes-form.jsp" />
 
-
+                    </form>
                 </div>
 
             </div>
