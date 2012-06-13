@@ -11,13 +11,13 @@ package util;
 public class HTMLUtil {
 
     public static String getEditButton(String actname, int id){
-        String html = "<a href=\"edita_"+actname+".jsp?id="+id+"\" class=\"btn btn-success\" >"
+        String html = "<a href=\"editar_"+actname+".jsp?id="+id+"\" class=\"btn btn-success\" >"
                 + "Editar"
                 + "</a>";
         return html;
     }
     public static String getDeleteButton(String actname, int id){
-        String html = "<a href=\"acao/apaga_"+actname+".jsp?id="+id+"\" class=\"btn btn-danger\" >"
+        String html = "<a href=\"acao/apagar_"+actname+".jsp?id="+id+"\" class=\"btn btn-danger\" >"
                 + "Apagar"
                 + "</a>";
         return html;
