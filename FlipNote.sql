@@ -11,7 +11,7 @@ USE `flipnote` ;
 CREATE  TABLE IF NOT EXISTS `flipnote`.`aluno` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
   `nome` VARCHAR(200) NOT NULL ,
-  `senha` VARCHAR(41) NOT NULL ,
+  `senha` VARCHAR(130) NOT NULL ,
   `email` VARCHAR(200) NOT NULL ,
   PRIMARY KEY (`id`) ,
   UNIQUE INDEX `email` (`email` ASC) )

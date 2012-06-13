@@ -24,7 +24,7 @@ public class Codificador {
     public static String codifica(String str) {
         MessageDigest md;
         try {
-            md = MessageDigest.getInstance("SHA");
+            md = MessageDigest.getInstance("SHA-512"); // Evita hackers ao maximo \o/
         } catch (NoSuchAlgorithmException ex) {
             return "";
         }
