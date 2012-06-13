@@ -36,7 +36,10 @@ Sessao.verificaLoginERedireciona(request, response);
                         </div>
                         <div class="span4">
                             <div class="row-fluid">
-                                <jsp:include page="includes/botoes-editar-apagar.jsp"/>
+                                <jsp:include page="includes/botoes-editar-apagar.jsp">
+                                    <jsp:param name="filename" value="anotacoes"/>
+                                    <jsp:param name="id" value="${id}"/>
+                                </jsp:include>
                             </div>
                         </div>
                     </div>
@@ -49,7 +52,10 @@ Sessao.verificaLoginERedireciona(request, response);
                         </div>
                         <div class="span4">
                             <div class="row-fluid">
-                                <jsp:include page="includes/botoes-editar-apagar.jsp"/>
+                                <jsp:include page="includes/botoes-editar-apagar.jsp">
+                                    <jsp:param name="filename" value="anotacoes"/>
+                                    <jsp:param name="id" value="${id}"/>
+                                </jsp:include>
                             </div>
                         </div>
                     </div>
