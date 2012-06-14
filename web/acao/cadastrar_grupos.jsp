@@ -6,7 +6,7 @@
 <%@page import="util.Sessao"%>
 <%@page import="modelo.GrupoAR"%>
 <%
-    Sessao.verificaLoginERedireciona(request, response);
+    Sessao.verificaSeEstaLogadoERedireciona(request, response);
     String nome = request.getParameter("nome");
     String descricao = request.getParameter("descricao");
     GrupoAR grupo = new GrupoAR();
@@ -15,9 +15,9 @@
     grupo.setNome(nome);
 
     if (grupo.insert()) {
-       response.sendRedirect("../cadastrado_sucesso.jsp?link=cadastrar_grupos.jsp");
+       response.sendRedirect("../cadastrar_grupos.jsp?situacao=cadastro_sucesso");
     } else {
-       response.sendRedirect("../cadastrado_erro.jsp?link=cadastrar_grupos.jsp");
+       response.sendRedirect("../cadastrar_grupos.jsp?situacao=cadastro_erro");
     }
 
 %>

@@ -6,7 +6,7 @@
 <%@page import="dao.MateriaDAO"%>
 <%@page import="java.util.ArrayList"%>
 <%
-Sessao.verificaLoginERedireciona(request, response);
+Sessao.verificaSeEstaLogadoERedireciona(request, response);
 %>
 <!DOCTYPE html>
 <html>
