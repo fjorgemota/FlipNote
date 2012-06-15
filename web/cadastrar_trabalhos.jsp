@@ -17,7 +17,7 @@
                     <h2>Cadastrar Trabalhos</h2>
                     <p><h4> Use o formulario abaixo para cadastrar um trabalho.</h4></p>
 
-                    <form action="acao/cadastrar_anotacao.jsp" method="POST">   
+                    <form action="acao/cadastrar_trabalho.jsp" method="POST">   
                         <jsp:include page="includes/materia.jsp" />
 
                         <jsp:include page="includes/data.jsp" />
