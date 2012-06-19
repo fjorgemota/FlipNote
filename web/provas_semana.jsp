@@ -31,12 +31,12 @@
                                 so.addVariable("path", "ampie/");
                                 so.addVariable("chart_settings", encodeURIComponent("<settings><redraw>1</redraw><background><alpha>100</alpha><border_alpha>20</border_alpha></background><legend><enabled>0</enabled><align>center</align></legend><pie><y>50%</y></pie><data_labels><show>{title}: {value}</show><max_width>140</max_width></data_labels></settings>"));
                                 so.addVariable("chart_data", encodeURIComponent("<pie><%
-                                                                ArrayList<MateriaAR> atividades = MateriaDAO.getMaterias();
-                                                                for(MateriaAR materia: atividades){
-                                                                    out.print("<slice title='"+materia.getNome()+"'>"+materia.getAtividadesPeriodo(Data.getDate(), Data.getDate(86400*30)) +"</slice>");
-                                                                }
-                                                                                                                               %></pie>"));
-                                so.write("amcharts_1336583874998");
+                                    ArrayList<MateriaAR> atividades = MateriaDAO.getMaterias();
+                                    for (MateriaAR materia : atividades) {
+                                        out.print("<slice title='" + materia.getNome() + "'>" + materia.getAtividadesPeriodo(Data.getDate(), Data.getDate(86400 * 30)) + "</slice>");
+                                    }
+                                %></pie>"));
+                                    so.write("amcharts_1336583874998");
                             </script>
 
                         </div>
@@ -47,21 +47,21 @@
                         </div>
 
                     </div>
+                    <div class="row-fluid">
+                        <div class="span6">
+                            <h3>Conteudo das avaliações</h3>
 
-                    <div class="span6">
-                        <h3>Conteudo das avaliações</h3>
+                        </div>
 
+
+                        <div class="span6">
+                            <h3>Notas das ultimas provas</h3>
+
+
+
+
+                        </div>
                     </div>
-
-
-                    <div class="span6">
-                        <h3>Notas das ultimas provas</h3>
-                        
-                        
-                      
-
-                    </div>
-
                 </div><!--/span-->
             </div>
         </div>
