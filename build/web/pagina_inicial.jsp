@@ -73,8 +73,7 @@ Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
                         </div><!--/span-->
                         <div class="span6">
                             <h2>Atividades recentes</h2>
-                            <p>Histórico de atividades, exemplo Najuan cadastrou um trabalho em Programaação Orientada a Objetos - Há¡ 20 minutos. </p>
-                            <p>Kamila,Convidou voce a participar do grupo "Técnico" - Ontem . </p>
+                           
 
                         </div><!--/span-->
 
