@@ -28,6 +28,18 @@ else if(situacao.equals("apagado_erro")){
 else if(situacao.equals("apagado_sucesso")){
     out.print(HTMLUtil.alerta("Registro apagado com sucesso"));
 }
+else if(situacao.equals("login_sucesso")){
+    out.print(HTMLUtil.alerta("Login realizado com sucesso"));
+}
+else if(situacao.equals("login_erro")){
+    out.print(HTMLUtil.alerta("Nome ou senha incorretos"));
+}
+else if(situacao.equals("logout_sucesso")){
+    out.print(HTMLUtil.alerta("Você foi desconectado com sucesso"));
+}
+else if(situacao.equals("logout_erro")){
+    out.print(HTMLUtil.alerta("Houve um erro durante o logout"));
+}
 if(!situacao.equals("")){
     out.print("});</script>");
 }
