@@ -80,6 +80,7 @@ public class Data {
         try {
             return dateFormat.parse(s);
         } catch (ParseException ex) {
+            System.out.println(ex.getMessage());
             return null;
         }
     }

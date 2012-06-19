@@ -105,14 +105,14 @@ public abstract class TarefaBaseAR implements AR {
         MySQL cliente = MySQL.getInstance();
         String sql = "INSERT INTO "+nomeTabela+"(id, materia, data, descricao, notificacao, nota, aluno) "
                 + "VALUES("+this.getID()+",'"+this.getMateriaSQL()+"', "
-                + "'"+Data.getDate(this.getData())+"', '"+this.getDescricao()+"', '"+Data.getDateTime(this.getNotificacao())+"', "+this.getNota()+", "+this.getCriadorSQL()+");";
+                + "'"+Data.getDate(this.getData())+"', '"+this.getDescricao()+"', "+this.getNotificacaoSQL()+", "+this.getNota()+", "+this.getCriadorSQL()+");";
         return cliente.executaInsert(sql);
     }
     protected boolean atualiza(String nomeTabela) {
         MySQL cliente = MySQL.getInstance();
         String sql = "UPDATE "+nomeTabela+" SET materia="+this.getMateriaSQL()+", "
                 + "data='"+Data.getDate(this.getData())+"', descricao='"+this.getDescricao()+"',"
-                + "notificacao='"+Data.getDateTime(this.getNotificacao())+"', nota="+this.getNota()+", aluno="+this.getCriadorSQL()+" WHERE id="+this.getID()+";";
+                + "notificacao="+this.getNotificacaoSQL()+", nota="+this.getNota()+", aluno="+this.getCriadorSQL()+" WHERE id="+this.getID()+";";
         return cliente.executaUpdate(sql);
     }
 
@@ -132,5 +132,11 @@ public abstract class TarefaBaseAR implements AR {
             return "NULL";
         }
         return this.getCriador().getID()+"";
+    }
+    private String getNotificacaoSQL(){
+        if(this.notificacao == null){
+            return "NULL";
+        }
+        return "'"+Data.getDateTime(this.notificacao)+"'";
     }
 }
