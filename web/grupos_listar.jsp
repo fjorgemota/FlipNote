@@ -48,7 +48,7 @@
                             
                             
                             out.print("<div class=\"span4\">");
-                            out.print(HTMLUtil.getActionsButtons("grupos", grupo.getID()));
+                            out.print(HTMLUtil.getActionsButtons("grupo", grupo.getID()));
                             out.print("</div>");
                             
                             out.print("</div>");

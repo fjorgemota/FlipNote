@@ -19,7 +19,7 @@
     trabalho.setData(data);
     trabalho.setNotificacao(notificacao);
     trabalho.setMateria(Integer.parseInt(materia));
-    
+    trabalho.setCriador(Sessao.getAlunoLogado(request));
     
     if (trabalho.insert()) {
         //out.print(sql);

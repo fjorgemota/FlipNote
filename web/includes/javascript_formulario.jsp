@@ -40,6 +40,9 @@ else if(situacao.equals("logout_sucesso")){
 else if(situacao.equals("logout_erro")){
     out.print(HTMLUtil.alerta("Houve um erro durante o logout"));
 }
+else if(situacao.equals("foi_hacker")){
+    out.print(HTMLUtil.alerta("Erro: Hackers não são permitidos por aqui..engraçadinho.."));
+}
 if(!situacao.equals("")){
     out.print("});</script>");
 }

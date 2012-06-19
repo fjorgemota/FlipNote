@@ -13,7 +13,7 @@
     if(!grupo.load()){
         response.sendRedirect("../grupos_listar.jsp?situacao=apagado_erro");
     }
-       else if(grupo.getAluno() == Sessao.getAlunoLogado(request)){
+    if(grupo.getAluno().getID() == Sessao.getAlunoLogado(request).getID()){
         if(grupo.delete()){
             response.sendRedirect("../grupos_listar.jsp?situacao=apagado_sucesso");
         }
@@ -22,8 +22,7 @@
         }
     }   
     else{
-        out.print("Erro: Hackers não são permitidos por aqui..engraçadinho..<br />");
-        out.print("<a href=\"../pagina_inicial.jsp\">Voltar</a>");
+        response.sendRedirect("../grupos_listar.jsp?situacao=foi_hacker");
     }
 
 %>

@@ -1,3 +1,4 @@
+<%@page import="modelo.TarefaBaseAR"%>
 <%@page import="util.Sessao"%>
 <%@page import="dao.AlunoDAO"%>
 <%@page import="modelo.AlunoAR"%>
@@ -44,7 +45,7 @@ Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
                                 so.addVariable("path", "ampie/");
                                 so.addVariable("chart_settings", encodeURIComponent("<settings><redraw>1</redraw><background><alpha>100</alpha><border_alpha>20</border_alpha></background><legend><enabled>0</enabled><align>center</align></legend><pie><y>50%</y></pie><data_labels><show>{title}: {value}</show><max_width>140</max_width></data_labels></settings>"));
                                 so.addVariable("chart_data", encodeURIComponent("<pie><%
-                                                                ArrayList<MateriaAR> atividades = MateriaDAO.getMaterias();
+                                                                                        ArrayList<MateriaAR> atividades = MateriaDAO.getMateriasPorAluno(aluno);
                                                                 for(MateriaAR materia: atividades){
                                                                     out.print("<slice title='"+materia.getNome()+"'>"+materia.getAtividadesPeriodo(Data.getDate(), Data.getDate(86400*30)) +"</slice>");
                                                                 }
@@ -73,8 +74,14 @@ Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
                         </div><!--/span-->
                         <div class="span6">
                             <h2>Atividades recentes</h2>
-                            <p>Histórico de atividades, exemplo Najuan cadastrou um trabalho em Programaação Orientada a Objetos - Há¡ 20 minutos. </p>
-                            <p>Kamila,Convidou voce a participar do grupo "Técnico" - Ontem . </p>
+                            <ul>
+                                <%
+                                ArrayList<TarefaBaseAR> tarefas = aluno.getTodasTarefas(Data.getDate(), Data.getDate(86400*30));
+                                for(TarefaBaseAR tarefa: tarefas){
+                                    out.print("<li><a href='"+tarefa.getEditLink()+"'>"+tarefa.getDescricao()+"</a> - em "+"</li>" );
+                                }
+                                %>
+                            </ul>
 
                         </div><!--/span-->
 

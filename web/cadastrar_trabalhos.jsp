@@ -30,7 +30,7 @@ Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
                             <p>Conteudo:  </p>
                         </div>
                         <div class="span6">
-                            <textarea rows="3" cols="80" ></textarea>
+                            <textarea rows="3" cols="80" name="descricao"></textarea>
                         </div>
                     </div>
                     <jsp:include page="includes/notificacao.jsp" />
