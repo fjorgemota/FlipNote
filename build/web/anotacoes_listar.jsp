@@ -4,7 +4,7 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="util.Sessao"%>
 <%
-Sessao.verificaLoginERedireciona(request, response);
+Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
 %>
 <html>
     <jsp:include page="includes/head.jsp">

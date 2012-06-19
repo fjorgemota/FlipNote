@@ -3,6 +3,9 @@
 <%@page import="util.Sessao"%>
 <%@page import="modelo.MateriaAR"%>
 <%@page import="java.util.ArrayList"%>
+<%
+    Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
+%>
 <html>
 
     <jsp:include page="includes/head.jsp">
@@ -46,9 +49,9 @@
                             out.print("<div class=\"span4\">");
                             out.print(materia.getProfessor());
                             out.print("</div>");
-                            
-                            
-                          out.print("<div class=\"span4\">");
+
+
+                            out.print("<div class=\"span4\">");
                             out.print(HTMLUtil.getActionsButtons("materia", materia.getID()));
                             out.print("</div>");
 

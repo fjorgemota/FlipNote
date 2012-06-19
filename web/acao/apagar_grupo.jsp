@@ -6,7 +6,7 @@
 <%@page import="util.Sessao"%>
 <%@page import="modelo.GrupoAR"%>
 <%
-    Sessao.verificaLoginERedireciona(request, response);
+    Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
     String id = request.getParameter("id");
     GrupoAR grupo = new GrupoAR();
     grupo.setID(Integer.parseInt(id));
