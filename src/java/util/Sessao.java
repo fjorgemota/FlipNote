@@ -40,7 +40,7 @@ public class Sessao {
     public static void verificaSeNaoEstaLogadoERedireciona(HttpServletRequest request, HttpServletResponse response){
         if(!estaLogado(request)){
             try {
-                response.sendRedirect("/FlipNote/index.jsp");
+                response.sendRedirect("/FlipNote/index.jsp?situacao=foi_hacker");
             } catch (IOException ex) {
                 return;
             }

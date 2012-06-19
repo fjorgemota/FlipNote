@@ -26,8 +26,12 @@ public class TrabalhoAR extends TarefaBaseAR{
     public boolean delete() {
          return this.apaga("trabalho");
     }
-
-    
+    public String getEditLink() {
+        return "editar_trabalho.jsp?id="+this.getID();
+    }
+    public String getDeleteLink() {
+        return "acao/apagar_trabalho.jsp?id="+this.getID();
+    }
 
    
 }

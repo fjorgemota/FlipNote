@@ -48,7 +48,10 @@ public class HTMLUtil {
             + "  width     : 300,"
             + " opacity   : 0.5,"
             + " margin    : 30,"
-            + "classes   : \"rounded_corners\""
+            + "classes   : \"rounded_corners\","
+            + "msgCss : {"
+            + "textAlign : 'center'"
+            + "}"
             + "});";
         return html;
     }

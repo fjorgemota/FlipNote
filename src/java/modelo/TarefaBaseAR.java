@@ -29,7 +29,11 @@ public abstract class TarefaBaseAR implements AR {
     public void setCriador(AlunoAR criador) {
         this.criador = criador;
     }
-
+    public void setCriador(int criador) {
+        this.criador = new AlunoAR();
+        this.criador.setID(criador);
+        this.criador.load();
+    }
     public Date getData() {
         return data;
     }
@@ -139,4 +143,6 @@ public abstract class TarefaBaseAR implements AR {
         }
         return "'"+Data.getDateTime(this.notificacao)+"'";
     }
+    public abstract String getEditLink();
+    public abstract String getDeleteLink();
 }

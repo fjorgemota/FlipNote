@@ -27,5 +27,12 @@ public class ProvaAR extends TarefaBaseAR{
          return this.apaga("prova");
     }
 
+    public String getEditLink() {
+        return "editar_prova.jsp?id="+this.getID();
+    }
+    public String getDeleteLink() {
+        return "acao/apagar_trabalho.jsp?id="+this.getID();
+    }
+
    
 }

@@ -42,6 +42,7 @@ public class MateriaDAO {
       
         while(linhas.next()){
             MateriaAR n = new MateriaAR();
+            n.setID(linhas.getInt("id"));
             n.setAluno(linhas.getInt("aluno"));
             n.setGrupo(linhas.getInt("grupo"));
             n.setProfessor(linhas.getString("professor"));
@@ -59,6 +60,7 @@ public class MateriaDAO {
       
         while(linhas.next()){
             MateriaAR n = new MateriaAR();
+            n.setID(linhas.getInt("id"));
             n.setAluno(linhas.getInt("aluno"));
             n.setGrupo(linhas.getInt("grupo"));
             n.setProfessor(linhas.getString("professor"));
