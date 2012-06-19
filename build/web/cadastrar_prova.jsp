@@ -1,4 +1,8 @@
+<%@page import="util.Sessao"%>
 <!DOCTYPE html>
+<%
+    Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
+%>
 <html>
    <jsp:include page="includes/head.jsp">
         <jsp:param name="titulo" value="Cadastrar avaliações"/>
