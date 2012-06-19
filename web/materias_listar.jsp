@@ -1,3 +1,4 @@
+<%@page import="util.HTMLUtil"%>
 <%@page import="dao.MateriaDAO"%>
 <%@page import="util.Sessao"%>
 <%@page import="modelo.MateriaAR"%>
@@ -33,7 +34,7 @@
                             Ações
                         </div>
                     </div>
-                    
+
                     <%
                         ArrayList<MateriaAR> materias = MateriaDAO.getMateriasPorAluno(Sessao.getAlunoLogado(request));
                         for (MateriaAR materia : materias) {
@@ -47,16 +48,14 @@
                             out.print("</div>");
                             
                             
-                            out.print("<div class=\"span4\">");
-                            
-                            out.print("</div>");
-                            
+                          out.print("<div class=\"span4\">");
+                            out.print(HTMLUtil.getActionsButtons("materia", materia.getID()));
                             out.print("</div>");
 
                         }
                     %>
-                                                                                 
-                  
+
+
                 </div><!--/span-->
 
             </div>

@@ -1,3 +1,8 @@
+<%@page import="util.Sessao"%>
+<%@page import="com.oracle.net.Sdp"%>
+<%
+Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
+%>
 <!DOCTYPE html>
 <html>
   <jsp:include page="includes/head.jsp">
