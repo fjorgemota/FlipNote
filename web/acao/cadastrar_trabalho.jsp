@@ -9,14 +9,14 @@
     String descricao = request.getParameter("descricao");
     String data = request.getParameter("data");
     String notificacao = request.getParameter("notificacao");
-
+    String materia = request.getParameter("materia");
     
     
     TrabalhoAR trabalho = new TrabalhoAR();
     trabalho.setDescricao(descricao);
     trabalho.setData(data);
     trabalho.setNotificacao(notificacao);
-   
+    trabalho.setMateria(Integer.parseInt(materia));
     
     
     if (trabalho.insert()) {
