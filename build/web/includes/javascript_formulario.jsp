@@ -8,22 +8,27 @@
 <script language="javascript" type="text/javascript" src="js/index.js"></script>
 <script language="javascript" type="text/javascript" src="js/form.js"></script>
 <% 
-String situacao_cadastro = request.getParameter("situacao_cadastro");
-if(situacao_cadastro == null){
-    situacao_cadastro = "";            
+String situacao = request.getParameter("situacao");
+if(situacao == null){
+    situacao= "";            
 }
-if(!situacao_cadastro.equals("")){
+if(!situacao.equals("")){
     out.print("<script language=\"javascript\" type=\"text/javascript\" src=\"js/jquery.jnotifica.js\"></script>");
     out.print("<script language=\"javascript\" type=\"text/javascript\">jQuery(document).ready(function(){");
 }
-if(situacao_cadastro.equals("sucesso")){
+if(situacao.equals("cadastro_sucesso")){
     out.print(HTMLUtil.alerta("Registro cadastrado com sucesso"));
 }
-else if(situacao_cadastro.equals("erro")){
+else if(situacao.equals("cadastro_erro")){
     out.print(HTMLUtil.alerta("Houve um erro durante o salvamento do registro"));
-    
 }
-if(!situacao_cadastro.equals("")){
+else if(situacao.equals("apagado_erro")){
+    out.print(HTMLUtil.alerta("Houve um erro durante o apagamento do registro"));
+}
+else if(situacao.equals("apagado_sucesso")){
+    out.print(HTMLUtil.alerta("Registro apagado com sucesso"));
+}
+if(!situacao.equals("")){
     out.print("});</script>");
 }
 %>

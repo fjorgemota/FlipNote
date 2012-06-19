@@ -1,4 +1,5 @@
 <%@page import="util.HTMLUtil"%>
+<%@page import="javax.swing.text.html.HTML"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="util.Sessao"%>
 <%@page import="dao.GrupoDAO"%>
@@ -46,13 +47,11 @@
                             out.print("</div>");
                             
                             
-                           
                             out.print("<div class=\"span4\">");
-                            out.print(HTMLUtil.getActionsButtons("grupo", grupo.getID()));
-                            out.print("</div>");
+                            out.print(HTMLUtil.getActionsButtons("grupos", grupo.getID()));
                             out.print("</div>");
                             
-                          
+                            out.print("</div>");
 
                         }
                     %>

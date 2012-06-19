@@ -8,7 +8,7 @@
 <%@page import="util.Sessao"%>
 <%@page import="modelo.ProvaAR"%>
 <%
-    Sessao.verificaLoginERedireciona(request, response);
+    Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
     String data = request.getParameter("data");
     String descricao = request.getParameter("descricao");
     String notificacao = request.getParameter("notificacao");

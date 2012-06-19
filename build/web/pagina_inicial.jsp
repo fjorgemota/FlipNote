@@ -6,7 +6,7 @@
 <%@page import="dao.MateriaDAO"%>
 <%@page import="java.util.ArrayList"%>
 <%
-Sessao.verificaLoginERedireciona(request, response);
+Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
 %>
 <!DOCTYPE html>
 <html>
@@ -28,9 +28,7 @@ Sessao.verificaLoginERedireciona(request, response);
                             AlunoAR aluno = Sessao.getAlunoLogado(request);
                             out.print(aluno.getPrimeiroNome());
                             %></h1>
-                        <p>Parece que voce vai ter uma semana corrida,<% 
-                             out.print(aluno.getPrimeiroNome());
-                            %>, Portanto, </p>
+                        <p>Parece que voce vai ter uma semana corrida,Fernando, Portanto, </p>
                         <p>Boa sorte. :)</p>
                         <p><a class="btn btn-primary btn-large">Veja porquê. &raquo;</a></p>
                     </div>

@@ -37,10 +37,19 @@ public class Sessao {
     public static boolean estaLogado(HttpServletRequest request) {
         return getAlunoLogado(request).getID() != 0;
     }
-    public static void verificaLoginERedireciona(HttpServletRequest request, HttpServletResponse response){
+    public static void verificaSeNaoEstaLogadoERedireciona(HttpServletRequest request, HttpServletResponse response){
         if(!estaLogado(request)){
             try {
                 response.sendRedirect("/FlipNote/index.jsp");
+            } catch (IOException ex) {
+                return;
+            }
+        }
+    }
+    public static void verificaSeEstaLogadoERedireciona(HttpServletRequest request, HttpServletResponse response){
+        if(estaLogado(request)){
+            try {
+                response.sendRedirect("/FlipNote/pagina_inicial.jsp");
             } catch (IOException ex) {
                 return;
             }

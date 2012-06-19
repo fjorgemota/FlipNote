@@ -6,7 +6,7 @@
 <%@page import="util.Sessao"%>
 <%@page import="modelo.MateriaAR"%>
 <%
-    Sessao.verificaLoginERedireciona(request, response);
+    Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
     String nome = request.getParameter("nome");
     String professor = request.getParameter("professor");
     MateriaAR materia = new MateriaAR();

@@ -1,4 +1,13 @@
+<%-- 
+    Document   : index
+    Created on : Jun 5, 2012, 4:05:10 PM
+    Author     : fernando_mota
+--%>
+<%@page import="util.Sessao"%>
 <!DOCTYPE html>
+<% 
+Sessao.verificaSeEstaLogadoERedireciona(request, response);
+%>
 <html>
 
     <jsp:include page="includes/head.jsp">

@@ -15,9 +15,9 @@
     aluno.setSenha(senha);
     if (aluno.insert()) {
         //out.print(sql);
-        response.sendRedirect("../index.jsp?situacao_cadastro=sucesso");
+        response.sendRedirect("../index.jsp?situacao=cadastro_sucesso");
     } else {
-        response.sendRedirect("../cadastrar_sucesso.jsp?situacao_cadastro=erro");
+        response.sendRedirect("../cadastrar_sucesso.jsp?situacao=cadastro_erro");
     }
 
 %>
