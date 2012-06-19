@@ -6,5 +6,5 @@
 
 <%
 session.invalidate();
-response.sendRedirect("../index.jsp");
+response.sendRedirect("../index.jsp?situacao=logout_sucesso");
 %>

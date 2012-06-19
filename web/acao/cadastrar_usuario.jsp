@@ -17,7 +17,7 @@
         //out.print(sql);
         response.sendRedirect("../index.jsp?situacao=cadastro_sucesso");
     } else {
-        response.sendRedirect("../cadastrar_sucesso.jsp?situacao=cadastro_erro");
+        response.sendRedirect("../cadastrar_usuario.jsp?situacao=cadastro_erro");
     }
 
 %>

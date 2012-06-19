@@ -106,6 +106,8 @@ public class MateriaAR implements AR{
     public int getAtividadesPeriodo(String data_inicio, String data_fim){
         String sql1 = "SELECT COUNT(id) AS num FROM prova WHERE materia='"+this.id+"' AND data>'"+data_inicio+"' AND data<'"+data_fim+"';";
         String sql2 = "SELECT COUNT(id) AS num FROM trabalho WHERE materia='"+this.id+"' AND data>'"+data_inicio+"' AND data<'"+data_fim+"';";
+        System.out.println(sql1);
+        System.out.println(sql2);
         MySQL cliente = MySQL.getInstance();
         ConjuntoResultados num1 = cliente.executaSelect(sql1);
         ConjuntoResultados num2 = cliente.executaSelect(sql2);

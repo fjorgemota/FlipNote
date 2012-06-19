@@ -4,20 +4,21 @@
     Author     : fernando_mota
 --%>
 
+<%@page import="util.Sessao"%>
 <%@page import="modelo.AlunoAR"%>
 <%@page import="dao.AlunoDAO"%>
 <%
+    Sessao.verificaSeEstaLogadoERedireciona(request, response);
     String email = request.getParameter("email");
     String senha = request.getParameter("senha");
     AlunoAR aluno = AlunoDAO.getAluno(email, senha);
     if (aluno != null) {
         session.setAttribute("aluno", aluno.getID());
-       response.sendRedirect("../pagina_inicial.jsp");
+       response.sendRedirect("../pagina_inicial.jsp?situacao=login_sucesso");
 
     } else {
 
-        out.print("Erro: Nome ou senha incorretos<br />");
-        out.print("<a href=\"../index.jsp\">Voltar</a>");
+        response.sendRedirect("../index.jsp?situacao=login_erro");
     }
 
 %>

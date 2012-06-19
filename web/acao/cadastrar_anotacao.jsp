@@ -9,7 +9,7 @@
 
 
 <%
-    Sessao.verificaLoginERedireciona(request, response);
+    Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
     String titulo = request.getParameter("titulo");
     String texto = request.getParameter("texto");
     AnotacaoAR anotacao = new AnotacaoAR();
@@ -18,9 +18,9 @@
     anotacao.setTexto(texto);
 
     if (anotacao.insert()) {
-        response.sendRedirect("../cadastrado_sucesso.jsp?link=cadastrar_anotacao.jsp");
+        response.sendRedirect("../cadastrar_anotacao.jsp?situacao=cadastro_sucesso");
     } else {
-        response.sendRedirect("../cadastrado_erro.jsp?link=cadastrar_anotacao.jsp");
+        response.sendRedirect("../cadastrar_anotacao.jsp?situacao=cadastro_sucesso");
     }
 
 %>

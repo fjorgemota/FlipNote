@@ -3,9 +3,11 @@
     Created on : Jun 14, 2012, 2:11:36 PM
     Author     : HP
 --%>
+<%@page import="util.Sessao"%>
 <%@page import="modelo.TarefaBaseAR"%>
 <%@page import="modelo.TrabalhoAR"%>
 <%    
+    Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
     String descricao = request.getParameter("descricao");
     String data = request.getParameter("data");
     String notificacao = request.getParameter("notificacao");
@@ -21,9 +23,9 @@
     
     if (trabalho.insert()) {
         //out.print(sql);
-        response.sendRedirect("../index.jsp?situacao_cadastro=sucesso");
+        response.sendRedirect("../cadastrar_trabalhos.jsp?situacao=cadastro_sucesso");
     } else {
-        response.sendRedirect("../cadastrar_sucesso.jsp?situacao_cadastro=erro");
+        response.sendRedirect("../cadastrar_trabalhos.jsp?situacao=cadastro_erro");
     }
     
 %>
