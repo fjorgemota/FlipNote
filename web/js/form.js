@@ -1,12 +1,19 @@
 jQuery(function(){
     console.log(jQuery("form .btn-success"));
     console.log(jQuery("form .btn-danger"));
+    function enviaFormulario(f){
+        jQuery(f).parents("form").get(0).submit();
+    }
     jQuery("form .btn-success").click(function(){
-        console.log(jQuery(this).parents("form"));
-        jQuery(this).parents("form").get(0).submit(); // Implementa o submit em botoes de cor verde no formulario
+        enviaFormulario(this); // Implementa o submit em botoes de cor verde no formulario
+    });
+    jQuery("form *").keypress(function(e){
+        if(e.keyCode == 13){
+            enviaFormulario(this);
+        }
+        return true;
     });
     jQuery("form .btn-danger").click(function(){
-        console.log(jQuery(this).parents("form"));
         jQuery(this).parents("form").get(0).reset(); // Implementa o reset em botoes de cor vermelha no formulario
     });
 });

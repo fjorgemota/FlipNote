@@ -20,10 +20,10 @@
     prova.setNotificacao(notificacao);
     prova.setMateria(Integer.parseInt(materia));
     if (prova.insert()) {
-        response.sendRedirect("../cadastrado_sucesso.jsp?link=cadastrar_prova.jsp");
+        response.sendRedirect("../cadastrar_prova.jsp?situacao=cadastro_sucesso");
 
     } else {
-        response.sendRedirect("../cadastrado_erro.jsp?link=cadastrar_prova.jsp");
+        response.sendRedirect("../cadastrar_prova.jsp?situacao=cadastro_erro");
     }
 
 %>

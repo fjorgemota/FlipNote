@@ -16,7 +16,7 @@ Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
                 <div class="span3">
                     <jsp:include page="includes/menu.jsp"/>
                 </div>
-
+                <form action="acao/cadastrar_trabalho.jsp" method="POST">
                 <div class="span9">
                     <h2>Cadastrar Trabalhos</h2>
                     <p><h4> Use o formulario abaixo para cadastrar um trabalho.</h4></p>
@@ -38,7 +38,7 @@ Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
 
 
                 </div>
-
+                </form>
             </div>
         </div>
         <jsp:include page="includes/javascript_formulario.jsp"/>
