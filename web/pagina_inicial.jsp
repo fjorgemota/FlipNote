@@ -9,6 +9,10 @@
 <%@page import="java.util.ArrayList"%>
 <%
     Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
+    String dataReq = request.getParameter("data");
+    if (!Data.validateDate(dataReq)) {
+        dataReq = null;
+    }
 %>
 <!DOCTYPE html>
 <html>
@@ -46,12 +50,23 @@
                                 so.addVariable("path", "ampie/");
                                 so.addVariable("chart_settings", encodeURIComponent("<settings><redraw>1</redraw><background><alpha>100</alpha><border_alpha>20</border_alpha></background><legend><enabled>0</enabled><align>center</align></legend><pie><y>50%</y></pie><data_labels><show>{title}: {value}</show><max_width>140</max_width></data_labels></settings>"));
                                 so.addVariable("chart_data", encodeURIComponent("<pie><%
-                                                                                        ArrayList<MateriaAR> atividades = MateriaDAO.getMateriasPorAluno(aluno);
-                                                                for(MateriaAR materia: atividades){
-                                                                    out.print("<slice title='"+materia.getNome()+"'>"+materia.getAtividadesPeriodo(Data.getDate(), Data.getDate(86400*30)) +"</slice>");
-                                                                }
-                                                                                                                               %></pie>"));
-                                so.write("amcharts_1336583874998");
+                                    ArrayList<MateriaAR> atividades = MateriaDAO.getMateriasPorAluno(aluno);
+                                    for (MateriaAR materia : atividades) {
+
+
+
+                                        out.print("<slice title='" + materia.getNome() + "'>");
+                                        if (dataReq == null) {
+                                            out.print(materia.getAtividadesPeriodo(Data.getDate(), Data.getDate(86400 * 30)));
+                                        } else {
+                                            out.print(materia.getAtividadesPeriodo(dataReq, dataReq));
+                                        }
+                                        out.print("</slice>");
+                                    }
+
+
+                                %></pie>"));
+                                                                                                                                   so.write("amcharts_1336583874998");
                             </script>
 
 
@@ -77,13 +92,18 @@
                             <h2>Atividades</h2>
                             <ul>
                                 <%
-                                ArrayList<TarefaBaseAR> tarefas = TarefasDAO.getTodasTarefas(aluno, Data.getDate(), Data.getDate(86400*30));
-                                for(TarefaBaseAR tarefa: tarefas){
-                                    out.print("<li><a href='"+tarefa.getEditLink()+"'>"+tarefa.getDescricao()+"</a> - em "+Data.getReadableDate(tarefa.getData())+"</li>" );
-                                }
-                                if(tarefas.isEmpty()){
-                                    out.print("Você não possui atividades no próximo mês");
-                                }
+                                    ArrayList<TarefaBaseAR> tarefas;
+                                    if (dataReq == null) {
+                                        tarefas = TarefasDAO.getTodasTarefas(aluno, Data.getDate(), Data.getDate(86400 * 30));
+                                    } else {
+                                        tarefas = TarefasDAO.getTodasTarefas(aluno, dataReq, dataReq);
+                                    }
+                                    for (TarefaBaseAR tarefa : tarefas) {
+                                        out.print("<li><a href='" + tarefa.getEditLink() + "'>" + tarefa.getDescricao() + "</a> - em " + Data.getReadableDate(tarefa.getData()) + "</li>");
+                                    }
+                                    if (tarefas.isEmpty()) {
+                                        out.print("Você não possui atividades no próximo mês");
+                                    }
                                 %>
                             </ul>
 
