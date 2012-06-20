@@ -113,52 +113,5 @@ public class AlunoAR implements AR {
 
     public void setSenha(String senha) {
         this.senha = Codificador.codifica(senha);
-    }
-    /* Metodos especiais */
-    public ArrayList<TarefaBaseAR> getTodasTarefas(String data_inicio, String data_fim){
-        String sql = "SELECT *, 'prova' as tipo FROM prova WHERE data>=\""+data_inicio+"\" AND data <= \""+data_fim+"\"  union SELECT *, 'trabalho' as tipo FROM trabalho WHERE data>=\""+data_inicio+"\" AND data <= \""+data_fim+"\" ORDER BY data DESC ";
-        MySQL db = MySQL.getInstance();
-        ConjuntoResultados linhas = db.executaSelect(sql);
-        ArrayList<TarefaBaseAR> tarefas = new ArrayList<TarefaBaseAR>();
-        while(linhas.next()){
-            TarefaBaseAR tarefa;
-            if(linhas.getString("tipo").equals("prova")){
-                tarefa = new ProvaAR();
-            }
-            else{
-                tarefa = new TrabalhoAR();
-            }
-            tarefa.setID(linhas.getInt("id"));
-            tarefa.setMateria(linhas.getInt("materia"));
-            tarefa.setData(linhas.getString("data"));
-            tarefa.setDescricao(linhas.getString("descricao"));
-            tarefa.setNotificacao(linhas.getString("notificacao"));
-            tarefa.setCriador(linhas.getInt("aluno"));
-            tarefas.add(tarefa);
-        }
-        return tarefas;
-    }
-    public ArrayList<TarefaBaseAR> getTodasTarefas(){
-        String sql = "SELECT *, 'prova' as tipo FROM prova union SELECT *, 'trabalho' as tipo FROM trabalho ORDER BY data DESC";
-        MySQL db = MySQL.getInstance();
-        ConjuntoResultados linhas = db.executaSelect(sql);
-        ArrayList<TarefaBaseAR> tarefas = new ArrayList<TarefaBaseAR>();
-        while(linhas.next()){
-            TarefaBaseAR tarefa;
-            if(linhas.getString("tipo").equals("prova")){
-                tarefa = new ProvaAR();
-            }
-            else{
-                tarefa = new TrabalhoAR();
-            }
-            tarefa.setID(linhas.getInt("id"));
-            tarefa.setMateria(linhas.getInt("materia"));
-            tarefa.setData(linhas.getString("data"));
-            tarefa.setDescricao(linhas.getString("descricao"));
-            tarefa.setNotificacao(linhas.getString("notificacao"));
-            tarefa.setCriador(linhas.getInt("aluno"));
-            tarefas.add(tarefa);
-        }
-        return tarefas;
-    }
+    }    
 }
