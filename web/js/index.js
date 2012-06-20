@@ -6,7 +6,7 @@ if(!!document.getElementById("calendar")){
         min:Calendar.dateToInt(new Date(new Date().getTime()-86400)),
         onSelect:function(e){
             var d = Calendar.intToDate(this.selection.getFirstDate());
-            window.location.href = "#resumo/"+d.getFullYear()+"/"+(d.getMonth()+1)+"/"+d.getDate();
+            window.location.href = "?data="+d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();
         }
     });
 }
