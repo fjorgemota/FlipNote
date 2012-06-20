@@ -42,7 +42,12 @@ public abstract class TarefaBaseAR implements AR {
         this.data = data;
     }
     public void setData(String data) {
-        this.data = Data.getDate(data);
+        if(data == null){
+            data = "";
+        }
+        if(!data.equals("")){
+            this.data = Data.getDate(data);
+        }
     }
     public String getDescricao() {
         return descricao;
@@ -88,8 +93,13 @@ public abstract class TarefaBaseAR implements AR {
         this.notificacao = notificacao;
     }
     public void setNotificacao(String notificacao) {
-        this.notificacao = Data.getDateTime(notificacao);
-    }
+        if(notificacao == null){
+            notificacao = "";
+        }
+        if(!notificacao.equals("")){
+            this.notificacao = Data.getDateTime(notificacao);
+        }
+    }    
     protected boolean carrega(String nomeTabela) {
         MySQL cliente = MySQL.getInstance();
         String sql = "SELECT * FROM "+nomeTabela+" WHERE id='"+this.getID()+"';";
