@@ -79,7 +79,7 @@ Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
                                 <%
                                 ArrayList<TarefaBaseAR> tarefas = TarefasDAO.getTodasTarefas(aluno, Data.getDate(), Data.getDate(86400*30));
                                 for(TarefaBaseAR tarefa: tarefas){
-                                    out.print("<li><a href='"+tarefa.getEditLink()+"'>"+tarefa.getDescricao()+"</a> - em "+Data.getDate(tarefa.getData())+"</li>" );
+                                    out.print("<li><a href='"+tarefa.getEditLink()+"'>"+tarefa.getDescricao()+"</a> - em "+Data.getReadableDate(tarefa.getData())+"</li>" );
                                 }
                                 if(tarefas.isEmpty()){
                                     out.print("Você não possui atividades no próximo mês");
