@@ -10,7 +10,7 @@
     Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
     String nome = request.getParameter("nome");
     String descricao = request.getParameter("descricao");
-    String id = request.getParameter(Integer.parseInt(id));
+    String id = request.getParameter(Integer.parseInt("id"));
     GrupoAR grupo = new GrupoAR();
     grupo.setAluno(Sessao.getAlunoLogado(request));
     grupo.setDescricao(descricao);

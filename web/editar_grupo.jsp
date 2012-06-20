@@ -4,6 +4,7 @@
     Author     : HP
 --%>
 
+<%@page import="util.HTMLUtil"%>
 <html>
     <jsp:include page="includes/head.jsp">
         <jsp:param name="titulo" value="Editar Grupos"/>
@@ -18,38 +19,39 @@
                     <jsp:include page="includes/menu.jsp"/>
                 </div>
                 <div class="span9">
-                    
+
                     <h2>Editar Grupo</h2>
                     <p><h4>Use o formulario abaixo para editar um grupo.</h4> </p>
 
-                    <form action="acao/editar_grupos.jsp" method="POST">
 
 
-                        <div class="row-fluid">
-                            <div class="span4">
-                                <p>Digite o nome do grupo: </p>
-                            </div>
-                            <div class="span8">
-                                <input type="text" name="nome" size="30" />
-                            </div>
+                    <%=HTMLUtil.initFormEditar("grupo")%>
+
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <p>Digite o nome do grupo: </p>
                         </div>
-                        
-                        
-
-                        <div class="row-fluid">
-                            <div class="span4">
-                                <p>Descrição do grupo: </p>
-                            </div>
-                            <div class="span8">
-                                <input type="text" name="descricao" size="30" />
-                            </div>
+                        <div class="span8">
+                            <input type="text" name="nome" size="30" />
                         </div>
-                
-
-                        <jsp:include page="includes/botoes-form.jsp" />
+                    </div>
 
 
-                    </form>
+
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <p>Descrição do grupo: </p>
+                        </div>
+                        <div class="span8">
+                            <input type="text" name="descricao" size="30" />
+                        </div>
+                    </div>
+
+
+                    <jsp:include page="includes/botoes-form.jsp" />
+
+
+                    <%=HTMLUtil.endForm()%>
                 </div>
 
             </div>
