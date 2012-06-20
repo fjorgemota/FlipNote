@@ -6,11 +6,11 @@
 <%@page import="dao.MateriaDAO"%>
 <%@page import="java.util.ArrayList"%>
 <%
-Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
+    Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
 %>
 <!DOCTYPE html>
 <html>
-   <jsp:include page="includes/head.jsp">
+    <jsp:include page="includes/head.jsp">
         <jsp:param name="titulo" value="Página inicial"/>
     </jsp:include>
     <body>
@@ -24,11 +24,11 @@ Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
                 </div>
                 <div class="span9">
                     <div class="hero-unit">
-                        <h1>Bem vindo, <% 
+                        <h1>Bem vindo, <%
                             AlunoAR aluno = Sessao.getAlunoLogado(request);
                             out.print(aluno.getPrimeiroNome());
                             %></h1>
-                        <p>Parece que voce vai ter uma semana corrida,Fernando, Portanto, </p>
+                        <p>Parece que voce vai ter uma semana corrida, <% out.print(aluno.getPrimeiroNome());%>, Portanto, </p>
                         <p>Boa sorte. :)</p>
                         <p><a class="btn btn-primary btn-large">Veja porquê. &raquo;</a></p>
                     </div>
@@ -44,12 +44,12 @@ Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
                                 so.addVariable("path", "ampie/");
                                 so.addVariable("chart_settings", encodeURIComponent("<settings><redraw>1</redraw><background><alpha>100</alpha><border_alpha>20</border_alpha></background><legend><enabled>0</enabled><align>center</align></legend><pie><y>50%</y></pie><data_labels><show>{title}: {value}</show><max_width>140</max_width></data_labels></settings>"));
                                 so.addVariable("chart_data", encodeURIComponent("<pie><%
-                                                                ArrayList<MateriaAR> atividades = MateriaDAO.getMaterias();
-                                                                for(MateriaAR materia: atividades){
-                                                                    out.print("<slice title='"+materia.getNome()+"'>"+materia.getAtividadesPeriodo(Data.getDate(), Data.getDate(86400*30)) +"</slice>");
-                                                                }
-                                                                                                                               %></pie>"));
-                                so.write("amcharts_1336583874998");
+                                    ArrayList<MateriaAR> atividades = MateriaDAO.getMaterias();
+                                    for (MateriaAR materia : atividades) {
+                                        out.print("<slice title='" + materia.getNome() + "'>" + materia.getAtividadesPeriodo(Data.getDate(), Data.getDate(86400 * 30)) + "</slice>");
+                                    }
+                                %></pie>"));
+                                    so.write("amcharts_1336583874998");
                             </script>
 
 
@@ -73,7 +73,7 @@ Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
                         </div><!--/span-->
                         <div class="span6">
                             <h2>Atividades recentes</h2>
-                           
+
 
                         </div><!--/span-->
 
