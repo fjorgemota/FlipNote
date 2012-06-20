@@ -13,7 +13,7 @@
     if(!grupo.load()){
         response.sendRedirect("../grupos_listar.jsp?situacao=apagado_erro");
     }
-    if(grupo.getAluno().getID() == Sessao.getAlunoLogado(request).getID()){
+       else if(grupo.getAluno().getID() == Sessao.getAlunoLogado(request).getID()){
         if(grupo.delete()){
             response.sendRedirect("../grupos_listar.jsp?situacao=apagado_sucesso");
         }
