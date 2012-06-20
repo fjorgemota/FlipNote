@@ -1,10 +1,11 @@
+<%@page import="util.HTMLUtil"%>
 <%@page import="util.Sessao"%>
 <%
-Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
+    Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
 %>
 <!DOCTYPE html>
 <html>
-  <jsp:include page="includes/head.jsp">
+    <jsp:include page="includes/head.jsp">
         <jsp:param name="titulo" value="Cadastrar Trabalhos"/>
     </jsp:include>
     <body>
@@ -16,7 +17,9 @@ Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
                 <div class="span3">
                     <jsp:include page="includes/menu.jsp"/>
                 </div>
-                <form action="acao/cadastrar_trabalho.jsp" method="POST">
+
+                <%=HTMLUtil.initFormCadastrar("trabalho")%>
+
                 <div class="span9">
                     <h2>Cadastrar Trabalhos</h2>
                     <p><h4> Use o formulario abaixo para cadastrar um trabalho.</h4></p>
@@ -24,7 +27,7 @@ Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
                     <jsp:include page="includes/materia.jsp" />
 
                     <jsp:include page="includes/data.jsp" />
-                    
+
                     <div class="row-fluid">
                         <div class="span6">
                             <p>Conteudo:  </p>
@@ -40,7 +43,8 @@ Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
 
 
                 </div>
-                </form>
+                <%=HTMLUtil.endForm()%>
+
             </div>
         </div>
         <jsp:include page="includes/javascript_formulario.jsp"/>

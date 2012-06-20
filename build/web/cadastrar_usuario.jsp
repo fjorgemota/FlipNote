@@ -83,6 +83,10 @@
                     <a class="btn btn-danger" >
                         Limpar
                     </a>
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    <a class="btn btn-primary " href="index.jsp">Voltar</a>
                 </div>
                 <div class="span3">
                     &nbsp;

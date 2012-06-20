@@ -1,3 +1,4 @@
+<%@page import="util.HTMLUtil"%>
 <!DOCTYPE html>
 <html>
     <jsp:include page="includes/head.jsp">
@@ -17,24 +18,23 @@
 
                     <p><h4> Use o formulario abaixo para cadastrar uma anotação.</h4></p>
 
-                    <form action="acao/cadastrar_anotacao.jsp" method="POST">
-                        <div class="row-fluid">
-                            <div class="span6">
-                                <p>Titulo: </p>
-                            </div>
-                            <div class="span6">
-                                <input type="text" name="titulo" size="30" /> 
-                            </div>
-
+                    <%=HTMLUtil.initFormCadastrar("anotacao")%>
+                    <div class="row-fluid">
+                        <div class="span6">
+                            <p>Titulo: </p>
+                        </div>
+                        <div class="span6">
+                            <input type="text" name="titulo" size="30" /> 
                         </div>
 
-                        <div class="row-fluid">
-                            <div class="span6">
-                                <p>Anotação </p>
-                            </div>
-                            <div class="span6">
-                                <input type="text" name="texto" size="30" />  
-                            </div>
+                    </div>
+
+                    <div class="row-fluid">
+                        <div class="span6">
+                            <p>Anotação </p>
+                        </div>
+                        <div class="span6">
+                            <input type="text" name="texto" size="30" />  
                         </div>
                         
                         
@@ -42,7 +42,8 @@
                         <jsp:include page="includes/botoes-form.jsp">
                             <jsp:param name="botaoEnviar" value="Cadastrar" />
                         </jsp:include>
-                    </form>
+                    </div>
+                    <% HTMLUtil.endForm(); %>
                 </div>
 
             </div>

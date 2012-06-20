@@ -11,14 +11,14 @@
     AnotacaoAR anotacao = new AnotacaoAR();
     anotacao.setID(Integer.parseInt(id));
     if(!anotacao.load()){
-        response.sendRedirect("../materias_listar.jsp?situacao=apagado_erro");
+        response.sendRedirect("../anotacoes_listar.jsp?situacao=apagado_erro");
     }
        else if(anotacao.getAluno().getID() == Sessao.getAlunoLogado(request).getID()){
         if(anotacao.delete()){
-            response.sendRedirect("../materias_listar.jsp?situacao=apagado_sucesso");
+            response.sendRedirect("../anotacoes_listar.jsp?situacao=apagado_sucesso");
         }
         else{
-            response.sendRedirect("../materias_listar.jsp?situacao=apagado_erro");
+            response.sendRedirect("../anotacoes_listar.jsp?situacao=apagado_erro");
         }
     }   
     else{
