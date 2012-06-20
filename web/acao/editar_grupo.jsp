@@ -10,17 +10,19 @@
     Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
     String nome = request.getParameter("nome");
     String descricao = request.getParameter("descricao");
-    String id = request.getParameter(Integer.parseInt("id"));
+    String id = request.getParameter("id");
     GrupoAR grupo = new GrupoAR();
+    
     grupo.setAluno(Sessao.getAlunoLogado(request));
-    grupo.setID(id);
+    grupo.setID(Integer.parseInt(id));
     grupo.setDescricao(descricao);
     grupo.setNome(nome);
 
     if (grupo.update()) {
-       response.sendRedirect("../editar_grupos.jsp?situacao=alterado_sucesso");
+        response.sendRedirect("../editar_grupo.jsp?situacao=atualizado_sucesso&id="+id);
+
     } else {
-       response.sendRedirect("../editar_grupos.jsp?situacao=alterado_erro");
+        response.sendRedirect("../editar_grupo.jsp?situacao=atualizado_erro&id="+id);
     }
 
 %>

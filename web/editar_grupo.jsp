@@ -4,7 +4,17 @@
     Author     : HP
 --%>
 
+<%@page import="modelo.GrupoAR"%>
+<%@page import="util.Sessao"%>
 <%@page import="util.HTMLUtil"%>
+<%
+    Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
+    GrupoAR grupo = new GrupoAR();
+    grupo.setID(Integer.parseInt(request.getParameter("id")));
+    if (!grupo.load()) {
+        response.sendRedirect("grupos_listar.jsp?situacao=carregamento_erro");
+    }
+%>
 <html>
     <jsp:include page="includes/head.jsp">
         <jsp:param name="titulo" value="Editar Grupos"/>
@@ -26,13 +36,13 @@
 
 
                     <%=HTMLUtil.initFormEditar("grupo")%>
-
+                    <input type="hidden" name="id" value="<%=grupo.getID()%>" />
                     <div class="row-fluid">
                         <div class="span4">
                             <p>Digite o nome do grupo: </p>
                         </div>
                         <div class="span8">
-                            <input type="text" name="nome" size="30" />
+                            <input type="text" name="nome" size="30" value="<%=grupo.getNome()%>" />
                         </div>
                     </div>
 
@@ -43,12 +53,14 @@
                             <p>Descrição do grupo: </p>
                         </div>
                         <div class="span8">
-                            <input type="text" name="descricao" size="30" />
+                            <input type="text" name="descricao" size="30"  value="<%=grupo.getDescricao()%>"/>
                         </div>
                     </div>
 
 
-                    <jsp:include page="includes/botoes-form.jsp" />
+                    <jsp:include page="includes/botoes-form.jsp" >
+                        <jsp:param name="botaoEnviar" value="Editar" />
+                    </jsp:include>
 
 
                     <%=HTMLUtil.endForm()%>
