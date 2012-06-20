@@ -14,7 +14,7 @@ public class ConjuntoResultados
             try{
                 return rs.next();
             }catch(SQLException sqlError){
-                System.out.println("Erro no SQL: "+sqlError);
+                System.out.println("Erro na iteracao: "+sqlError);
                 return false;
             }
         }
@@ -23,7 +23,7 @@ public class ConjuntoResultados
             try{
                 return rs.getString(t);
             }catch(SQLException sqlError){
-                System.out.println("Erro no SQL: "+sqlError);
+                System.out.println("Erro na captura da String "+t+": "+sqlError);
                 return "";
             }
         }
@@ -32,7 +32,7 @@ public class ConjuntoResultados
             try{
                 return rs.getInt(t);
             }catch(SQLException sqlError){
-                System.out.println("Erro no SQL: "+sqlError);
+                System.out.println("Erro na captura do Inteiro "+t+": "+sqlError);
                 return 0;
             }
         }
@@ -41,7 +41,7 @@ public class ConjuntoResultados
             try{
                 return rs.getDouble(t);
             }catch(SQLException sqlError){
-                System.out.println("Erro no SQL: "+sqlError);
+                System.out.println("Erro na captura do Double "+t+": "+sqlError);
                 return 0;
             }
         }
@@ -49,7 +49,7 @@ public class ConjuntoResultados
             try{
                 return rs.getFloat(t);
             }catch(SQLException sqlError){
-                System.out.println("Erro no SQL: "+sqlError);
+                System.out.println("Erro na captura do Float "+t+": "+sqlError);
                 return 0;
             }
         }
