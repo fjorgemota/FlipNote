@@ -37,7 +37,9 @@
 
                     </div>
                     <jsp:include page="includes/notificacao.jsp" />
-                    <jsp:include page="includes/botoes-form.jsp" />
+                    <jsp:include page="includes/botoes-form.jsp">
+                        <jsp:param name="botaoEnviar" value="Cadastrar" />
+                    </jsp:include>
 
 
                 </div>
