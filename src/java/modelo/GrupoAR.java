@@ -83,7 +83,7 @@ public class GrupoAR implements AR {
     public boolean update() {
         
         MySQL cliente = MySQL.getInstance();
-        String sql = "UPDATE grupo SET nome='"+this.getNome()+"',descricao='"+this.getDescricao()+ ", aluno="+this.getAlunoSQL()+" WHERE id='"+this.getID()+"';";
+        String sql = "UPDATE grupo SET nome='"+this.getNome()+"',descricao='"+this.getDescricao()+ "', aluno="+this.getAlunoSQL()+" WHERE id='"+this.getID()+"';";
         return cliente.executaUpdate(sql);
        
     }
