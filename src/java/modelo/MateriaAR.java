@@ -65,6 +65,9 @@ public class MateriaAR implements AR{
     }
 
     public void setGrupo(int grupo) {
+        if(grupo != 0){
+            return;
+        }
         this.grupo = new GrupoAR();
         this.grupo.setID(grupo);
         this.grupo.load();
@@ -104,18 +107,18 @@ public class MateriaAR implements AR{
         return numero1+numero2;
     }
     public int getAtividadesPeriodo(String data_inicio, String data_fim){
-        String sql1 = "SELECT COUNT(id) AS num FROM prova WHERE materia='"+this.id+"' AND data>'"+data_inicio+"' AND data<'"+data_fim+"';";
-        String sql2 = "SELECT COUNT(id) AS num FROM trabalho WHERE materia='"+this.id+"' AND data>'"+data_inicio+"' AND data<'"+data_fim+"';";
+        String sql1 = "SELECT COUNT(id) AS num FROM prova WHERE materia='"+this.id+"' AND data>='"+data_inicio+"' AND data<'"+data_fim+"';";
+        String sql2 = "SELECT COUNT(id) AS num FROM trabalho WHERE materia='"+this.id+"' AND data>='"+data_inicio+"' AND data<'"+data_fim+"';";
         System.out.println(sql1);
         System.out.println(sql2);
         MySQL cliente = MySQL.getInstance();
         ConjuntoResultados num1 = cliente.executaSelect(sql1);
-        ConjuntoResultados num2 = cliente.executaSelect(sql2);
         int numero1 = 0;
-        int numero2 = 0;
         if(num1.next()){
             numero1 = num1.getInt("num");
         }
+        int numero2 = 0;
+        ConjuntoResultados num2 = cliente.executaSelect(sql2);
         if(num2.next()){
             numero2 = num2.getInt("num");
         }
@@ -124,12 +127,13 @@ public class MateriaAR implements AR{
     public boolean load() {
         MySQL cliente = MySQL.getInstance();
         String sql = "SELECT * FROM materia WHERE id='"+this.getID()+"';";
+        System.out.print(sql);
         ConjuntoResultados linha = cliente.executaSelect(sql);
         if(linha.next()){
             this.setAluno(linha.getInt("aluno"));
-            this.setGrupo(linha.getInt("grupo"));
             this.setProfessor(linha.getString("professor"));
             this.setNome(linha.getString("nome"));
+            this.setGrupo(linha.getInt("grupo"));
             return true;
         }
         return false;

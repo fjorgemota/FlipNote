@@ -36,7 +36,9 @@
                             <input type="text" name="professor" size="30" />
                         </div>
                     </div>
-                    <jsp:include page="includes/botoes-form.jsp" />
+                    <jsp:include page="includes/botoes-form.jsp">
+                        <jsp:param name="botaoEnviar" value="Cadastrar" />
+                    </jsp:include>
 
                     <%=HTMLUtil.endForm()%>
                 </div>

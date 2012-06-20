@@ -33,11 +33,13 @@
                             <p>Conteudo:  </p>
                         </div>
                         <div class="span6">
-                            <textarea rows="3" cols="80" ></textarea>
+                            <textarea rows="3" cols="80" name="descricao"></textarea>
                         </div>
                     </div>
                     <jsp:include page="includes/notificacao.jsp" />
-                    <jsp:include page="includes/botoes-form.jsp" />
+                    <jsp:include page="includes/botoes-form.jsp">
+                        <jsp:param name="botaoEnviar" value="Cadastrar" />
+                    </jsp:include>
 
 
                 </div>

@@ -2,11 +2,12 @@ package util;
 
 import java.io.*;
 import java.sql.*; 
-import javax.swing.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class MySQL
 {
-    Statement statement;    
+    Connection conn;
     String user = "root";
     String pass = "senai2012";
     String database = "flipnote";
@@ -18,8 +19,8 @@ public class MySQL
 
        try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection(url,user,pass);
-            statement = conn.createStatement();
+            conn = DriverManager.getConnection(url,user,pass);
+            
         } catch (ClassNotFoundException e){
             System.out.println("Driver MySQL não encontrado.");
             System.exit(0);
@@ -33,10 +34,18 @@ public class MySQL
         }
         return MySQL.instance;
     }
+    private Statement getStatement(){
+        try {
+            return conn.createStatement();
+        } catch (SQLException ex) {
+            System.out.println("Erro na conexão com a base de dados: "+ex);
+        }
+        return null;
+    }
     public boolean executaInsert(String insert)
     {
         try {
-            statement.execute(insert);
+            this.getStatement().execute(insert);
             return true;
         } catch (SQLException e){
             System.out.println("Erro na Inclusão do registro "+e);
@@ -47,7 +56,7 @@ public class MySQL
     public boolean executaUpdate(String insert)
     {
         try {
-            statement.execute(insert);
+            this.getStatement().execute(insert);
             return true;
         } catch (SQLException e){
             System.out.println("Erro na atualização do registro "+e);
@@ -58,7 +67,7 @@ public class MySQL
     public boolean executaDelete(String delete)
     {
         try {
-            statement.execute(delete);
+           this.getStatement().execute(delete);
             return true;
         } catch (SQLException e){
             System.out.println("Erro na exclusão do registro "+e);
@@ -69,12 +78,11 @@ public class MySQL
     public ConjuntoResultados executaSelect(String select)
     {
         try {
-            ResultSet rs = statement.executeQuery(select);
+            ResultSet rs = this.getStatement().executeQuery(select);
             ConjuntoResultados cr = new ConjuntoResultados(rs);
             return cr;
         } catch (SQLException e){
-            JOptionPane.showMessageDialog(null, ""+e, "Erro no SELECT", JOptionPane.ERROR_MESSAGE);
-            System.exit(0);
+            System.out.println("Erro na seleção do registro "+e);
             return null;
         }
     }

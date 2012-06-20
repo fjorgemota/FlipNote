@@ -1,5 +1,9 @@
+<%@page import="util.Sessao"%>
 <%@page import="util.HTMLUtil"%>
 <!DOCTYPE html>
+<%
+    Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
+%>
 <html>
     <jsp:include page="includes/head.jsp">
         <jsp:param name="titulo" value="Cadastrar avaliações"/>
@@ -35,7 +39,9 @@
 
                     </div>
                     <jsp:include page="includes/notificacao.jsp" />
-                    <jsp:include page="includes/botoes-form.jsp" />
+                    <jsp:include page="includes/botoes-form.jsp">
+                        <jsp:param name="botaoEnviar" value="Cadastrar" />
+                    </jsp:include>
 
 
                 </div>

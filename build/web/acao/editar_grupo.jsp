@@ -13,7 +13,10 @@
     String id = request.getParameter(Integer.parseInt("id"));
     GrupoAR grupo = new GrupoAR();
     grupo.setAluno(Sessao.getAlunoLogado(request));
+<<<<<<< HEAD
     grupo.setID(id);
+=======
+>>>>>>> c60de42ee740dd4095471db564b6731bc7bf002a
     grupo.setDescricao(descricao);
     grupo.setNome(nome);
 

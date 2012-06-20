@@ -1,3 +1,5 @@
+<%@page import="dao.TarefasDAO"%>
+<%@page import="modelo.TarefaBaseAR"%>
 <%@page import="util.Sessao"%>
 <%@page import="dao.AlunoDAO"%>
 <%@page import="modelo.AlunoAR"%>
@@ -44,12 +46,12 @@
                                 so.addVariable("path", "ampie/");
                                 so.addVariable("chart_settings", encodeURIComponent("<settings><redraw>1</redraw><background><alpha>100</alpha><border_alpha>20</border_alpha></background><legend><enabled>0</enabled><align>center</align></legend><pie><y>50%</y></pie><data_labels><show>{title}: {value}</show><max_width>140</max_width></data_labels></settings>"));
                                 so.addVariable("chart_data", encodeURIComponent("<pie><%
-                                    ArrayList<MateriaAR> atividades = MateriaDAO.getMaterias();
-                                    for (MateriaAR materia : atividades) {
-                                        out.print("<slice title='" + materia.getNome() + "'>" + materia.getAtividadesPeriodo(Data.getDate(), Data.getDate(86400 * 30)) + "</slice>");
-                                    }
-                                %></pie>"));
-                                    so.write("amcharts_1336583874998");
+                                                                                        ArrayList<MateriaAR> atividades = MateriaDAO.getMateriasPorAluno(aluno);
+                                                                for(MateriaAR materia: atividades){
+                                                                    out.print("<slice title='"+materia.getNome()+"'>"+materia.getAtividadesPeriodo(Data.getDate(), Data.getDate(86400*30)) +"</slice>");
+                                                                }
+                                                                                                                               %></pie>"));
+                                so.write("amcharts_1336583874998");
                             </script>
 
 
@@ -65,15 +67,25 @@
                         <div class="span6">
                             <h2>Tarefas</h2>
                             <ul class="unstyled">
-                                <li><a href="cadastrar_avaliacao.jsp">Cadastrar avaliações</a></li>
+                                <li><a href="cadastrar_prova.jsp">Cadastrar Prova</a></li>
                                 <li><a href="cadastrar_trabalhos.jsp">Cadastrar Trabalho</a></li>
                                 <li><a href="cadastrar_anotacao.jsp">Cadastrar Anotações</a></li>
                                 <li><a href="cadastrar_materia.jsp">Cadastrar Matéria</a></li>
                             </ul>
                         </div><!--/span-->
                         <div class="span6">
-                            <h2>Atividades recentes</h2>
-
+                            <h2>Atividades</h2>
+                            <ul>
+                                <%
+                                ArrayList<TarefaBaseAR> tarefas = TarefasDAO.getTodasTarefas(aluno, Data.getDate(), Data.getDate(86400*30));
+                                for(TarefaBaseAR tarefa: tarefas){
+                                    out.print("<li><a href='"+tarefa.getEditLink()+"'>"+tarefa.getDescricao()+"</a> - em "+Data.getReadableDate(tarefa.getData())+"</li>" );
+                                }
+                                if(tarefas.isEmpty()){
+                                    out.print("Você não possui atividades no próximo mês");
+                                }
+                                %>
+                            </ul>
 
                         </div><!--/span-->
 

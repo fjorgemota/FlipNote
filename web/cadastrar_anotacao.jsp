@@ -36,13 +36,14 @@
                         <div class="span6">
                             <input type="text" name="texto" size="30" />  
                         </div>
+                        
+                        
+                        <jsp:include page="includes/notificacao.jsp" />     
+                        <jsp:include page="includes/botoes-form.jsp">
+                            <jsp:param name="botaoEnviar" value="Cadastrar" />
+                        </jsp:include>
                     </div>
-
-
-                    <jsp:include page="includes/notificacao.jsp" />     
-                    <jsp:include page="includes/botoes-form.jsp" />
-                    <%=HTMLUtil.endForm()%>
-
+                    <% HTMLUtil.endForm(); %>
                 </div>
 
             </div>

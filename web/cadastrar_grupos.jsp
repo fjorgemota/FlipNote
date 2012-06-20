@@ -1,4 +1,8 @@
+<%@page import="util.Sessao"%>
 <%@page import="util.HTMLUtil"%>
+<%
+Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
+%>
 <!DOCTYPE html>
 <html>
     <jsp:include page="includes/head.jsp">
@@ -41,8 +45,10 @@
                             </div>
                         </div>
 
+                        <jsp:include page="includes/botoes-form.jsp">
+                            <jsp:param name="botaoEnviar" value="Cadastrar" />
+                        </jsp:include>
 
-                        <jsp:include page="includes/botoes-form.jsp" />
 
                         <%=HTMLUtil.endForm()%>
                    

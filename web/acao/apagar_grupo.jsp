@@ -22,8 +22,7 @@
         }
     }   
     else{
-        out.print("Erro: Hackers não são permitidos por aqui..engraçadinho..<br />");
-        out.print("<a href=\"../pagina_inicial.jsp\">Voltar</a>");
+        response.sendRedirect("../grupos_listar.jsp?situacao=foi_hacker");
     }
 
 %>
