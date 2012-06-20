@@ -1,4 +1,8 @@
+<%@page import="util.Sessao"%>
 <%@page import="util.HTMLUtil"%>
+<%
+Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
+%>
 <!DOCTYPE html>
 <html>
     <jsp:include page="includes/head.jsp">

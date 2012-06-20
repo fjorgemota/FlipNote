@@ -1,3 +1,7 @@
+<%@page import="util.Data"%>
+<%@page import="modelo.ProvaAR"%>
+<%@page import="modelo.ProvaAR"%>
+<%@page import="dao.ProvasDAO"%>
 <%@page import="util.HTMLUtil"%>
 <%@page import="dao.MateriaDAO"%>
 <%@page import="util.Sessao"%>
@@ -27,32 +31,37 @@
                         </div>
                     </div>
                     <div class="row-fluid" id="rowtitle">
-                        <div class="span4">
-                            Nome
+                        <div class="span3">
+                            Descrição
                         </div>
-                        <div class="span4">
-                            Professor
+                        <div class="span3">
+                            Criador
                         </div>
-                        <div class="span4">
+                        <div class="span3">
+                            Data
+                        </div>
+                        <div class="span3">
                             Ações
                         </div>
                     </div>
 
                     <%
-                        ArrayList<MateriaAR> materias = MateriaDAO.getMateriasPorAluno(Sessao.getAlunoLogado(request));
-                        for (MateriaAR materia : materias) {
+                        ArrayList<ProvaAR> provas = ProvasDAO.getProvasPorAluno(Sessao.getAlunoLogado(request));
+                        for (ProvaAR prova: provas) {
                             out.print("<div class=\"row-fluid\">");
-                            out.print("<div class=\"span4\">");
-                            out.print(materia.getNome());
+                            out.print("<div class=\"span3\">");
+                            out.print(prova.getDescricao());
                             out.print("</div>");
 
-                            out.print("<div class=\"span4\">");
-                            out.print(materia.getProfessor());
+                            out.print("<div class=\"span3\">");
+                            out.print(prova.getCriador().getPrimeiroNome());
+                            out.print("</div>");
+                            out.print("<div class=\"span3\">");
+                            out.print(Data.getReadableDate(prova.getData()));
                             out.print("</div>");
 
-
-                            out.print("<div class=\"span4\">");
-                            out.print(HTMLUtil.getActionsButtons("materia", materia.getID()));
+                            out.print("<div class=\"span3\">");
+                            out.print(HTMLUtil.getActionsButtons("prova", prova.getID()));
                             out.print("</div>");
 
                         }
