@@ -1,10 +1,10 @@
 <%@page import="util.Data"%>
 <div class="row-fluid">
     <div class="span6">
-        <p>Data da avaliação: </p>
+        <p>Data: </p>
     </div>
     <div class="span6">
-        <input type ="text" id="datepicker" name="data" value="<% out.print(Data.getDateByFormat("yyyy-MM-dd")); %>" />
+        <input type ="text" id="datepicker" name="data" value="<% out.print(Data.getDate()); %>" />
     </div>
 
 </div>
