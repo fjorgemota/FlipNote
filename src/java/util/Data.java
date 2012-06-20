@@ -16,6 +16,15 @@ import java.util.Date;
  */
 public class Data {
     /* Somente data */
+    public static boolean validateDate(String s){
+        try{
+            getDate(s);
+            return true;
+        }
+        catch(Exception ex){
+            return false;
+        }
+    }
     public static String getDate() {
         return getDateByFormat("yyyy-MM-dd");
     }
@@ -48,7 +57,15 @@ public class Data {
         return getStringByFormat(data, "dd/MM/yyyy", plus);
     }
     /* Data e hora */ 
-    
+    public static boolean validateDateTime(String s){
+        try{
+            getDateTime(s);
+            return true;
+        }
+        catch(Exception ex){
+            return false;
+        }
+    }
     public static String getDateTime() {
         return getDateByFormat("yyyy-MM-dd HH:mm:ss");
     }
