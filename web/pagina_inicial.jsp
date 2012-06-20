@@ -1,3 +1,4 @@
+<%@page import="dao.TarefasDAO"%>
 <%@page import="modelo.TarefaBaseAR"%>
 <%@page import="util.Sessao"%>
 <%@page import="dao.AlunoDAO"%>
@@ -66,19 +67,22 @@ Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
                         <div class="span6">
                             <h2>Tarefas</h2>
                             <ul class="unstyled">
-                                <li><a href="cadastrar_avaliacao.jsp">Cadastrar avaliações</a></li>
+                                <li><a href="cadastrar_prova.jsp">Cadastrar Prova</a></li>
                                 <li><a href="cadastrar_trabalhos.jsp">Cadastrar Trabalho</a></li>
                                 <li><a href="cadastrar_anotacao.jsp">Cadastrar Anotações</a></li>
                                 <li><a href="cadastrar_materia.jsp">Cadastrar Matéria</a></li>
                             </ul>
                         </div><!--/span-->
                         <div class="span6">
-                            <h2>Atividades recentes</h2>
+                            <h2>Atividades para o próximo mês</h2>
                             <ul>
                                 <%
-                                ArrayList<TarefaBaseAR> tarefas = aluno.getTodasTarefas(Data.getDate(), Data.getDate(86400*30));
+                                ArrayList<TarefaBaseAR> tarefas = TarefasDAO.getTodasTarefas(aluno, Data.getDate(), Data.getDate(86400*30));
                                 for(TarefaBaseAR tarefa: tarefas){
-                                    out.print("<li><a href='"+tarefa.getEditLink()+"'>"+tarefa.getDescricao()+"</a> - em "+"</li>" );
+                                    out.print("<li><a href='"+tarefa.getEditLink()+"'>"+tarefa.getDescricao()+"</a> - em "+Data.getReadableDate(tarefa.getData())+"</li>" );
+                                }
+                                if(tarefas.isEmpty()){
+                                    out.print("Você não possui atividades no próximo mês");
                                 }
                                 %>
                             </ul>
