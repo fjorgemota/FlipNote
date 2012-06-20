@@ -1,3 +1,4 @@
+<%@page import="util.HTMLUtil"%>
 <!DOCTYPE html>
 <html>
     <jsp:include page="includes/head.jsp">
@@ -13,12 +14,12 @@
                     <jsp:include page="includes/menu.jsp"/>
                 </div>
                 <div class="span9">
-                    
+
                     <h2>Cadastrar Grupo</h2>
                     <p><h4>Use o formulario abaixo para criar um grupo.</h4> </p>
 
-                    <form action="acao/cadastrar_grupos.jsp" method="POST">
-
+                   
+                        <%=HTMLUtil.initFormCadastrar("grupos")%>
 
                         <div class="row-fluid">
                             <div class="span4">
@@ -28,8 +29,8 @@
                                 <input type="text" name="nome" size="30" />
                             </div>
                         </div>
-                        
-                        
+
+
 
                         <div class="row-fluid">
                             <div class="span4">
@@ -39,12 +40,12 @@
                                 <input type="text" name="descricao" size="30" />
                             </div>
                         </div>
-                
+
 
                         <jsp:include page="includes/botoes-form.jsp" />
 
-
-                    </form>
+                        <%=HTMLUtil.endForm()%>
+                   
                 </div>
 
             </div>

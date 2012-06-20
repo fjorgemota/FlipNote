@@ -1,6 +1,7 @@
+<%@page import="util.HTMLUtil"%>
 <!DOCTYPE html>
 <html>
-   <jsp:include page="includes/head.jsp">
+    <jsp:include page="includes/head.jsp">
         <jsp:param name="titulo" value="Cadastrar avaliações"/>
     </jsp:include>
     <body>
@@ -9,10 +10,11 @@
         </div>
         <div class="container-fluid">
             <div class="row-fluid">
-              <div class="span3">
-                     <jsp:include page="includes/menu.jsp"/>
+                <div class="span3">
+                    <jsp:include page="includes/menu.jsp"/>
                 </div>
-                <form action="acao/cadastrar_prova.jsp" method="POST">
+
+                <%=HTMLUtil.initFormCadastrar("prova")%>
                 <div class="span9">
                     <h2>Cadastrar avaliação</h2>
                     <p> <h4>Use o formulario abaixo para cadastrar uma avaliação no sistema.</h4></p>
@@ -37,11 +39,11 @@
 
 
                 </div>
-                </form>
+                <%=HTMLUtil.endForm()%>
 
             </div>
         </div>
-       
-      <jsp:include page="includes/javascript_formulario.jsp"/>
+
+        <jsp:include page="includes/javascript_formulario.jsp"/>
     </body>
 </html>
