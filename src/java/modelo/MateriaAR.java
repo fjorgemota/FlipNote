@@ -65,6 +65,9 @@ public class MateriaAR implements AR{
     }
 
     public void setGrupo(int grupo) {
+        if(grupo != 0){
+            return;
+        }
         this.grupo = new GrupoAR();
         this.grupo.setID(grupo);
         this.grupo.load();
@@ -124,12 +127,13 @@ public class MateriaAR implements AR{
     public boolean load() {
         MySQL cliente = MySQL.getInstance();
         String sql = "SELECT * FROM materia WHERE id='"+this.getID()+"';";
+        System.out.print(sql);
         ConjuntoResultados linha = cliente.executaSelect(sql);
         if(linha.next()){
             this.setAluno(linha.getInt("aluno"));
-            this.setGrupo(linha.getInt("grupo"));
             this.setProfessor(linha.getString("professor"));
             this.setNome(linha.getString("nome"));
+            this.setGrupo(linha.getInt("grupo"));
             return true;
         }
         return false;
