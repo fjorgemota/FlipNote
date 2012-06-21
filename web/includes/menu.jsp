@@ -23,6 +23,11 @@
                                     Neste Mês
                                 </a>
                             </li>
+                            <li>
+                                <a href="provas_listar.jsp">
+                                    Listar
+                                </a>
+                            </li>
                             <li class="nav-header">
                                 Trabalhos
                             </li>
@@ -39,6 +44,11 @@
                             <li>
                                 <a href="trabalhos_mes.jsp">
                                     Neste Mês
+                                </a>
+                            </li>
+                            <li>
+                                <a href="trabalhos_listar.jsp">
+                                    Listar
                                 </a>
                             </li>
                             <li class="nav-header">
