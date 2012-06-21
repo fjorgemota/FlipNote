@@ -1,3 +1,5 @@
+<%@page import="modelo.TrabalhoAR"%>
+<%@page import="dao.TrabalhosDAO"%>
 <%@page import="util.Data"%>
 <%@page import="modelo.ProvaAR"%>
 <%@page import="modelo.ProvaAR"%>
@@ -27,7 +29,7 @@
                 <div class="span9" id="tablerow">
                     <div class="row-fluid">
                         <div class="span12">
-                            <h1>Lista de Provas</h1>
+                            <h1>Lista de Trabalhos</h1>
                         </div>
                     </div>
                     <div class="row-fluid" id="rowtitle">
@@ -46,22 +48,22 @@
                     </div>
 
                     <%
-                        ArrayList<ProvaAR> provas = ProvasDAO.getProvasPorAluno(Sessao.getAlunoLogado(request));
-                        for (ProvaAR prova: provas) {
+                        ArrayList<TrabalhoAR> trabalhos = TrabalhosDAO.getTrabalhosPorAluno(Sessao.getAlunoLogado(request));
+                        for (TrabalhoAR trabalho: trabalhos) {
                             out.print("<div class=\"row-fluid\">");
                             out.print("<div class=\"span3\">");
-                            out.print(prova.getDescricao());
+                            out.print(trabalho.getDescricao());
                             out.print("</div>");
 
                             out.print("<div class=\"span3\">");
-                            out.print(prova.getCriador().getPrimeiroNome());
+                            out.print(trabalho.getCriador().getPrimeiroNome());
                             out.print("</div>");
                             out.print("<div class=\"span3\">");
-                            out.print(Data.getReadableDate(prova.getData()));
+                            out.print(Data.getReadableDate(trabalho.getData()));
                             out.print("</div>");
 
                             out.print("<div class=\"span3\">");
-                            out.print(HTMLUtil.getActionsButtons("prova", prova.getID()));
+                            out.print(HTMLUtil.getActionsButtons("trabalho", trabalho.getID()));
                             out.print("</div>");
 
                         }
