@@ -20,6 +20,11 @@
                 </div>
                 <div class="span9" id="tablerow">
                     <div class="row-fluid">
+                        <div class="span12">
+                            <h1>Lista de Grupos</h1>
+                        </div>
+                    </div>
+                    <div class="row-fluid">
                         <div class="span4" >
                             Nome do grupo
                         </div>
