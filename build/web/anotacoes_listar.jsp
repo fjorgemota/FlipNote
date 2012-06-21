@@ -25,7 +25,7 @@ Sessao.verificaSeNaoEstaLogadoERedireciona(request, response);
                             <h1>Lista de Anotações</h1>
                         </div>
                     </div>
-                    <div class="row-fluid">
+                    <div class="row-fluid" id="rowtitle">
                         <div class="span4">
                             ID
                         </div>

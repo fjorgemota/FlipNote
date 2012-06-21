@@ -24,7 +24,7 @@
                             <h1>Lista de Grupos</h1>
                         </div>
                     </div>
-                    <div class="row-fluid">
+                    <div class="row-fluid" id="rowtitle">
                         <div class="span4" >
                             Nome do grupo
                         </div>

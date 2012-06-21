@@ -12,7 +12,7 @@
                     <div class="nav-collapse">
                         <ul class="nav">
                             <li class="active"><a href="pagina_inicial.jsp">Inicio</a></li>
-                            <li><a href="#minhaconta">Minha Conta</a></li>
+                            <li><a href="editar_minhaconta.jsp">Minha Conta</a></li>
                             <li><a href="acao/logout.jsp">Sair</a></li>
                         </ul>
                         <p class="navbar-text pull-right">Conectado como <a href="#minhaconta"><% 

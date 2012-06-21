@@ -49,7 +49,7 @@ public class AlunoAR implements AR {
     public boolean update() {
 
         MySQL cliente = MySQL.getInstance();
-        String sql = "UPDATE alunoo SET nome='" + this.getNomeCompleto() + "',email='" + this.getEmail() + "',"
+        String sql = "UPDATE aluno SET nome='" + this.getNomeCompleto() + "',email='" + this.getEmail() + "',"
                 + "senha=" + this.getSenha() + " WHERE id='" + this.getID() + "';";
         return cliente.executaUpdate(sql);
 
