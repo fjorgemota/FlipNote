@@ -27,10 +27,11 @@ public class TrabalhosDAO {
         while(linhas.next()){
             TrabalhoAR n = new TrabalhoAR();
             n.setID(linhas.getInt("id"));
+            n.setCriador(linhas.getInt("aluno"));
             n.setMateria(linhas.getInt("materia"));
             n.setData(linhas.getString("data"));
             n.setDescricao(linhas.getString("descricao"));
-            n.setNotificacao(linhas.getString("data"));
+            n.setNotificacao(linhas.getString("notificacao"));
             n.setNota(linhas.getFloat("nota"));
             trabalhos.add(n);
         }
@@ -46,10 +47,11 @@ public class TrabalhosDAO {
         while(linhas.next()){
             TrabalhoAR n = new TrabalhoAR();
             n.setID(linhas.getInt("id"));
+            n.setCriador(linhas.getInt("aluno"));
             n.setMateria(linhas.getInt("materia"));
             n.setData(linhas.getString("data"));
             n.setDescricao(linhas.getString("descricao"));
-            n.setNotificacao(linhas.getString("data"));
+            n.setNotificacao(linhas.getString("notificacao"));
             n.setNota(linhas.getFloat("nota"));
             trabalhos.add(n);
         }
@@ -65,10 +67,11 @@ public class TrabalhosDAO {
         while(linhas.next()){
             TrabalhoAR n = new TrabalhoAR();
             n.setID(linhas.getInt("id"));
+            n.setCriador(linhas.getInt("aluno"));
             n.setMateria(linhas.getInt("materia"));
             n.setData(linhas.getString("data"));
             n.setDescricao(linhas.getString("descricao"));
-            n.setNotificacao(linhas.getString("data"));
+            n.setNotificacao(linhas.getString("notificacao"));
             n.setNota(linhas.getFloat("nota"));
             trabalhos.add(n);
         }
