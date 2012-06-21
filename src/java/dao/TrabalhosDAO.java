@@ -16,11 +16,12 @@ import util.MySQL;
  * @author fernando_mota
  */
 public class TrabalhosDAO {
-    public static ArrayList<TrabalhoAR> getProvasPorAluno(AlunoAR aluno){
+    public static ArrayList<TrabalhoAR> getTrabalhosPorAluno(AlunoAR aluno){
         ArrayList<TrabalhoAR> trabalhos = new ArrayList<TrabalhoAR>();
         
-        MySQL bancoDados = new MySQL();
+        MySQL bancoDados = MySQL.getInstance();
         String sql = "SELECT * FROM trabalho WHERE aluno='"+aluno.getID()+"';";
+        System.out.print(sql);
         ConjuntoResultados linhas = bancoDados.executaSelect(sql);  
       
         while(linhas.next()){
@@ -35,10 +36,10 @@ public class TrabalhosDAO {
         }
         return trabalhos;    
     }
-    public static ArrayList<TrabalhoAR> getProvasPorAluno(int aluno){
+    public static ArrayList<TrabalhoAR> getTrabalhosPorAluno(int aluno){
         ArrayList<TrabalhoAR> trabalhos = new ArrayList<TrabalhoAR>();
         
-        MySQL bancoDados = new MySQL();
+        MySQL bancoDados = MySQL.getInstance();
         String sql = "SELECT * FROM trabalho WHERE aluno='"+aluno+"';";
         ConjuntoResultados linhas = bancoDados.executaSelect(sql);  
       
@@ -54,10 +55,10 @@ public class TrabalhosDAO {
         }
         return trabalhos;     
     }
-    public static ArrayList<TrabalhoAR> getProvasPorAluno(){
+    public static ArrayList<TrabalhoAR> getTrabalhosPorAluno(){
         ArrayList<TrabalhoAR> trabalhos = new ArrayList<TrabalhoAR>();
         
-        MySQL bancoDados = new MySQL();
+        MySQL bancoDados = MySQL.getInstance();
         String sql = "SELECT * FROM trabalho;";
         ConjuntoResultados linhas = bancoDados.executaSelect(sql);  
       
