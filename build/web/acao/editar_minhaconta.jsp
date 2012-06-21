@@ -10,19 +10,19 @@
     String nome = request.getParameter("nome");
     String email = request.getParameter("email");
     String id = request.getParameter("id");
-   
+    // String senha = request.getParameter("senha");
     AlunoAR aluno = new AlunoAR();
-    
+
     aluno.setNome(nome);
     aluno.setID(Integer.parseInt(id));
     aluno.setEmail(email);
-    
+    //   aluno.setSenha(senha);
 
     if (aluno.update()) {
-        response.sendRedirect("../editar_minhaconta.jsp?situacao=atualizado_sucesso&id="+id);
+        response.sendRedirect("../editar_minhaconta.jsp?situacao=atualizado_sucesso&id=" + id);
 
     } else {
-        response.sendRedirect("../editar_minhaconta.jsp?situacao=atualizado_erro&id="+id);
+        response.sendRedirect("../editar_minhaconta.jsp?situacao=atualizado_erro&id=" + id);
     }
 
 %>
