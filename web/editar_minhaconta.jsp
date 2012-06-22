@@ -64,7 +64,7 @@
                             <p>Sua senha:  </p>
                         </div>
                         <div class="span8">
-                            <%--       <input type="text" name="senha" size="30"  value="<%=aluno.getSenha()%>"/>    --%>
+                               <input type="text" name="senha" size="30"  value="*****"/>   
                         </div>
                     </div>
 
